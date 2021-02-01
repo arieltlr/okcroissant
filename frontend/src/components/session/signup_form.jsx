@@ -66,6 +66,8 @@ class SignupForm extends React.Component {
                         />
                         <br/>
                         <button className="form-submit">Create Account</button>
+                        <br/>
+                        {this.props.otherForm}
                     </div>
                 </form>
             </div>

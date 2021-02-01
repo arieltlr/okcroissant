@@ -13,7 +13,12 @@ const mapDispatchToProps = (dispatch) => {
   return {
     login: user => dispatch(login(user)),
     openModal: modal => dispatch(openModal(modal)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    otherForm: (
+            <button className="otherFormButton" onClick={()=> dispatch(openModal('signup'))}>
+                New to OK Croissant? Sign up
+            </button>
+        ),
   }
 }
 
