@@ -19,10 +19,10 @@ router.post('/',
         
             const newBreadprofile = new Breadprofile({
               user: req.user.id,
-              thin: req.thin,
-              wholewheat: req.wholewheat,
-              filling: req.filling,
-              savory: req.filling
+              thin: req.body.thin,
+              wholewheat: req.body.wholewheat,
+              filling: req.body.filling,
+              savory: req.body.savory
             });
         
             newBreadprofile.save().then(breadprofile => res.json(breadprofile));
@@ -31,13 +31,15 @@ router.post('/',
 
 
 router.get('/user/:user_id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     (req, res) => {
         Breadprofile.find({user: req.params.user_id})
-            .then(breadprofile => res.json(breadprofile))
+            .then(breadprofile => res.json(breadprofile[breadprofile.length-1]))
             .catch(err => 
                     res.status(404).json({ noBreadprofileFound: 'No profile found for this user' })
                 )
     })
 
-    module.exports = router;
+
+
+module.exports = router;
