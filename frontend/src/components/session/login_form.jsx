@@ -62,6 +62,8 @@ class LoginForm extends React.Component {
                             placeholder="Confirm Password"
                         />
                         <button className="form-submit">Create Account</button>
+                        <br/>
+                        {this.props.otherForm}
                     </div>
                 </form>
             </div>

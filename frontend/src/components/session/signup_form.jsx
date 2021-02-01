@@ -10,7 +10,7 @@ class SignupForm extends React.Component {
             password2: '',
             errors: {}
         };
-        this.handleSubmit = this.handlesubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
     };
 
@@ -50,21 +50,24 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
                         <input type="text"
-                            value={this.state.email}
+                            defaultValue={this.state.email}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
                         <br/>
                         <input type="password"
-                            value={this.state.password}
+                            defaultValue={this.state.password}
                             placeholder="Password"
                             />
                         <br/>
                         <input type="password"
-                            value={this.state.password2}
+                            defaultValue={this.state.password2}
                             placeholder="Confirm Password"
                         />
+                        <br/>
                         <button className="form-submit">Create Account</button>
+                        <br/>
+                        {this.props.otherForm}
                     </div>
                 </form>
             </div>
