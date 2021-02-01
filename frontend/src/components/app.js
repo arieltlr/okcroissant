@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AuthRoute } from '../util/route_util'; //ProctedRoute
 import { Switch, Route } from 'react-router-dom'; //Route
