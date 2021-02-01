@@ -6,7 +6,16 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 
-// We'll dispatch this when our user signs in
+export const logoutUser = () => ({
+    type: RECEIVE_USER_LOGOUT
+});
+
+export const logout = () => dispatch => {
+    localStorage.removeItem('jwtToken')
+    APIUtil.setAuthToken(false)
+    dispatch(logoutUser)
+}
+
 export const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
     currentUser
@@ -16,19 +25,13 @@ export const receiveCurrentUser = currentUser => ({
 export const receiveUserSignIn = () => ({
     type: RECEIVE_USER_SIGN_IN
 });
-
+  
 // We dispatch this one to show authentication errors on the frontend
 export const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
 });
 
-// When our user is logged out, we will dispatch this action to set isAuthenticated to false
-export const logoutUser = () => ({
-    type: RECEIVE_USER_LOGOUT
-});
-
-// Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = user => dispatch => (
     APIUtil.signup(user).then(() => (
         dispatch(receiveUserSignIn())
@@ -46,14 +49,7 @@ export const login = user => dispatch => (
         const decoded = jwt_decode(token);
         dispatch(receiveCurrentUser(decoded))
     })
-        .catch(err => {
-            dispatch(receiveErrors(err.response.data));
-        })
+    .catch(err => {
+        dispatch(receiveErrors(err.response.data));
+    })
 )
-
-// We wrote this one earlier
-export const logout = () => dispatch => {
-    localStorage.removeItem('jwtToken')
-    APIUtil.setAuthToken(false)
-    dispatch(logoutUser())
-};
