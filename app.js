@@ -4,6 +4,8 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI
 const users = require("./routes/api/users")
+const breadprofile = require('./routes/api/breadprofile')
+
 
 const passport = require('passport');
 // const path = require('path');
@@ -26,6 +28,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
+app.use("/api/breadprofile", breadprofile);
 
 
 
