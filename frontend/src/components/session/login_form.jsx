@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
             password: '',
             errors: {}
         };
-        this.handleSubmit = this.handlesubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
     };
 
