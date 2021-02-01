@@ -13,33 +13,33 @@ module.exports = function validateBreadprofileInput(data){
         errors.thin = "Field must be true or false"
     }
 
-    if (Validator.isEmpty(data.thin)) {
-        errors.thin = "Field is required"
-    }
+    // if (Validator.isEmpty(data.thin)) {
+    //     errors.thin = "Field is required"
+    // }
 
     if (!Validator.isBoolean(data.wholewheat)) {
         errors.wholewheat = "Field must be true or false"
     }
 
-    if (Validator.isEmpty(data.wholewheat)) {
-        errors.wholewheat = "Field is required"
-    }
+    // if (Validator.isEmpty(data.wholewheat)) {
+    //     errors.wholewheat = "Field is required"
+    // }
 
     if (!Validator.isBoolean(data.filling)) {
         errors.filling = "Field must be true or false"
     }
 
-    if (Validator.isEmpty(data.filling)) {
-        errors.filling = "Field is required"
-    }
+    // if (Validator.isEmpty(data.filling)) {
+    //     errors.filling = "Field is required"
+    // }
 
     if (!Validator.isBoolean(data.savory)) {
         errors.savory = "Field must be true or false"
     }
 
-     if (Validator.isEmpty(data.savory)) {
-        errors.savory = "Field is required"
-    }
+    //  if (Validator.isEmpty(data.savory)) {
+    //     errors.savory = "Field is required"
+    // }
 
     return {
         errors, 
