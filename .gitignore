@@ -1,4 +1,8 @@
 
 /node_modules
 /frontend/node_modules
+<<<<<<< HEAD
 /config/keys.js
+=======
+/keys.js
+>>>>>>> c9734338e818bc294a7e99be1c7b0d4e0a9cf18f
