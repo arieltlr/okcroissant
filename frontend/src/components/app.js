@@ -7,6 +7,8 @@ import { Switch, Route } from 'react-router-dom'; //Route
 import SplashPage from './splash/splash';
 import SignupContainer from '../components/session/signup_container';
 
+import '../css/style.scss';
+
 const App = () => (
     <div>
         {/* <NavBarContainer /> */}

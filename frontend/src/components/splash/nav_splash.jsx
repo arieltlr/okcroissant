@@ -1,12 +1,10 @@
-
 import React from 'react';
-import './splash.css'
 
 
 // onclickk
 const NavSplash = () =>{
     return (
-        <div >
+        // <div className="master">
             <nav className="splash-nav">
                 <img className="logo" src="" alt="okCrossiantLogo"/>
                 <div className="button-master">
@@ -14,7 +12,7 @@ const NavSplash = () =>{
                     <button>Sign Up</button>
                 </div>
             </nav>
-        </div>
+        // </div>
     )
 }
 
