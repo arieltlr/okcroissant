@@ -3,4 +3,3 @@ module.exports = {
     //Make sure this is your own unique string
     secretOrKey: 'TKp3u1LbuITxxh4su12Catsrrt0Fj4w7'
 }
-
