@@ -4,7 +4,7 @@ const validText = require('./valid-text');
 module.exports = function validateLoginInput(data){
     let errors = {};
 
-    data.username = validText(data.hanusernamedle) ? data.username : '';
+    data.username = validText(data.username) ? data.username : '';
     data.password = validText(data.password) ? data.password : '';
     data.password2 = validText(data.password2) ? data.password2 : '';
 
@@ -15,14 +15,14 @@ module.exports = function validateLoginInput(data){
     if(Validator.isEmpty(data.username)){
         errors.username = 'Username is required';
     }
-
+    
+    if(!Validator.isLength(data.password, { min: 6, max: 30 })){
+        errors.password = 'Password must be at least 6 characters'
+    }
     if(Validator.isEmpty(data.password)){
         errors.password = 'Password field is required'
     }
 
-    if(!Validator.isLength(data.password, { min: 6, max: 30 })){
-        errors.password = 'Password must be at least 6 characters'
-    }
 
     if(Validator.isEmpty(data.password2)){
         errors.password2 = 'Confirm Password field is required';

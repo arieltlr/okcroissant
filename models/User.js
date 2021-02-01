@@ -11,19 +11,19 @@ const UserSchema = new Schema({
         type: String,
         required: false
     },
-    location: {
-        type: String,
-        required: true
-    },
-    country: {
-        type: String,
-        required: true
-    },
+    // location: {
+    //     type: String,
+    //     required: true
+    // },
+    // country: {
+    //     type: String,
+    //     required: true
+    // },
     date: {
         type: Date,
         default: Date.now
     }
 });
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('users', UserSchema);
 module.exports = User;
