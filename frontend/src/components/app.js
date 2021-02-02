@@ -5,7 +5,6 @@ import { Switch, Route } from 'react-router-dom'; //Route
 import SplashPage from './splash/splash';
 import Modal from './modal/modal'
 import NavBar from './mainNav/nav_container';
-import "./css/test.scss"
 
 const App = () => (
     

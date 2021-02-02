@@ -8,7 +8,6 @@ class SignupForm extends React.Component {
             username: '',
             password: '',
             password2: '',
-            errors: {}
         };
         // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,27 +28,15 @@ class SignupForm extends React.Component {
         }
         debugger
         this.props.signup(user)
-            .then(this.props.closeModal)
     }
-    
+    componentWillUnmount(){
+        const resetErrors = {};
+        this.props.refreshErrors(resetErrors);
+    }
 
 
-    render() {
-        let usernameError;
-        let passwordError;
-        let usernameErrorBoolean;
-        let passwordErrorBoolean;
 
-        const errorMessages = Object.keys(this.props.errors).map((error, index)=> {
-            if (error.includes("Username")){
-                usernameErrorBoolean = true;
-                usernameError = this.props.errors[error];
-            } else {
-                passwordErrorBoolean = true;
-                passwordError = this.props.errors[error];
-            }
-        })
-        debugger
+    render() {   
         return (
             <div className="signup-form-container">
                 <div className="logo-container">
@@ -66,7 +53,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
-                        {usernameErrorBoolean ? <p className="error">{usernameError}</p> : null}
+                        <p className="error">{this.props.errors.username}</p>
                         </div>
                         <div className="input-container">
                             <p className="input-label">Password</p>
@@ -75,7 +62,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('password')}
                             placeholder="Password"
                             />
-                        {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
+                        <p className="error">{this.props.errors.password}</p>
                         </div>
                         <div className="input-container">
                             <p className="input-label">Confirm Password</p>
@@ -84,10 +71,9 @@ class SignupForm extends React.Component {
                             onChange={this.update('password2')}
                             placeholder="Confirm Password"
                             />
-                        {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
+                        <p className="error">{this.props.errors.password}</p>
                         </div>
                         <button className="form-submit">Create Account</button>
-                        <br/>
                         {this.props.otherForm}
                     </div>
                 </form>

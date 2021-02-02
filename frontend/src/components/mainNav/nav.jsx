@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         {console.log(this.props.isAuthenticated)}
         return (
             <div>
-                {true ? < MainNavBar /> : <NavSplashContainer/>}
+                {this.props.isAuthenticated ? < MainNavBar /> : <NavSplashContainer/>}
             </div>
             )
     }
