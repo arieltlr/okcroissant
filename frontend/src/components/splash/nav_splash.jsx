@@ -5,11 +5,11 @@ import React from 'react';
 class NavSplash extends React.Component{
     constructor(props){
         super(props)
-        debugger
+        // debugger
     }
 
     render(){
-        debugger
+        // debugger
         return (
             // <div className="master">
             <nav className="splash-nav">

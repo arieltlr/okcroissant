@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
     }
 }
 const mdp = (dispatch) => {
-    debugger
+    // debugger
     return {
         openModal: modal => dispatch(openModal(modal))
     }

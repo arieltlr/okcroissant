@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A read me!",
   "main": "app.js",
+  "engines": {
+    "node": "10.13.0"
+  },
   "scripts": {
     "server:debug": "nodemon --inspect app.js",
     "start": "node app.js",

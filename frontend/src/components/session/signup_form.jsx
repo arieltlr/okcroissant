@@ -10,7 +10,7 @@ class SignupForm extends React.Component {
             password2: '',
             errors: {}
         };
-        debugger
+        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
     };
@@ -27,7 +27,7 @@ class SignupForm extends React.Component {
             password: this.state.password,
             password2: this.state.password2,
         }
-        debugger
+        // debugger
         this.props.signup(user)
             .then(() => this.props.closeModal())
             .then(this.props.history.push('/main'))

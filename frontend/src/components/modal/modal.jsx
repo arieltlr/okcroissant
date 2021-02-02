@@ -33,7 +33,7 @@ function Modal ({modal, closeModal}) {
 }
 
 const mstp = state => {
-    debugger
+    // debugger
     return {
         modal: state.ui.modal
     }
