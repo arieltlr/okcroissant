@@ -43,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "sass": "^1.32.6",
+    "yarn": "^1.22.10"
   }
 }
