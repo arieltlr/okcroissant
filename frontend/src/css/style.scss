@@ -1,0 +1,30 @@
+
+@import '../../public/base/variables.scss'; //under public/base/variable.scss
+
+// style sheet I am using on App.js
+
+// easred all button settings
+ button{
+        margin: 10px;
+        border: none;
+        outline:none;
+        background: none;
+};
+
+// applying to all elements
+*{
+    font-family:$main-Roboto-font;
+}
+.splash-nav{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    // background-color: red;
+};
+
+.button-master{
+    display: flex;
+    flex-direction: row;
+}
