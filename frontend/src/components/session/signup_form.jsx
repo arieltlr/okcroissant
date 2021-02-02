@@ -10,6 +10,7 @@ class SignupForm extends React.Component {
             password2: '',
             errors: {}
         };
+        debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
     };
@@ -22,10 +23,11 @@ class SignupForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         let user = {
-            username: this.state.email,
+            username: this.state.username,
             password: this.state.password,
             password2: this.state.password2,
         }
+        debugger
         this.props.signup(user)
             .then(() => this.props.closeModal())
     }
@@ -50,18 +52,20 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
                         <input type="text"
-                            defaultValue={this.state.email}
+                            value={this.state.username}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
                         <br/>
                         <input type="password"
-                            defaultValue={this.state.password}
+                            value={this.state.password}
+                            onChange={this.update('password')}
                             placeholder="Password"
                             />
                         <br/>
                         <input type="password"
-                            defaultValue={this.state.password2}
+                            value={this.state.password2}
+                            onChange={this.update('password2')}
                             placeholder="Confirm Password"
                         />
                         <br/>
