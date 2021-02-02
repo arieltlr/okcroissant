@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
+import { signup, receiveErrors } from '../../actions/session_actions';
 import SignupForm from './signup_form';
 import {openModal, closeModal} from '../../actions/modal_actions'; 
 
@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     signup: user => dispatch(signup(user)),
     openModal: modal => dispatch(openModal(modal)), 
     closeModal: () => dispatch(closeModal()),
+    refreshErrors: (resetErrors) => dispatch(receiveErrors(resetErrors)),
     otherForm: (
             <button className="otherFormButton" onClick={() => dispatch(openModal('login'))}>
                 Already a member? Log in
