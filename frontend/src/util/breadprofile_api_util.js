@@ -10,4 +10,4 @@ export const createBreadprofile = (breadprofile) =>{
 
 export const updateBreadprofile = (breadprofile) =>{
     return axios.post(`/api/breadprofile/${breadprofile.id}`, breadprofile)
-}
+})
