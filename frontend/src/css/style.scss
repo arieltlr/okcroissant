@@ -24,13 +24,7 @@
     // background-color: red;
 };
 
-.background-img{
-    display: flex;
-    justify-content: center;
-    // height: 100%;
-    z-index: -999;
-    position: absolute;
-}
+
 
 .button-master{
     display: flex;
@@ -49,4 +43,9 @@
     margin: 65px;
     line-height: 1.6;
     font-size: 25px;
+}
+
+.background-img{
+    z-index: -999;
+    position: absolute;
 }
