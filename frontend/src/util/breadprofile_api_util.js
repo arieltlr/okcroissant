@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const getBreadprofile = (userId) =>{
+export const getBreadprofileResponses = (userId) =>{
     return axios.get(`/api/breadprofile/user/${userId}`)
 };
 

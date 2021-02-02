@@ -1,15 +1,15 @@
 import * as APIUtil from '../util/breadprofile_api_util';
 import jwt_decode from 'jwt-decode';
 
-export const RECEIVE_BREAD_MATCHES = "RECEIVE_BREAD_MATCHES";
+export const RECEIVE_BREAD_PROFILE_RESPONSES = "RECEIVE_BREAD_PROFILE_RESPONSES";
 
-export const receiveBreadMatches = breadMatches => ({
-    type: RECEIVE_BREAD_MATCHES,
-    breadMatches
+export const receiveBreadMatches = responses => ({
+    type: RECEIVE_BREAD_PROFILE_RESPONSES,
+    responses
 });
 
-export const getBreadMatches = userId => dispatch =>{
-    return APIUtil.getBreadprofile(userId).then((breadMatches) => (
+export const getBreadProfileResponses = userId => dispatch =>{
+    return APIUtil.getBreadprofileResponses(userId).then((breadMatches) => (
         dispatch(receiveBreadMatches(breadMatches))
     ))
 }

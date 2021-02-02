@@ -1,4 +1,6 @@
 import { connect } from 'react-redux';
+import { createBreadProfile } from '../../actions/bread_profile_actions';
+
 
 import  NewProfile from './create_profile_form'
 const msp = state =>{
@@ -10,7 +12,6 @@ const msp = state =>{
 const mdp = dispatch=>{
     return ({
     createBreadProfile: breadProfile => dispatch(createBreadProfile(breadProfile)),
-    updateBreadProfile: breadProfile => dispatch(updateBreadProfile(breadProfile))
     })
 }
 export default connect(msp, mdp)(NewProfile);

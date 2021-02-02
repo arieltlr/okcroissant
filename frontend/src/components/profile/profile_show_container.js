@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getBreadMatches, createBreadProfile, updateBreadProfile } from '../../actions/bread_actions';
+import { getBreadProfileResponses, createBreadProfile, updateBreadProfile } from '../../actions/bread_profile_actions';
 import ProfileShow from './profile_show'
 
 const mstp = (state) => {
@@ -11,7 +11,7 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
     return {
-        getBreadMatches: (userId) => dispatch(getBreadMatches(userId)),
+        getBreadProfileResponses: (userId) => dispatch(getBreadMatches(userId)),
         createBreadProfile: breadProfile => dispatch(createBreadProfile(breadProfile)),
         updateBreadProfile: breadProfile => dispatch(updateBreadProfile(breadProfile))
     }
