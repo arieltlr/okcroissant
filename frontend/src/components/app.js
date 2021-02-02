@@ -15,10 +15,7 @@ const App = () => (
         <NavBar/>
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
-<<<<<<< HEAD
-=======
             <ProtectedRoute exact path="/main" component={MainPage}/>
->>>>>>> cc35fe9277d90aaef39a6c601ac481fb4b98d0c6
         </Switch>
     </div>
 );
