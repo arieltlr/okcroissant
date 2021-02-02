@@ -5,20 +5,22 @@ import React from 'react';
 class MainNavBar extends React.Component {
     constructor(props) {
         super(props)
-        // this.logoutUser = this.logoutUser(this)
+        debugger
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
-    // logoutUser(e){
-    //     e.preventDefault();
-    //     this.props.logout()
-    // }
+    handleLogout(e){
+        e.preventDefault();
+        debugger
+        this.props.logout();
+    }
 
     render() {
         return (
             <nav className="master-nav">
                 <div className="splash-nav">
                     <img className="logo" src="https://media.istockphoto.com/photos/heap-of-bread-picture-id995038782?s=170667a" alt="okCrossiantLogo" />
-                    {/* <button onClick={()=>this.logoutUser}>Logout</button> */}
+                    <button onClick={this.handleLogout}>Log Out</button>
                 </div>
             </nav>
 

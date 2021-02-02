@@ -1,10 +1,12 @@
 
 import React from 'react';
-import { AuthRoute } from '../util/route_util'; //ProctedRoute
+import { AuthRoute, ProtectedRoute } from '../util/route_util'; //ProctedRoute
 import { Switch, Route } from 'react-router-dom'; //Route
 import SplashPage from './splash/splash';
 import Modal from './modal/modal'
 import NavBar from './mainNav/nav_container';
+import "./css/test.scss"
+import MainPage from './main/main_container';
 
 const App = () => (
     
@@ -13,6 +15,7 @@ const App = () => (
         <NavBar/>
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
+            <ProtectedRoute exact path="/main" component={MainPage}/>
         </Switch>
     </div>
 );

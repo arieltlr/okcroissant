@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavSplashContainer from '../splash/nav_container';
-import MainNavBar from './main';
+import MainNavContainerBar from './main_container';
 // onclickk
 class NavBar extends React.Component {
     constructor(props) {
@@ -10,10 +10,10 @@ class NavBar extends React.Component {
 // mainnavbar if user is signed in
 // navsplash if user is not signed in
     render() {
-        {console.log(this.props.isAuthenticated)}
+        // {console.log(this.props.isAuthenticated)}
         return (
             <div>
-                {this.props.isAuthenticated ? < MainNavBar /> : <NavSplashContainer/>}
+                {this.props.isAuthenticated ? < MainNavContainerBar /> : <NavSplashContainer/>}
             </div>
             )
     }
