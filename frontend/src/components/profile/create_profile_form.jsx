@@ -1,5 +1,10 @@
 import React from 'react'
 
+import Page1 from './page1'
+import Page2 from './page2'
+import Page3 from './page3'
+import Page4 from './page4'
+
 class NewProfile extends React.Component{
     constructor(props){
         super(props);
@@ -10,7 +15,12 @@ class NewProfile extends React.Component{
             filling = false,
             savory = false
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+        this.nextButton=this.nextButton.bind(this);
+        this.prevButton=this.prevButton.bind(this);
     }
     handleSubmit(event){
         event.preventDefault();
@@ -19,6 +29,12 @@ class NewProfile extends React.Component{
         this.props.createProfile(newState)
             .then((project)=>{
                 return  this.props.history.push(``)})
+    }
+    handleChange(event){
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        })
     }
 
     next(){
@@ -31,7 +47,7 @@ class NewProfile extends React.Component{
 
     previous(){
         let currentPage = this.state.currentPage;
-        currentPage = currentPage <= 1? 1: currentPage - 1;
+        currentPage = currentPage <= 1? 1: currentPage-1;
         this.setState({
             currentPage: currentPage
         })
@@ -130,6 +146,40 @@ class NewProfile extends React.Component{
     }
 
     render(){
-        
+        <div className = 'profile-block'>
+            <div className = 'profile-container'>
+                <h2>{this.state.currentPage} of 4</h2>
+                <div className='profile-form'>
+                    <form onSubmit={this.handleSubmit}>
+                        <Page1 
+                            currentPage = {this.state.currentPage}
+                            handleChange = {this.handleChange}
+                            thin = {this.state.thin}
+                        />
+                        <Page2 
+                            currentPage = {this.state.currentPage}
+                            handleChange = {this.handleChange}
+                            wholewheat = {this.state.wholewheat}
+                        />
+                        <Page3 
+                            currentPage = {this.state.currentPage}
+                            handleChange = {this.handleChange}
+                            filling = {this.state.filling}
+                        />
+                        <Page4 
+                            currentPage = {this.state.currentPage}
+                            handleChange = {this.handleChange}
+                            savory = {this.state.savory}
+                        />
+                        <div className='form-buttons'>
+                            {this.prevButton()}
+                            {this.nextButton()}
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
     }
 }
+
+export default NewProfile;
