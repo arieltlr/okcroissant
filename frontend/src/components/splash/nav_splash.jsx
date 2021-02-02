@@ -11,19 +11,14 @@ class NavSplash extends React.Component{
     render(){
         // debugger
         return (
-            // <div className="master">
             <nav className="splash-nav">
-                <img className="logo" src="" alt="okCrossiantLogo" />
+                <img className="splash-nav"src="https://media.istockphoto.com/photos/heap-of-bread-picture-id995038782?s=170667a" alt="okCrossiantLogo" />
                 <div className="button-master">
-                    <div>
-                        <button className="button-splash" onClick={() => this.props.openModal('login')}>Login</button>
-                    </div>
-                    <div>
-                        <button className="button-splash" onClick={() => this.props.openModal('signup')}>Sign Up</button>
-                    </div>
+                    <button className="button-splash" onClick={() => this.props.openModal('login')}>Login</button>
+                    <button className="button-splash" onClick={() => this.props.openModal('signup')}>Sign Up</button>
                 </div>
             </nav>
-            // </div>
+
         )
     }
 }

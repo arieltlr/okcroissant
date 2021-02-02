@@ -1,0 +1,72 @@
+
+
+
+/* DEFAULT */
+ button{
+     /* // easred all button settings */
+        margin: 10px;
+        border: none;
+        outline:none;
+        background: none;
+};
+/* VARIABLES
+:root {
+    colors
+  -- #FFC237;
+  
+  --blue-highlight:#379EFF;
+  --blue-splash:rgb(6, 98, 202);
+  --background-grey: rgba(50, 50, 50, 0.17);
+  Margin (default)
+  50px
+
+  Used Color
+  --button:hover #fad888 
+  --button background#FAEFD6;
+  --button outline: #352500;
+} */
+
+
+/* // applying to all elements */
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SPLASH NAV */
+.splash-nav{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+};
+
+div.button-master{
+    
+}
+div.button-master .button-splash{
+    background-color: #FAEFD6;
+    border: 1px solid #352500;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    margin-right: 30px;
+    
+}
+
+.button-master .button-splash:hover{
+    background-color: #fad888;
+    border: 1px solid #352500;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+p.content-splash{
+    font-family: 'Roboto', sans-serif;
+    margin: 60px;
+    height: 500px;
+    width: 60%;
+    font-size: 40px;
+    line-height: 1.3;
+}
