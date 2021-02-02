@@ -30,22 +30,3 @@
     display: flex;
     flex-direction: row;
 }
-.button-splash{
-    margin:25px;
-    background-color: $tan-background;
-    padding: 10px 25px 10px 25px;
-    border: 1px solid $dark-brown-accents;
-    border-radius: 3px;
-}
-
-.content-splash{
-    width: 40%;
-    margin: 65px;
-    line-height: 1.6;
-    font-size: 25px;
-}
-
-.background-img{
-    z-index: -999;
-    position: absolute;
-}

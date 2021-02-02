@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import {connect} from 'react-redux';
 import SignupContainer from '../../components/session/signup_container';
+import LoginContainer from '../../components/session/login_container';
 
 function Modal ({modal, closeModal}) {
     if (!modal) {
@@ -31,6 +32,7 @@ function Modal ({modal, closeModal}) {
 }
 
 const mstp = state => {
+    debugger
     return {
         modal: state.ui.modal
     }

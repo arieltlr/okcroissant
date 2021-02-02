@@ -1,22 +1,31 @@
 import React from 'react';
 
+
 // onclickk
-const NavSplash = () =>{
-    return (
-        // <div className="master">
+class NavSplash extends React.Component{
+    constructor(props){
+        super(props)
+        debugger
+    }
+
+    render(){
+        debugger
+        return (
+            // <div className="master">
             <nav className="splash-nav">
-                <img className="logo" src="" alt="okCrossiantLogo"/>
+                <img className="logo" src="" alt="okCrossiantLogo" />
                 <div className="button-master">
                     <div>
-                        <button className="button-splash">Login</button>
+                        <button className="button-splash" onClick={() => this.props.openModal('login')}>Login</button>
                     </div>
                     <div>
-                        <button className="button-splash">Sign Up</button>
+                        <button className="button-splash" onClick={() => this.props.openModal('signup')}>Sign Up</button>
                     </div>
                 </div>
             </nav>
-        // </div>
-    )
+            // </div>
+        )
+    }
 }
 
 export default NavSplash;
