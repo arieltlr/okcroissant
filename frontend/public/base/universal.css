@@ -112,3 +112,8 @@ div.button-master .button-splash{
     font-size: 20px;
     color: rgb(6, 98, 202);
 }
+button {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    border: none;
+}
