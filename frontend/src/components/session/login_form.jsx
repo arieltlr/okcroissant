@@ -42,27 +42,43 @@ class LoginForm extends React.Component {
     }
 
     render() {
+        let emailError;
+        let passwordError;
+        let emailErrorBoolean;
+        let passwordErrorBoolean;
+
+        const errorMessages = Object.keys(this.state.errors).map((error, index)=> {
+            if (error.includes("Email")){
+                emailErrorBoolean = true;
+                emailError = this.state.errors[error];
+            } else {
+                passwordErrorBoolean = true;
+                passwordError = this.state.errors[error];
+            }
+        })
+
         return (
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
-                        <input type="text"
-                            value={this.state.email}
+                        <div className="input-container">
+                        <p className="input-label">Username</p>
+                        <input  className="form-input" type="text"
+                            defaultValue={this.state.username}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
-                        <br/>
-                        <input type="password"
-                            value={this.state.password}
+                        {emailErrorBoolean ? <p className="error">{emailError}</p> : null}
+                        </div>
+                        <div className="input-container">
+                            <p className="input-label">Password</p>
+                            <input className="form-input" type="password"
+                            defaultValue={this.state.password}
                             placeholder="Password"
                             />
-                        <br/>
-                        <input type="password"
-                            value={this.state.password2}
-                            placeholder="Confirm Password"
-                        />
-                        <button className="form-submit">Create Account</button>
-                        <br/>
+                        {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
+                        </div>
+                        <button className="form-submit">Log in</button>
                         {this.props.otherForm}
                     </div>
                 </form>

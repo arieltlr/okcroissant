@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import '../../../public/base/variables.scss';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,4 +46,14 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+input {
+    border-radius: 15px;
+    border: solid 2px $background-grey;
+
+}
+input:focus {
+  outline: none; 
+  box-shadow: 0px 0px 0px 3px $blue-highlight;
+              
 }
