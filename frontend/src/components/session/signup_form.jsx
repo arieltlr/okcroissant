@@ -27,48 +27,65 @@ class SignupForm extends React.Component {
             password: this.state.password,
             password2: this.state.password2,
         }
-        // debugger
+        debugger
         this.props.signup(user)
-            .then(() => this.props.closeModal())
+            .then(this.props.closeModal)
     }
     
-    showErrors() {
-        return (
-            <ul>
-                {Object.keys(this.state.errors).map((error, index) => {
-                    return(
-                        <li key={`error-${index}`}>
-                            {this.state.errors[error]}
-                        </li>
-                    )
-                })};
-            </ul>
-        );
-    }
+
 
     render() {
+        let usernameError;
+        let passwordError;
+        let usernameErrorBoolean;
+        let passwordErrorBoolean;
+
+        const errorMessages = Object.keys(this.props.errors).map((error, index)=> {
+            if (error.includes("Username")){
+                usernameErrorBoolean = true;
+                usernameError = this.props.errors[error];
+            } else {
+                passwordErrorBoolean = true;
+                passwordError = this.props.errors[error];
+            }
+        })
+        debugger
         return (
             <div className="signup-form-container">
+                <div className="logo-container">
+                    <div className="logo">
+                    </div>
+                    <h2 className="form-brand">OkCroissant</h2>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
-                        <input type="text"
-                            value={this.state.username}
+                        <div className="input-container">
+                        <p className="input-label">Username</p>
+                        <input  className="form-input" type="text"
+                            defaultValue={this.state.username}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
-                        <br/>
-                        <input type="password"
-                            value={this.state.password}
+                        {usernameErrorBoolean ? <p className="error">{usernameError}</p> : null}
+                        </div>
+                        <div className="input-container">
+                            <p className="input-label">Password</p>
+                            <input className="form-input" type="password"
+                            defaultValue={this.state.password}
                             onChange={this.update('password')}
                             placeholder="Password"
                             />
-                        <br/>
-                        <input type="password"
-                            value={this.state.password2}
+                        {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
+                        </div>
+                        <div className="input-container">
+                            <p className="input-label">Confirm Password</p>
+                            <input className="form-input" type="password"
+                            defaultValue={this.state.password2}
                             onChange={this.update('password2')}
                             placeholder="Confirm Password"
-                        />
-                        <br/>
+                            />
+                        {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
+                        </div>
                         <button className="form-submit">Create Account</button>
                         <br/>
                         {this.props.otherForm}

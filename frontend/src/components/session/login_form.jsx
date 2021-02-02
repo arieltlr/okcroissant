@@ -6,8 +6,7 @@ class LoginForm extends React.Component {
         super(props);
         this.state = {
             username: '',
-            password: '',
-            errors: {}
+            password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
@@ -28,30 +27,17 @@ class LoginForm extends React.Component {
         this.props.login(user).then(this.props.closeModal())
     }
     
-    showErrors() {
-        return (
-            <ul>
-                {Object.keys(this.state.errors).map((error, index) => {
-                    return(
-                        <li key={`error-${index}`}>
-                            {this.state.errors[error]}
-                        </li>
-                    )
-                })};
-            </ul>
-        );
-    }
 
     render() {
-        let emailError;
+        let usernameError;
         let passwordError;
-        let emailErrorBoolean;
+        let usernameErrorBoolean;
         let passwordErrorBoolean;
 
-        const errorMessages = Object.keys(this.state.errors).map((error, index)=> {
-            if (error.includes("Email")){
-                emailErrorBoolean = true;
-                emailError = this.state.errors[error];
+        const errorMessages = Object.keys(this.props.errors).map((error, index)=> {
+            if (error.includes("Username")){
+                usernameErrorBoolean = true;
+                usernameError = this.state.errors[error];
             } else {
                 passwordErrorBoolean = true;
                 passwordError = this.state.errors[error];
@@ -60,6 +46,11 @@ class LoginForm extends React.Component {
 
         return (
             <div className="signup-form-container">
+                <div className="logo-container">
+                    <div className="logo">
+                    </div>
+                    <h2 className="form-brand">OkCroissant</h2>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
                         <div className="input-container">
@@ -69,7 +60,7 @@ class LoginForm extends React.Component {
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
-                        {emailErrorBoolean ? <p className="error">{emailError}</p> : null}
+                        {usernameErrorBoolean ? <p className="error">{usernameError}</p> : null}
                         </div>
                         <div className="input-container">
                             <p className="input-label">Password</p>
