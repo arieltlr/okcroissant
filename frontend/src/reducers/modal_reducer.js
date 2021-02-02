@@ -11,6 +11,8 @@ const modalReducer = (state=null, action) => {
             return null;
         case RECEIVE_USER_SIGN_IN:
             return null;
+        case RECEIVE_CURRENT_USER:
+            return null;
         default:
             return state;
     }
