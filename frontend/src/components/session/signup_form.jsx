@@ -28,11 +28,6 @@ class SignupForm extends React.Component {
         }
         debugger
         this.props.signup(user)
-<<<<<<< HEAD
-            .then(() => this.props.closeModal())
-            .then(this.props.history.push('/main'))
-=======
->>>>>>> cc35fe9277d90aaef39a6c601ac481fb4b98d0c6
     }
     componentWillUnmount(){
         const resetErrors = {};

@@ -12,12 +12,7 @@ const App = () => (
     
     <div>
         <Modal/>
-<<<<<<< HEAD
-        {/* <NavBarContainer /> */}
-        
-=======
         <NavBar/>
->>>>>>> main
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
             <ProtectedRoute exact path="/main" component={MainPage}/>
