@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
             username: this.state.email,
             password: this.state.password,
         }
-        this.props.login(user, this.props.history)
+        this.props.login(user).then(this.props.closeModal())
     }
     
     showErrors() {
