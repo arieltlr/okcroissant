@@ -4,6 +4,7 @@ import SignupForm from './signup_form';
 import {openModal, closeModal} from '../../actions/modal_actions'; 
 
 const mapStateToProps = (state) => {
+  debugger
   return {
     signedIn: state.session.isSignedIn,
     errors: state.errors.session

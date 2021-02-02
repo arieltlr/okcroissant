@@ -21,10 +21,11 @@ class LoginForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         let user = {
-            username: this.state.email,
+            username: this.state.username,
             password: this.state.password,
         }
-        this.props.login(user, this.props.history)
+        debugger
+        this.props.login(user).then(this.props.closeModal())
     }
     
     showErrors() {
@@ -64,7 +65,7 @@ class LoginForm extends React.Component {
                         <div className="input-container">
                         <p className="input-label">Username</p>
                         <input  className="form-input" type="text"
-                            defaultValue={this.state.username}
+                            value={this.state.username}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
@@ -73,7 +74,8 @@ class LoginForm extends React.Component {
                         <div className="input-container">
                             <p className="input-label">Password</p>
                             <input className="form-input" type="password"
-                            defaultValue={this.state.password}
+                            value={this.state.password}
+                            onChange={this.update('password')}
                             placeholder="Password"
                             />
                         {passwordErrorBoolean ? <p className="error">{passwordError}</p> : null}
