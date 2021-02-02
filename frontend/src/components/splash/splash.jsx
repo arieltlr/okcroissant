@@ -10,7 +10,7 @@ class SplashPage extends React.Component {
     }
     render() {
         return (
-            <div class="universal">
+            <div className="universal">
                 <NavSplashContainer/>
                 <p className="content-splash">
                     OkCroissant is a premium worlwide bread concierge that delivers bread from all over the world through a premium overnight international jet to your door. 

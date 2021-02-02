@@ -29,7 +29,7 @@
 
 /* // applying to all elements */
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .master-nav{
@@ -65,10 +65,10 @@ div.button-master .button-splash{
 }
 
 p.content-splash{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 25px;
     padding: 15px;
-    height: 450px;
+    height: 485px;
     width: 60%;
     font-size: 37px;
     line-height: 1.5;
@@ -97,13 +97,13 @@ p.content-splash{
     
 }
 .column{
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 15px;
     background-color: #fbf6f77a;
     border-radius: 20px;
 }
 .column h1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
     padding-bottom: 10px;
 }
