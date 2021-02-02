@@ -9,6 +9,7 @@ const App = () => (
     <div>
         <Modal/>
         {/* <NavBarContainer /> */}
+        
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
         </Switch>
