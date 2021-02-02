@@ -12,7 +12,6 @@ const App = () => (
         {/* <NavBarContainer /> */}
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
-
         </Switch>
     </div>
 );

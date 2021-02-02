@@ -30,6 +30,7 @@ class SignupForm extends React.Component {
         debugger
         this.props.signup(user)
             .then(() => this.props.closeModal())
+            .then(this.props.history.push('/main'))
     }
     
     showErrors() {
