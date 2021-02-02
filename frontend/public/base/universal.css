@@ -1,14 +1,6 @@
 
-
-
 /* DEFAULT */
- button{
-     /* // easred all button settings */
-        margin: 10px;
-        border: none;
-        outline:none;
-        background: none;
-};
+
 /* VARIABLES
 :root {
     colors
@@ -37,6 +29,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #fbf6f77a;
+    padding: 50px 25px 10px 25px;
 }
 /* SPLASH NAV */
 img.logo{
@@ -64,9 +58,8 @@ div.button-master .button-splash{
     cursor: pointer;
 }
 
-p.content-splash{
+.content-splash{
     font-family: 'Raleway', sans-serif;
-    margin: 25px;
     padding: 15px;
     height: 485px;
     width: 60%;
@@ -76,6 +69,7 @@ p.content-splash{
     background-color: #fbf6f77a;
     border-radius: 30px;
     overflow:hidden;
+    margin-left: 50px;
 }
 
 .universal{
@@ -117,4 +111,9 @@ p.content-splash{
 .footer-lst a:hover{
     font-size: 20px;
     color: rgb(6, 98, 202);
+}
+button {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    border: none;
 }
