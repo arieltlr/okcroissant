@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import MainPage from './main';
-
-// this is for the mainnavbar 
+// THIS IS THE MAIN SPLASH CONTAINER!!!!
 const msp = (state, ownProps) => {
     return {
     }
