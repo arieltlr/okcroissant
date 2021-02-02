@@ -32,6 +32,10 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.14",
+<<<<<<< HEAD
+=======
+    "node-sass": "^4.14.1",
+>>>>>>> 240e82640b28725019faeea47bb7c9e9d83f6529
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "validator": "^13.5.2"

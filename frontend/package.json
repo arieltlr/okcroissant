@@ -9,6 +9,10 @@
     "@testing-library/user-event": "^12.6.2",
     "axios": "^0.21.1",
     "jwt-decode": "^3.1.2",
+<<<<<<< HEAD
+=======
+    "node-sass": "^4.14.1",
+>>>>>>> 240e82640b28725019faeea47bb7c9e9d83f6529
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
