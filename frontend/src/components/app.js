@@ -4,7 +4,6 @@ import { AuthRoute } from '../util/route_util'; //ProctedRoute
 import { Switch, Route } from 'react-router-dom'; //Route
 import SplashPage from './splash/splash';
 import Modal from './modal/modal'
-import '../css/style.scss';
 
 const App = () => (
     <div>

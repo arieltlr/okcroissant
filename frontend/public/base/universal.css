@@ -1,0 +1,120 @@
+
+
+
+/* DEFAULT */
+ button{
+     /* // easred all button settings */
+        margin: 10px;
+        border: none;
+        outline:none;
+        background: none;
+};
+/* VARIABLES
+:root {
+    colors
+  -- #FFC237;
+  
+  --blue-highlight:#379EFF;
+  --blue-splash:rgb(6, 98, 202);
+  --background-grey: rgba(50, 50, 50, 0.17);
+  Margin (default)
+  50px
+
+  Used Color
+  --button:hover #fad888 
+  --button background#FAEFD6;
+  --button outline: #352500;
+} */
+
+
+/* // applying to all elements */
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.master-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* SPLASH NAV */
+img.logo{
+    padding: 10px 20px 10px 20px;
+    height: 60px;
+}
+
+div.button-master{
+    
+}
+div.button-master .button-splash{
+    background-color: #FAEFD6;
+    border: 1px solid #352500;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    margin-right: 30px;
+    
+}
+
+.button-master .button-splash:hover{
+    background-color: #fad888;
+    border: 1px solid #352500;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+p.content-splash{
+    font-family: 'Raleway', sans-serif;
+    margin: 25px;
+    padding: 15px;
+    height: 485px;
+    width: 60%;
+    font-size: 37px;
+    line-height: 1.5;
+    color: #2b2620;
+    background-color: #fbf6f77a;
+    border-radius: 30px;
+    overflow:hidden;
+}
+
+.universal{
+    background-color:  #2b2620;
+    background-image: url(../img/background.jpg);
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* resizes the background imge to cover the entire container*/
+    
+}
+
+.footer-master{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+    
+}
+.column{
+    margin-top: 150px;
+    padding: 15px;
+    background-color: #fbf6f77a;
+    border-radius: 20px;
+}
+.column h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.footer-lst a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(3, 76, 100);
+    padding-bottom: 10px;
+}
+
+.footer-lst a:hover{
+    font-size: 20px;
+    color: rgb(6, 98, 202);
+}
