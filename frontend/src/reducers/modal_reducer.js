@@ -1,5 +1,5 @@
 import { OPEN_MODAL, CLOSE_MODAL} from '../actions/modal_actions';
-import { RECEIVE_USER_SIGN_IN } from '../actions/session_actions'
+import { RECEIVE_USER_SIGN_IN, RECEIVE_CURRENT_USER } from '../actions/session_actions'
 
 const modalReducer = (state=null, action) => {
     Object.freeze(state);
