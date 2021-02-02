@@ -53,14 +53,14 @@ router.patch('/:breadprofile_id',
             if (!isValid) {
                 return res.status(400).json(errors);
             }
-            debugger
+            // debugger
             Breadprofile.findByIdAndUpdate(
                 req.params.breadprofile_id,
                 req.body,
                 {new: true},
 
                 (err, profile) =>{
-                    debugger
+                    // debugger
                     if(err) return res.status(500).send(err);
                     return res.send(profile);
                 }

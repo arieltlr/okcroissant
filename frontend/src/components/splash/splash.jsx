@@ -7,7 +7,7 @@ import Footer from './footer';
 class SplashPage extends React.Component {
     constructor(props){
         super(props)
-        debugger
+        // debugger
     }
     render() {
         return (
