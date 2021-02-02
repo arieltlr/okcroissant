@@ -4,14 +4,16 @@ import { AuthRoute } from '../util/route_util'; //ProctedRoute
 import { Switch, Route } from 'react-router-dom'; //Route
 import SplashPage from './splash/splash';
 import Modal from './modal/modal'
+import NavBar from './mainNav/nav_container';
+import "./css/test.scss"
 
 const App = () => (
+    
     <div>
         <Modal/>
-        {/* <NavBarContainer /> */}
+        <NavBar/>
         <Switch>
             <AuthRoute exact path="/" component={SplashPage} />
-
         </Switch>
     </div>
 );
