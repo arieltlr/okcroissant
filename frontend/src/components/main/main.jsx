@@ -33,6 +33,7 @@ class MainPage extends React.Component {
             className: "slider variable-width",
         };
         let items;
+        const arrayId = this.props.breads.map(bread => bread._id)
             items = this.props.breads.map((bread, i) => {
                 debugger
                 return (
