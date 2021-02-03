@@ -26,7 +26,7 @@ class SignupForm extends React.Component {
             password2: this.state.password2,
         }
         // debugger
-        this.props.signup(user)
+        this.props.signup(user).then(user=>this.props.history.push('/main'))
     }
     componentWillUnmount(){
         const resetErrors = {};
