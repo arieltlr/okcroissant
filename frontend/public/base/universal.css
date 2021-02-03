@@ -88,6 +88,7 @@ div.button-master .button-splash{
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 80px;
+    background-color: #faefd6;
     
 }
 .column{
