@@ -5,10 +5,9 @@ export const getBreadprofileResponses = (userId) =>{
 };
 
 export const createBreadprofile = (breadprofile) =>{
-    // debugger
     return axios.post(`/api/breadprofile`, breadprofile)
 };
 
 export const updateBreadprofile = (breadprofile) =>{
-    return axios.post(`/api/breadprofile/${breadprofile.id}`, breadprofile)
+    return axios.patch(`/api/breadprofile/${breadprofile.id}`, breadprofile)
 };

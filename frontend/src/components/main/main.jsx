@@ -13,7 +13,7 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.bread
-        debugger
+        // debugger
     }
 
     componentDidMount(){
@@ -33,12 +33,12 @@ class MainPage extends React.Component {
             className: "slider variable-width",
         };
         let items;
-        const arrayId = this.props.breads.map(bread => bread._id)
+        // const arrayId = this.props.breads.map(bread => bread._id)
             items = this.props.breads.map((bread, i) => {
                 debugger
                 return (
                     <div className="carasal" key={i}>
-                        <img className="bread-carasal" width="100%" src={bread.image} />
+                        <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>
                         <div className="master">
                             <div className="bread-description-main">
                                 <p className="bread-description">{bread.description}</p>

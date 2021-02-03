@@ -6,7 +6,7 @@ class BreadShow extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.fetchABread(this.props.match.params.breadId)
     }
 
@@ -32,7 +32,6 @@ class BreadShow extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <p>${bread.price}</p>
                     </div>
                     <div>
                         <button>Add to Cart</button>

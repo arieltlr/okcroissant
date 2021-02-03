@@ -17,7 +17,7 @@ export default function(state = initialState, action) {
         user: action.currentUser
       };
     case RECEIVE_USER_LOGOUT:
-      debugger
+      // debugger
       return {
         isAuthenticated: false,
         user: undefined
