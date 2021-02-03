@@ -11,7 +11,7 @@ router.post('/',
         passport.authenticate('jwt', { session: false }),
         (req, res) => {
             Breadprofile.findOne({user: req.user.id}).then(user =>{
-                debugger
+                // debugger
                 if(user){
                     return res.status(400).json({user: "Bread profile created already!"})
                 }else{
