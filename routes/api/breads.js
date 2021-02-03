@@ -29,14 +29,6 @@ router.post('/',
     }   
 );
 
-router.get("/:bread_id", (req, res) => {
-    Bread.findById(req.params.bread_id)
-        .then(bread => res.json(bread))
-        .catch(err => 
-            res.status(400).json({ nobreadfound: 'No bread found with that id!' })
-        );
-});
-
 router.get("/matches", (req, res) => {
     Bread.find({ 
         thin: { $eq: req.body.thin },
@@ -46,6 +38,14 @@ router.get("/matches", (req, res) => {
     })
         .then(breads => res.json(breads));
 })
+
+router.get("/:bread_id", (req, res) => {
+    Bread.findById(req.params.bread_id)
+        .then(bread => res.json(bread))
+        .catch(err => 
+            res.status(400).json({ nobreadfound: 'No bread found with that id!' })
+        );
+});
 
 router.get("/", (req, res) => {
     Bread.aggregate(

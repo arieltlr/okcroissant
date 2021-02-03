@@ -12,5 +12,6 @@ export const fetchBread = breadId => {
 
 //bread suggestion based on profile 
 export const fetchSuggestedBreads = (breadData) => {
+    debugger
     return axios.get(`/api/breads/matches`, breadData)
 }

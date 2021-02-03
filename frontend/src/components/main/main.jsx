@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import MainImage from "../../images/main-img1.jpg"
 import MainImage2 from "../../images/main-img2.jpg"
 import MainImage3 from "../../images/image3.jpg"
+import { Link } from 'react-router-dom';
 // THIS IS THE MAIN SPLASH 
 // onclickk
 class MainPage extends React.Component {
@@ -31,10 +32,9 @@ class MainPage extends React.Component {
             slidesToScroll:1,
             className: "slider variable-width",
         };
-        const arrayed = this.props.breads[0]
         let items;
-        if (arrayed !== undefined) {
-            items = arrayed.map((bread, i) => {
+            items = this.props.breads.map((bread, i) => {
+                debugger
                 return (
                     <div className="carasal" key={i}>
                         <img className="bread-carasal" width="100%" src={bread.image} />
@@ -47,13 +47,14 @@ class MainPage extends React.Component {
                                 <p className="bread-origin">From:{bread.origin}</p>
                             </div>
                             <div className="position-button">
-                                <button>Show Page Button</button>
+                                <Link to={`/bread/${bread._id}`} >
+                                    Show Page Button
+                                </Link>
                             </div>
                         </div>
                     </div>
                 )
             })
-        }
         
         return (
             <div>
