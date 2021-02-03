@@ -11,7 +11,7 @@ class MainNavBar extends React.Component {
 
     componentDidMount(){
         this.props.fetchUser(this.props.currentUser);
-        debugger
+        // debugger
     }
 
     handleLogout(e){

@@ -27,10 +27,8 @@ class NewProfile extends React.Component{
         event.preventDefault();
         let newState =Object.assign({}, this.state);
         delete newState['currentPage'];
-        // debugger;
         this.props.createBreadProfile(newState)
             .then((project)=>{
-                // debugger
                 return  this.props.history.push(`/main`)})
     }
     handleChange(event){
