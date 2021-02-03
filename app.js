@@ -6,8 +6,9 @@ const db = require("./config/keys").mongoURI
 const users = require("./routes/api/users")
 const breadprofile = require('./routes/api/breadprofile')
 const breads = require('./routes/api/breads');
-const cartitems =  require('./routes/api/cartitems')
+const cartitems =  require('./routes/api/cartitems');
 const path = require('path');
+const reviews = require('./routes/api/reviews');
 
 
 const passport = require('passport');
@@ -40,6 +41,7 @@ app.use("/api/users", users);
 app.use("/api/breadprofile", breadprofile);
 app.use("/api/breads", breads);
 app.use("/api/cartitems", cartitems);
+app.use('/api/reviews', reviews)
 
 const port = process.env.PORT || 5000;
 
