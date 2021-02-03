@@ -9,7 +9,7 @@
     z-index: 10;
 }
 
-.signup-modal, .login-modal {
+.signup-modal, .login-modal, .edit-bprofile-modal {
     width: 400px;
     height: 400px;
     position: absolute;
@@ -27,6 +27,9 @@
 }
 .signup-modal {
     height: 500px;
+}
+.edit-bprofile-modal {
+    height: 650px;
 }
 .logo-container {
     display: flex;

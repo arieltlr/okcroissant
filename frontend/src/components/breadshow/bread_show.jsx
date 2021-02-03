@@ -6,7 +6,7 @@ class BreadShow extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.fetchABread(this.props.match.params.breadId)
     }
 

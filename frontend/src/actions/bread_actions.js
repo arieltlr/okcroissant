@@ -32,12 +32,12 @@ export const fetchABread = (breadId) => dispatch => (
 )
 
 export const fetchSuggestBreads = breadData => dispatch => {
-    debugger
+    // debugger
     return BreadApiUtil.fetchSuggestedBreads(breadData)
         .then(breads => {
-            debugger
+            // debugger
             dispatch(receiveSuggestedBread(breads))})
         .catch(err => {
-            debugger
+            // debugger
             console.log(err)})
 }

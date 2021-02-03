@@ -8,7 +8,7 @@ const breadReducer = (state = {}, action) => {
         case RECEIVE_A_BREAD:
             return Object.assign({}, state, { [action.bread.id]: action.bread })
         case RECEIVE_SUGGESTED_BREADS:
-            debugger
+            // debugger
             return action.breads.data
         default: 
             return state;

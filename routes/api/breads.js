@@ -30,7 +30,6 @@ router.post('/',
 );
 
 router.get("/matches", (req, res) => {
-    console.log(req.query)
     Bread.find({ 
         thin: { $eq: req.query.thin },
         wholewheat: { $eq: req.query.wholewheat }, 
@@ -38,7 +37,6 @@ router.get("/matches", (req, res) => {
         filling: { $eq: req.query.filling }
     })
         .then(breads => {
-            console.log(breads)
             return res.json(breads)});
 })
 

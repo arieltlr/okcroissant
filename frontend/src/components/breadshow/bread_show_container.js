@@ -3,7 +3,7 @@ import BreadShow from './bread_show';
 import { fetchABread } from '../../actions/bread_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         bread: state.bread[ownProps.match.params.breadId]
     }

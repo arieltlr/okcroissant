@@ -1,5 +1,6 @@
 import { OPEN_MODAL, CLOSE_MODAL} from '../actions/modal_actions';
-import { RECEIVE_USER_SIGN_IN, RECEIVE_CURRENT_USER } from '../actions/session_actions'
+import { RECEIVE_USER_SIGN_IN, RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_BREAD_PROFILE_RESPONSES } from '../actions/bread_profile_actions';
 
 const modalReducer = (state=null, action) => {
     Object.freeze(state);
@@ -12,6 +13,8 @@ const modalReducer = (state=null, action) => {
         case RECEIVE_USER_SIGN_IN:
             return null;
         case RECEIVE_CURRENT_USER:
+            return null;
+        case RECEIVE_BREAD_PROFILE_RESPONSES:
             return null;
         default:
             return state;

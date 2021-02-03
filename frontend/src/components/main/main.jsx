@@ -13,7 +13,7 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.bread
-        debugger
+        // debugger
     }
 
     componentDidMount(){
@@ -34,7 +34,7 @@ class MainPage extends React.Component {
         };
         let items;
             items = this.props.breads.map((bread, i) => {
-                debugger
+                // debugger
                 return (
                     <div className="carasal" key={i}>
                         <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>

@@ -11,8 +11,7 @@ class SuggestedSlider extends React.Component {
     }
 
     render() {
-        debugger
-        const { breads } = this.props;
+        // debugger
         const settings = {
             dots: true, 
             infinite: true,
