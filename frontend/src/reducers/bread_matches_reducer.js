@@ -1,4 +1,4 @@
-import { RECEIVE_BREAD_MATCHES } from '../actions/bread_actions'
+import { RECEIVE_BREAD_MATCHES } from '../actions/bread_profile_actions'
 import { RECEIVE_BREAD_PROFILE_RESPONSES } from '../actions/bread_profile_actions';
 
 const breadMatchesReducer = (state= {}, action) => {

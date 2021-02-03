@@ -8,12 +8,13 @@ import Page4 from './page4'
 class NewProfile extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-            currentPage = 1,
-            thin = false,
-            wholewheat = false,
-            filling = false,
-            savory = false
+        this.state = {
+            currentPage: 1,
+            thin: false,
+            wholewheat: false,
+            filling: false,
+            savory: false,
+
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +29,7 @@ class NewProfile extends React.Component{
         delete newState['currentPage'];
         this.props.createProfile(newState)
             .then((project)=>{
-                return  this.props.history.push(``)})
+                return  this.props.history.push(`/main`)})
     }
     handleChange(event){
         const {name, value} = event.target;
@@ -146,6 +147,7 @@ class NewProfile extends React.Component{
     }
 
     render(){
+        return (
         <div className = 'profile-block'>
             <div className = 'profile-container'>
                 <h2>{this.state.currentPage} of 4</h2>
@@ -179,6 +181,7 @@ class NewProfile extends React.Component{
                 </div>
             </div>
         </div>
+        )
     }
 }
 

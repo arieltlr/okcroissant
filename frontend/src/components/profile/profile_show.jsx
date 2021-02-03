@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 
 class ProfileShow extends React.Component {
     constructor(props) {
@@ -12,6 +12,7 @@ class ProfileShow extends React.Component {
                 <h1>
                     Profile show!
                 </h1>
+                <Link to='/createBreadprofile'>Create Profile</Link>
             </div>
         )
     }
