@@ -37,7 +37,7 @@ class MainPage extends React.Component {
                 debugger
                 return (
                     <div className="carasal" key={i}>
-                        <img className="bread-carasal" width="100%" src={bread.image} />
+                        <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>
                         <div className="master">
                             <div className="bread-description-main">
                                 <p className="bread-description">{bread.description}</p>
