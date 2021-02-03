@@ -8,8 +8,10 @@ import NavBar from './mainNav/nav_container';
 import "./css/css_imports.scss";
 import MainPage from './main/main_container';
 import ProfileShowContainer from './profile/profile_show_container';
-import create_profile_container from '../components/profile/create_profile_container';
+import create_profile_container from '../components/profile/create_profile_container'
+import BreadShowContainer from './breadshow/bread_show_container';
 
+import cart from "./cart/cart_container"
 const App = () => (
     
     <div>
@@ -20,6 +22,9 @@ const App = () => (
             <ProtectedRoute exact path="/main" component={MainPage}/>
             <ProtectedRoute exact path="/profile" component={ProfileShowContainer} />
             <ProtectedRoute exact path="/createBreadprofile" component={create_profile_container} />
+            <Route exact path="/bread/:breadId" component={BreadShowContainer} />
+
+            <ProtectedRoute exact path="/cart" component={cart}/>
         </Switch>
     </div>
 );

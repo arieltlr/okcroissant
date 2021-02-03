@@ -6,8 +6,8 @@ class SuggestedSlider extends React.Component {
         super(props);
     }
 
-    componentDidMount(){
-        this.props.fetchSuggestBreads(this.props.breadprofile);
+    componentDidUpdate(){
+        this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
     render() {
