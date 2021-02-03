@@ -4,7 +4,7 @@ import NavBar from './nav'
 // this is for the nav.jsx to see if a user is signed in
 
 const msp = (state, ownProps) => {
-    debugger
+    // debugger
     return{
         isAuthenticated : state.session.isAuthenticated
     }

@@ -8,19 +8,39 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-top: 30px;
 }
 .name-container {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 .profile-pic {
-    height: 200px;
-    width: 200px;
-    background-image: url('pexels-mariana-kurnyk-many_breads.jpg');
+    height: 260px;
+    width: 260px;
+    background-image: url('../../images/pexels-mariana-kurnyk-many_breads.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
+        
+}
+.display-username, .user-info-container {
+            margin-top: 8px;
+            font-size: 34px;
+            font-family: 'Raleway', sans-serif;
+            color: tan;
+        }
+.user-info-container {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.link-to-form {
+    margin-top: 60px;
+    text-decoration: none;
+    color: tan;
+    margin-bottom: 60px;
 }
