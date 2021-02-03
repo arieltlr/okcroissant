@@ -3,6 +3,8 @@
 /config/keys_dev.js
 /config/keys_prod.js
 /config/keys.js
-package-lock.json
-package.json
+
+
 .eslintcache
+package.json
+package-lock.json
