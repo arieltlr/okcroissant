@@ -11,16 +11,16 @@ class Page2 extends React.Component{
                             value = {this.props.wholewheat}
                             onChange = {this.props.handleChange}>
                         <option  hidden disabled> Select your answer </option>
-                        <option value='true'> True </option>
-                        <option value='false'> False </option>
+                        <option value='true'>Healthy Whole Grains</option>
+                        <option value='false'>Indulgent White Flour</option>
                         </select>
         return(
             <div className = 'inner-page-blcok'>
                 <div className = 'inter-page-container'>
-                        <p>Is your bread wholewheat?</p>
-                        <div>
-                            {selector}
-                        </div>            
+                        <h2 className="question-text">Wheat Berries and Wholegrains</h2>
+                        <h2>Or</h2>
+                        <h2>Pristine and Refined White Flour?</h2>
+                        {selector}          
                 </div>
             </div>
         )

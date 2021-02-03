@@ -1,0 +1,102 @@
+.profile-block {
+    height: 100%;
+    width: 100%;
+}
+.profile-block::after {
+    content: "";
+    background-image: url('../../images/natsuki-buns2-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+.profile-container {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    left: 425px;
+    border: 4px solid tan;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    opacity: 0.8; 
+}
+.profile-form-container {
+    width: 100%;
+    height: 100%;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-message {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    color: rgb(89, 89, 89);
+    margin-top: 26px;
+}
+.inter-page-container {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: rgb(89, 89, 89);
+        margin-top: 10px;
+        text-align: center;
+    }
+    select {
+        margin-top: 8px;
+        height: 40px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid tan;
+        // color: (rgb(228, 171, 95), white);
+        font-size: 16px;
+        color: rgb(89, 89, 89);
+    }
+    select:focus{
+        outline: none; 
+        box-shadow: 0px 0px 0px 3px rgb(228, 171, 95);
+    }
+}
+.form-buttons {
+    margin-top: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.next-page-button, .prev-page-button {
+    background-color: tan;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    margin-top: -30px;
+    width: 220px;
+}
+button:focus {
+    border-radius: 10px;
+    outline: none; 
+    box-shadow: 0px 0px 0px 3px rgb(228, 171, 95);
+
+}
+button:hover {
+    cursor: pointer;
+}

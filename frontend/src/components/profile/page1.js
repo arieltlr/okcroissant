@@ -13,17 +13,16 @@ class Page1 extends React.Component{
                             onChange = {this.props.handleChange}>
                         <option defaultValue='Select your answer' hidden disabled > Select your answer </option>
                         
-                        <option value='true'> True </option>
-                        <option value='false'> False </option>
+                        <option value='true'>Thin bread for me</option>
+                        <option value='false'>Let it rise</option>
                         </select>
         return(
             <div className = 'inner-page-blcok'>
                 <div className = 'inter-page-container'>
-                        <h2>First, let's get you set up.</h2>
-                        <p>Is your bread thin?</p>
-                        <div>
-                            {selector}
-                        </div>            
+                        <h2 className="question-text">Fluffy, Yeasty, and Tall</h2>
+                        <h2>Or</h2>
+                        <h2>Thin, Flat and Delicious?</h2>
+                        {selector}          
                 </div>
             </div>
         )
