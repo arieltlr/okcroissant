@@ -29,8 +29,30 @@ router.post('/',
     }
 );
 
-router.post('/mm', 
-  
+router.get('/user/:user_id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        CartItem.find({user: req.params.user_id})
+            .then(breadprofile => res.json(breadprofile))
+            .catch(err => 
+                    res.status(404).json({ noItemFound: 'No Item Found' })
+                )
+})
+
+
+
+router.delete('/:item_id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        CartItem.findByIdAndDelete(req.params.item_id, function (err, item) { 
+            if (err){ 
+                res.status(404).json({ noItemFound: 'No Item Found' });
+            } 
+            else{ 
+                res.json(item);
+            } 
+        })
+    }
 )
 
 module.exports = router;
