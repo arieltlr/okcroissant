@@ -31,8 +31,13 @@ export const fetchABread = (breadId) => dispatch => (
         .catch(err => console.log(err))
 )
 
-export const fetchSuggestBreads = breadData => dispatch => (
-    BreadApiUtil.fetchSuggestedBreads(breadData)
-        .then(breads => dispatch(receiveSuggestedBread(breads)))
-        .catch(err => console.log(err))
-)
+export const fetchSuggestBreads = breadData => dispatch => {
+    // debugger
+    return BreadApiUtil.fetchSuggestedBreads(breadData)
+        .then(breads => {
+            // debugger
+            dispatch(receiveSuggestedBread(breads))})
+        .catch(err => {
+            // debugger
+            console.log(err)})
+}

@@ -16,13 +16,13 @@ router.post('/',
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        debugger
+        // debugger
         const item = new CartItem({
             user: req.body.user_id,
             bread: req.body.bread_id,
             price: req.body.price
           });
-        debugger
+        // debugger
         item.save()
             .then(item => res.json(item))
             .catch(err =>res.status(400).json({ err }))

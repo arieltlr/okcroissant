@@ -29,6 +29,17 @@ router.post('/',
     }   
 );
 
+router.get("/matches", (req, res) => {
+    Bread.find({ 
+        thin: { $eq: req.query.thin },
+        wholewheat: { $eq: req.query.wholewheat }, 
+        savory: { $eq: req.query.savory },
+        filling: { $eq: req.query.filling }
+    })
+        .then(breads => {
+            return res.json(breads)});
+})
+
 router.get("/:bread_id", (req, res) => {
     Bread.findById(req.params.bread_id)
         .then(bread => res.json(bread))
@@ -36,16 +47,6 @@ router.get("/:bread_id", (req, res) => {
             res.status(400).json({ nobreadfound: 'No bread found with that id!' })
         );
 });
-
-router.get("/matches", (req, res) => {
-    Bread.find({ 
-        thin: { $eq: req.body.thin },
-        wholewheat: { $eq: req.body.wholewheat }, 
-        savory: { $eq: req.body.savory },
-        filling: { $eq: req.body.filling }
-    })
-        .then(breads => res.json(breads));
-})
 
 router.get("/", (req, res) => {
     Bread.aggregate(
