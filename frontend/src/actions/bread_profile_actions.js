@@ -3,23 +3,23 @@ import jwt_decode from 'jwt-decode';
 
 export const RECEIVE_BREAD_PROFILE_RESPONSES = "RECEIVE_BREAD_PROFILE_RESPONSES";
 
-export const receiveBreadMatches = responses => ({
+export const receiveProfileRes = responses => ({
     type: RECEIVE_BREAD_PROFILE_RESPONSES,
     responses
 });
 
 export const getBreadProfileResponses = userId => dispatch =>{
-    return APIUtil.getBreadprofileResponses(userId).then((breadMatches) => (
-        dispatch(receiveBreadMatches(breadMatches))
+    return APIUtil.getBreadprofileResponses(userId).then((responses) => (
+        dispatch(receiveProfileRes(responses))
     ))
 }
 export const createBreadProfile = breadProfile => dispatch => (
     APIUtil.createBreadprofile(breadProfile).then(breadProfile => (
-        dispatch(receiveBreadMatches(breadProfile))
+        dispatch(receiveProfileRes(breadProfile))
     ))  
 )
 export const updateBreadProfile = breadProfile => dispatch => (
     APIUtil.updateBreadprofile(breadProfile).then(breadProfile => (
-        dispatch(receiveBreadMatches(breadProfile))
+        dispatch(receiveProfileRes(breadProfile))
     ))  
 )
