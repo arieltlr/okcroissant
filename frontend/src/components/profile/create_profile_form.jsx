@@ -66,7 +66,7 @@ class NewProfile extends React.Component{
                     onClick = {this.next}
                     // disabled={!this.state.thin}
                 >
-                    Next: Wholewheat
+                    Next: Flour
                 </button>
             )
         }else if(this.state.currentPage === 2){
@@ -116,7 +116,7 @@ class NewProfile extends React.Component{
                     type ='button'
                     onClick={this.previous}
                 >
-                    ⬅ Thin
+                    ⬅ Height
                 </button>
             )
         }else if( this.state.currentPage === 3){
@@ -127,7 +127,7 @@ class NewProfile extends React.Component{
                     type ='button'
                     onClick={this.previous}
                 >
-                    ⬅ Wholewheat
+                    ⬅ Flour
                 </button>
             )
         }else if( this.state.currentPage === 4){
@@ -143,7 +143,7 @@ class NewProfile extends React.Component{
             )
         }else{
             return (
-                <p>Welcome back.</p>
+                null
             )
         }
     }
@@ -152,9 +152,13 @@ class NewProfile extends React.Component{
         return (
         <div className = 'profile-block'>
             <div className = 'profile-container'>
-                <h2>{this.state.currentPage} of 4</h2>
-                <div className='profile-form'>
-                    <form onSubmit={this.handleSubmit}>
+                <div className="welcome-message-container">
+                    
+                    {/* <h2>{this.state.currentPage} of 4</h2> */}
+                </div>
+                <div className='profile-form-container'>
+                    <form className="profile-form" onSubmit={this.handleSubmit}>
+                        <h1 className="welcome-message">Find Your Bread Matches!</h1>
                         <Page1 
                             currentPage = {this.state.currentPage}
                             handleChange = {this.handleChange}
@@ -176,10 +180,10 @@ class NewProfile extends React.Component{
                             savory = {this.state.savory}
                         />
                         <div className='form-buttons'>
-                            {this.prevButton()}
                             {this.nextButton()}
+                            {this.prevButton()}
                         </div> 
-                    </form>
+                    </form> 
                 </div>
             </div>
         </div>
