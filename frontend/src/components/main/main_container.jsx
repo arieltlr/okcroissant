@@ -4,7 +4,6 @@ import { fetchAllBreads } from '../../actions/bread_actions';
 
 // THIS IS THE MAIN SPLASH CONTAINER!!!!
 const msp = (state, ownProps) => {
-    debugger
     return {
         breads: Object.values(state.bread)
     }
