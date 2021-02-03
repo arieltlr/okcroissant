@@ -34,6 +34,10 @@ export const fetchABread = (breadId) => dispatch => (
 export const fetchSuggestBreads = breadData => dispatch => {
     debugger
     return BreadApiUtil.fetchSuggestedBreads(breadData)
-        .then(breads => dispatch(receiveSuggestedBread(breads)))
-        .catch(err => console.log(err))
+        .then(breads => {
+            debugger
+            dispatch(receiveSuggestedBread(breads))})
+        .catch(err => {
+            debugger
+            console.log(err)})
 }

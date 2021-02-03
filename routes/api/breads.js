@@ -30,13 +30,16 @@ router.post('/',
 );
 
 router.get("/matches", (req, res) => {
+    console.log(req.query)
     Bread.find({ 
-        thin: { $eq: req.body.thin },
-        wholewheat: { $eq: req.body.wholewheat }, 
-        savory: { $eq: req.body.savory },
-        filling: { $eq: req.body.filling }
+        thin: { $eq: req.query.thin },
+        wholewheat: { $eq: req.query.wholewheat }, 
+        savory: { $eq: req.query.savory },
+        filling: { $eq: req.query.filling }
     })
-        .then(breads => res.json(breads));
+        .then(breads => {
+            console.log(breads)
+            return res.json(breads)});
 })
 
 router.get("/:bread_id", (req, res) => {

@@ -86,3 +86,28 @@
       border: 1px solid $blue-border;
   }
 }
+.master-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbf6f77a;
+    padding: 50px 25px 10px 25px;
+
+    .button-splash{
+      background-color: #FAEFD6;
+      border: 1px solid #352500;
+      border-radius: 3px;
+      padding: 10px 20px 10px 20px;
+      margin-right: 30px;
+
+    }
+
+    .button-splash:hover{
+      background-color: #fad888;
+      border: 1px solid #352500;
+      border-radius: 3px;
+      padding: 10px 20px 10px 20px;
+      cursor: pointer;
+    }
+}
