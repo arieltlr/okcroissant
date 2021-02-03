@@ -25,8 +25,12 @@ router.post('/',
         debugger
         item.save()
             .then(item => res.json(item))
-            .catch(err =>res.status(400).json({ price: 'Price cannot be epmty' }))
+            .catch(err =>res.status(400).json({ err }))
     }
 );
+
+router.post('/mm', 
+  
+)
 
 module.exports = router;

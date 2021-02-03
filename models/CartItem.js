@@ -3,16 +3,15 @@ const Schema = mongoose.Schema;
 
 const CartItemSchema = new Schema({
     bread: {
-        type: String,
-        required: true
-
+        type: Schema.Types.ObjectId,
+        ref: 'breads'
     },
     user: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        ref: 'users'
     },
     price: {
-        type: String,
+        type: Number,
         required: true
     },
     date: {
