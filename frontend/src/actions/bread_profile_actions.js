@@ -14,11 +14,9 @@ export const getBreadProfileResponses = userId => dispatch =>{
     ))
 }
 export const createBreadProfile = breadProfile => dispatch => {
-    // debugger
-    return APIUtil.createBreadprofile(breadProfile).then(breadProfile => {
-        return 
+    return APIUtil.createBreadprofile(breadProfile).then(breadProfile => (
         dispatch(receiveProfileRes(breadProfile))
-    })  
+    ))  
     }
 export const updateBreadProfile = breadProfile => dispatch => (
     APIUtil.updateBreadprofile(breadProfile).then(breadProfile => (
