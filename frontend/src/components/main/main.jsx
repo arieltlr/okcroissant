@@ -15,6 +15,16 @@ class MainPage extends React.Component {
             <div>
                 <div className="slider">
                     <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    <div className="slide">bread item</div>
+                    
                 </div>
                 <div>
                     text box
