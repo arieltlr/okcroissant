@@ -3,7 +3,7 @@ import { getBreadProfileResponses, createBreadProfile, updateBreadProfile } from
 import ProfileShow from './profile_show';
 
 const mstp = (state) => {
-    debugger
+    // debugger
     return {
         breadProfile: state.breadProfile,
         user: state.session.user

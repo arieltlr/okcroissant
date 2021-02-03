@@ -12,7 +12,7 @@ class ProfileShow extends React.Component {
     }
 
     render(){
-        debugger
+        // debugger
         return (
             <div className="profile-show-container">
                 <div className="prof-items-container">
