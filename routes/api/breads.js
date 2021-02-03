@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
-const { db } = require('../../models/Bread');
 const Bread = require('../../models/Bread');
 const validateBreadInput = require('../../validation/bread');
 
