@@ -11,16 +11,16 @@ class Page4 extends React.Component{
                             value = {this.props.savory}
                             onChange = {this.props.handleChange}>
                         <option  hidden  disabled> Select your answer </option>
-                        <option value='true'> True </option>
-                        <option value='false'> False </option>
+                        <option value='true'>Savory, please</option>
+                        <option value='false'>Satisfy my sweet tooth</option>
                         </select>
         return(
             <div className = 'inner-page-blcok'>
                 <div className = 'inter-page-container'>
-                        <p>Is your bread savory?</p>
-                        <div>
-                            {selector}
-                        </div>            
+                        <h2 className="question-text">Lastly - Savory</h2>
+                        <h2>Or</h2>
+                        <h2>Sweet?</h2>
+                        {selector}          
                 </div>
             </div>
         )

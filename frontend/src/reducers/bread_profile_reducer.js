@@ -6,7 +6,7 @@ const breadProfileReducer = (state= {}, action) => {
     switch (action.type) {
         case RECEIVE_BREAD_PROFILE_RESPONSES:
             debugger
-            return action.responses;
+            return action.responses.data;
         default:
             return state;
     }
