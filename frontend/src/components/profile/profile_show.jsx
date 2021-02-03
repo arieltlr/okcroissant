@@ -16,8 +16,8 @@ class ProfileShow extends React.Component {
                         <p className="display-username">{this.props.user.username}</p>
                     </div>
                     <div className="user-info-container">
-                        <p className="user-info">{this.props.user.username}</p>
-                        <Link to="/createBreadprofile">Your Bread Profile</Link>
+                        {/* <p className="user-info">{this.props.user.username}</p> */}
+                        <Link className="link-to-form" to="/createBreadprofile">Your Bread Profile</Link>
                         <p className="bread-reviews">Your Bread Reviews</p>
                     </div>
 
