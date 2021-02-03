@@ -30,7 +30,7 @@ class NewProfile extends React.Component{
         // debugger;
         this.props.createBreadProfile(newState)
             .then((project)=>{
-                debugger
+                // debugger
                 return  this.props.history.push(`/main`)})
     }
     handleChange(event){
