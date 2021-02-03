@@ -43,7 +43,7 @@
     color: rgb(89, 89, 89);
     margin-top: 26px;
 }
-.inter-page-container {
+.inter-page-container, .inter-page-container-edit {
     height: 200px;
     width: 300px;
     display: flex;
@@ -74,6 +74,9 @@
         outline: none; 
         box-shadow: 0px 0px 0px 3px rgb(228, 171, 95);
     }
+}
+.inter-page-container-edit {
+    height: 120px;
 }
 .form-buttons {
     margin-top: 10px;

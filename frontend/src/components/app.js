@@ -8,7 +8,7 @@ import NavBar from './mainNav/nav_container';
 import "./css/css_imports.scss";
 import MainPage from './main/main_container';
 import ProfileShowContainer from './profile/profile_show_container';
-import create_profile_container from '../components/profile/create_profile_container'
+import create_profile_container from '../components/profile/create_profile_container';
 
 const App = () => (
     

@@ -49,6 +49,7 @@ router.post('/',
 router.patch('/:breadprofile_id', 
         passport.authenticate('jwt', { session: false }),
         (req, res) => {
+            // debugger
             const { errors, isValid } = validateBreadprofileInput(req.body);
               
             if (!isValid) {
@@ -61,7 +62,6 @@ router.patch('/:breadprofile_id',
                 {new: true},
 
                 (err, profile) =>{
-                    // debugger
                     if(err) return res.status(500).send(err);
                     return res.send(profile);
                 }
