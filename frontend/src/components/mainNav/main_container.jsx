@@ -7,13 +7,13 @@ import { logout, receiveCurrentUser} from '../../actions/session_actions'
 
 // this is for the mainnavbar 
 const msp = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         currentUser: state.session.user
     }
 }
 const mdp = (dispatch) => {
-    debugger
+    // debugger
     return {
         logout: () => dispatch(logout()),
         fetchUser: (user) => dispatch(receiveCurrentUser(user))

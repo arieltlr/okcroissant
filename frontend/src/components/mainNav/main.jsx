@@ -5,7 +5,7 @@ import React from 'react';
 class MainNavBar extends React.Component {
     constructor(props) {
         super(props)
-        debugger
+        // debugger
         this.handleLogout = this.handleLogout.bind(this);
     }
 
@@ -16,7 +16,7 @@ class MainNavBar extends React.Component {
 
     handleLogout(e){
         e.preventDefault();
-        debugger
+        // debugger
         this.props.logout();
     }
 

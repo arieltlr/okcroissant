@@ -20,7 +20,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "webpack": "4.44.2"
   },
   "scripts": {
     "start": "react-scripts start",
