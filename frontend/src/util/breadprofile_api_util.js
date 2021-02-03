@@ -5,7 +5,7 @@ export const getBreadprofileResponses = (userId) =>{
 };
 
 export const createBreadprofile = (breadprofile) =>{
-    debugger
+    // debugger
     return axios.post(`/api/breadprofile`, breadprofile)
 };
 
