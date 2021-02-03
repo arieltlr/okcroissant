@@ -10,7 +10,7 @@ class Page2 extends React.Component{
                             id="wholewheat"
                             value = {this.props.wholewheat}
                             onChange = {this.props.handleChange}>
-                        <option value='0' disabled hidden > Select your answer </option>
+                        <option  hidden disabled> Select your answer </option>
                         <option value='true'> True </option>
                         <option value='false'> False </option>
                         </select>

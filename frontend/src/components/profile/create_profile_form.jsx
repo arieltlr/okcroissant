@@ -27,8 +27,10 @@ class NewProfile extends React.Component{
         event.preventDefault();
         let newState =Object.assign({}, this.state);
         delete newState['currentPage'];
-        this.props.createProfile(newState)
+        // debugger;
+        this.props.createBreadProfile(newState)
             .then((project)=>{
+                debugger
                 return  this.props.history.push(`/main`)})
     }
     handleChange(event){
@@ -62,7 +64,7 @@ class NewProfile extends React.Component{
                     className = 'next-page-button'
                     type = 'button'
                     onClick = {this.next}
-                    disabled={!this.state.thin}
+                    // disabled={!this.state.thin}
                 >
                     Next: Wholewheat
                 </button>
@@ -74,7 +76,7 @@ class NewProfile extends React.Component{
                     className = 'next-page-button'
                     type = 'button'
                     onClick = {this.next}
-                    disabled={!this.state.wholewheat}
+                    // disabled={!this.state.wholewheat}
                 >
                     Next: Filling
                 </button>
@@ -86,7 +88,7 @@ class NewProfile extends React.Component{
                     className = 'next-page-button'
                     type = 'button'
                     onClick = {this.next}
-                    disabled={!this.state.filling}
+                    // disabled={!this.state.filling}
                 >
                     Next: Savory
                 </button>
@@ -97,7 +99,7 @@ class NewProfile extends React.Component{
                     id= 'next-button'
                     className = 'next-page-button'
                     type = 'submit'
-                    disabled={!this.state.savory}
+                    // disabled={!this.state.savory}
                 >
                     Create Profile
                 </button>

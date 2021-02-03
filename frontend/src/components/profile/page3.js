@@ -10,7 +10,7 @@ class Page3 extends React.Component{
                             id="filling"
                             value = {this.props.filling}
                             onChange = {this.props.handleChange}>
-                        <option value='0' disabled hidden > Select your answer </option>
+                        <option hidden disabled> Select your answer </option>
                         <option value='true'> True </option>
                         <option value='false'> False </option>
                         </select>

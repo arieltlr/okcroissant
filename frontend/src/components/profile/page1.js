@@ -8,9 +8,11 @@ class Page1 extends React.Component{
         }
         const selector = <select name="thin"
                             id="thin"
+                            // defaultValue = 'Select your answer'
                             value = {this.props.thin}
                             onChange = {this.props.handleChange}>
-                        <option value='0' disabled hidden > Select your answer </option>
+                        <option defaultValue='Select your answer' hidden disabled > Select your answer </option>
+                        
                         <option value='true'> True </option>
                         <option value='false'> False </option>
                         </select>
