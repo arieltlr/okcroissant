@@ -10,7 +10,7 @@ import MainPage from './main/main_container';
 import ProfileShowContainer from './profile/profile_show_container';
 import create_profile_container from '../components/profile/create_profile_container'
 import BreadShowContainer from './breadshow/bread_show_container';
-import ReviewsContainer from '../components/reviews/reviews_container';
+import ReviewShowContainer from '../components/reviews/review_show_container';
 import cart from "./cart/cart_container"
 const App = () => (
     
