@@ -6,19 +6,28 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
+        debugger
        this.props.fetchAllReviews();
     }
     render(){
-        debugger
-        return (
+
+        
+        if (this.props.reviews === undefined){
+            return null
+        } else{
+            const reviews = this.props.reviews.map(review => {
+                
+            })
+            return (
             <div>
                 <h1>
-                    Reviews page!
-                    
+    
                 </h1>
 
             </div>
         )
+        }
+        
     }
 }
 
