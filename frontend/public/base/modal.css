@@ -21,9 +21,7 @@
     background-color: white;
     display: flex;
     justify-content: center;
-    box-shadow: grey;
-    font-family: 'Raleway', sans-serif;
-    
+    box-shadow: grey;   
 }
 .signup-modal {
     height: 430px;
