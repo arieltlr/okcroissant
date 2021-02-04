@@ -41,10 +41,7 @@ class Cart extends React.Component {
             <div>
                 <div>
                     <div>
-                        <label htmlFor="quantity">Quantity</label>
-                        <button onClick={this.decrement}>-</button>
-                        <input type="number" id="quantity" name="quantity" min="1" max="5" value={this.state.value}/>
-                        <button onClick={this.increment}>+</button>
+                        {/* <p>{this.props.cart}</p> */}
                     </div>
                 </div>
                 <div> {/* the breads are all below */}

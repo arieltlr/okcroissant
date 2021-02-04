@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Bread = require('../../models/Bread');
-const User = require('../../models/User')
+const User = require('../../models/User');
 const CartItem = require('../../models/CartItem');
 const validateCartItemInput = require('../../validation/cartitem');
 
@@ -40,7 +40,6 @@ router.get('/user/:user_id',
                     res.status(404).json({ noItemFound: 'No Item Found' })
                 )
 })
-
 
 
 router.delete('/:item_id',

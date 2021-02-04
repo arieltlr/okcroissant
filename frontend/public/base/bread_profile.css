@@ -1,0 +1,91 @@
+.bread-show-img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    margin-right: 200px;
+    margin-left: 300px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.bread-show-container {
+    font-family: 'Raleway', sans-serif;
+}
+
+.bread-show-intro {
+    display: flex;
+}
+
+.bread-show-name {
+    display: block;
+    font-size: 50px;
+    position: relative;
+    margin-left: 30px;
+}
+.bread-show-name-container {
+    display: flex;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+
+.bread-show-info-container {
+    display: flex; 
+    position: relative;
+    font-size: 40px;
+}
+
+.bread-show-origin-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.bread-show-origin-label, .bread-show-description-label, .bread-show-name-label, .bread-show-price-label {
+    font-weight: bold;
+} 
+
+.bread-show-origin {
+    margin-left: 57px;
+}
+.bread-show-name-main{
+    display: flex;
+    flex-direction: column;
+    margin-right: 250px;
+    padding: 10px 50px;
+    background-color: #faefd682;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.bread-show-description-container {
+    display: flex;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.bread-show-description {
+    margin-left: 33px;
+}
+
+.bread-show-button {
+    height: 70px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bread-show-button:hover {
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.bread-show-price-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.bread-show-price {
+    margin-left: 70px;
+}

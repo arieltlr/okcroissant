@@ -4,16 +4,18 @@ import SuggestedSlider from './suggested_slider';
 import { fetchSuggestBreads } from '../../actions/bread_actions';
 
 const mapStateToProps = (state) => {
-    // debugger
+    debugger
     return {
+        user: state.session.user,
         breadProfile: state.breadProfile,
-        breads: state.breads
+        breads: state.bread
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
-        fetchSuggestBreads: breadData => dispatch(fetchSuggestBreads(breadData))
+        fetchSuggestBreads: breadData => dispatch(fetchSuggestBreads(breadData)),
+        getBreadProfileResponses: userId => dispatch(getBreadProfileResponses(userId))
     }
 }
 
