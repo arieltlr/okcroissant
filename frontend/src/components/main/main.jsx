@@ -42,7 +42,7 @@ class MainPage extends React.Component {
                 return (
                     <div className="carasal" key={i}>
                         <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}>
-                            <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>
+                            <img className="bread-carasal" width="100%" src={bread.image} />
                         </Link>
                             <div className="master">
                                 <div className="bread-description-main">
