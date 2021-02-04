@@ -45,7 +45,6 @@ class EditBProfile extends React.Component {
                                 id="thin"
                                 defaultValue = {this.props.breadProfile.thin}
                                 onChange = {this.handleChange}>
-                            <option defaultValue={this.state.thin} hidden>{this.state.thin}</option>
                             <option value='true'>Thin bread for me</option>
                             <option value='false'>Let it rise</option>
                             </select>
@@ -56,7 +55,6 @@ class EditBProfile extends React.Component {
                                 id="wholewheat"
                                 defaultValue = {this.props.breadProfile.wholewheat}
                                 onChange = {this.handleChange}>
-                            <option  hidden disabled> Select your answer </option>
                             <option value='true'>Healthy Whole Grains</option>
                             <option value='false'>Indulgent White Flour</option>
                             </select>        
@@ -67,7 +65,6 @@ class EditBProfile extends React.Component {
                                 id="filling"
                                 defaultValue = {this.props.breadProfile.filling}
                                 onChange = {this.handleChange}>
-                            <option hidden disabled> Select your answer </option>
                             <option value='true'>Fill it, stuff it, yum!</option>
                             <option value='se'>Bread and only bread</option>
                             </select>         
@@ -78,7 +75,6 @@ class EditBProfile extends React.Component {
                                 id="savory"
                                 defaultValue = {this.props.breadProfile.savory}
                                 onChange = {this.handleChange}>
-                            <option  hidden  disabled> Select your answer </option>
                             <option value='true'>Savory, please</option>
                             <option value='false'>Satisfy my sweet tooth</option>
                             </select>         
