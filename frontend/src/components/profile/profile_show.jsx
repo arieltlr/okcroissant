@@ -39,7 +39,7 @@ class ProfileShow extends React.Component {
                                 <Link className="link-to-form" to="/reviews">Your Bread Reviews</Link>
                             </div>
                             <div>
-                                <SuggestedSliderContainer />
+                                {/* <SuggestedSliderContainer /> */}
                             </div>
                         </div>
                 
