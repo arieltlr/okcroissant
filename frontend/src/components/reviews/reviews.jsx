@@ -21,10 +21,10 @@ class Reviews extends React.Component {
                 <div>
                     <div className="review-container">
                         <div className="review-info">
-                            <p>Bread Name {review.bread}</p>
+                            <p>Bread Name {this.props.bread.name}</p>
                             <p>Bread Image</p>
                             <p>{review.body}</p>
-                            <p>Review by: {review.user}</p>
+                            <p>Review by: {review.author}</p>
                         </div>
                     </div>  
                 </div>)

@@ -6,7 +6,8 @@ const mstp = (state) => {
     debugger
     return {
         reviews: state.reviews.data,
-        user: state.session.user
+        user: state.session.user,
+        bread: state.bread
 
     };
 };
