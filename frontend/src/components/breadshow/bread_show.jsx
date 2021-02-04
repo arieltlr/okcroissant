@@ -11,7 +11,7 @@ class BreadShow extends React.Component {
     }
 
     render(){
-        debugger
+        // debugger
         const { bread } = this.props;
         if (!bread) {
             return null;

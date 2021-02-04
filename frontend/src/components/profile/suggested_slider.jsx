@@ -1,5 +1,6 @@
 import React from 'react';
-import Slider from 'react-slick';
+import Carousel from 'react-elastic-carousel';
+import { Link } from 'react-router-dom';
 
 class SuggestedSlider extends React.Component {
     constructor(props){
@@ -7,42 +8,42 @@ class SuggestedSlider extends React.Component {
     }
 
     componentDidMount(){
-        this.props.getBreadProfileResposes(this.props.user.id)
+        // this.props.getBreadProfileResposes(this.props.user.id)
         this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
-    render() {
-        const settings = {
-            dots: true, 
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            autoplay: true,
-            speed: 3000,
-            autoplaySpeed: 3000,
-            cssEase: "linear",
-            className: "profile-slides"
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.breadProfile !== this.props.breadProfile) {
+            this.props.fetchSuggestBreads(this.props.breadProfile)
         }
+    }
+
+    render() {
+        const breakpoints= [
+            {width: 1, itemsToShow:1},
+            {width: 550, itemsToShow: 2, itemsToScroll: 2}
+        ]
+        let items;
         const { breads } = this.props;
-        debugger
-        if (!this.props.breadProfile) {
+        if (Object.keys(breads).length === 0) {
             return null;
         } else {
-            return (
-                <div>
-                    <Slider {...settings}>
-                        {
-                            breads.map( bread => {
-                                debugger
-                                return(
-                                    <img width="100%" src={bread.image}></img>
-                                )
-                            })
-                        }
-                    </Slider> 
-                </div>
-            )
+            items = breads.map(bread => {
+                return (
+                        <div>
+                            <Link to={`/breads/${bread._id}`}> <img className="profile-carousel-image" src={bread.image} /></Link>
+                            <p className="profile-carousel-name">{bread.name}</p>
+                        </div>
+                    )
+            })
         }
+        return (
+            <div className="profile-carousel">
+                <Carousel>
+                    {items}
+                </Carousel>
+            </div>
+        )
     }
 }
  
