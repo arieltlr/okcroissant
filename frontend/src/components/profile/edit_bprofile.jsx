@@ -69,7 +69,7 @@ class EditBProfile extends React.Component {
                                 onChange = {this.handleChange}>
                             <option hidden disabled> Select your answer </option>
                             <option value='true'>Fill it, stuff it, yum!</option>
-                            <option value='false'>Bread and only bread</option>
+                            <option value='se'>Bread and only bread</option>
                             </select>         
                     </div>
                     <div className = 'inter-page-container-edit'>

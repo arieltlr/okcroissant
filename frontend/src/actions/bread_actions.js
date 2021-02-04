@@ -37,7 +37,7 @@ export const fetchSuggestBreads = breadData => dispatch => {
         .then(breads => {
             // debugger
             dispatch(receiveSuggestedBread(breads))})
-        .catch(err => {
-            // debugger
-            console.log(err)})
+        // .catch(err => {
+        //     // debugger
+        //     console.log(err)})
 }

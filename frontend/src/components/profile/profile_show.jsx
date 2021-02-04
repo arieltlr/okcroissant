@@ -7,13 +7,13 @@ class ProfileShow extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
+    componentDidUpdate() {
         // debugger
         this.props.getBreadProfileResponses(this.props.user.id)
     }
 
     render(){
-        // debugger
+        debugger
         const hasProfile = Boolean(this.props.breadProfile.thin !== undefined);
         let formButton;
         if(hasProfile){

@@ -40,7 +40,6 @@ router.get('/user/:user_id',
 })
 
 
-
 router.delete('/:item_id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {

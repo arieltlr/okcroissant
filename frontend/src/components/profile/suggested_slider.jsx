@@ -6,16 +6,15 @@ class SuggestedSlider extends React.Component {
         super(props);
     }
 
-    componentDidUpdate(){
+    componentDidMount(){
         this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
     render() {
-        // debugger
         const settings = {
             dots: true, 
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: true,
             speed: 3000,
@@ -23,15 +22,26 @@ class SuggestedSlider extends React.Component {
             cssEase: "linear",
             className: "profile-slides"
         }
-
-        return (
-              <div>
-                <Slider {...settings}>
-                    
-                </Slider> 
-
-             </div>
-        )
+        const { breads } = this.props;
+        debugger
+        if (!breads) {
+            return null;
+        } else {
+            return (
+                <div>
+                    <Slider {...settings}>
+                        {/* {
+                            breads.map( bread => {
+                                debugger
+                                return(
+                                    <img width="100%" src={bread.image}></img>
+                                )
+                            })
+                        } */}
+                    </Slider> 
+                </div>
+            )
+        }
     }
 }
  
