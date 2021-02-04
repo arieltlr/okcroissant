@@ -1,12 +1,25 @@
 import React from 'react';
-import Footer from '../splash/footer';
 import CartItem from "./cart_item_container";
 
 class Cart extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleDelete = this.handleDelete.bind(this)
+    }
     
     componentDidMount(){
         // debugger
         this.props.fetchUserCartItems(this.props.user)
+    }
+
+    handleDelete(value) {
+        return e => this.props.deleteBreadItem(value)
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.cart !== this.props.cart){
+            this.props.fetchUserCartItems(this.props.user)
+        }
     }
 
     render() {
@@ -14,10 +27,10 @@ class Cart extends React.Component {
         // debugger
         if (this.props.cart !== undefined){
             breads = this.props.cart.map((items, i) => {
-                // debugger
                 return (
                     <div key={i}>
                         <CartItem breadId={items.bread}/>
+                        <button value={items._id} onClick={this.handleDelete(items._id)}>Delete Bread</button>
                     </div>
                 )
             })
