@@ -8,13 +8,15 @@ const mapStateToProps = (state, ownProps) => {
     return {
         // array: state.bread.map(bread => bread.id),
         bread: state.bread[ownProps.match.params.breadId],
+        userId: state.session.user.id
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
         fetchABread: breadId => dispatch(fetchABread(breadId)),
-        createUserCartItem: item => dispatch(createUserCartItem(item))
+        createUserCartItem: item => dispatch(createUserCartItem(item)),
+        fetchUserCartItems: userId => dispatch(fetchUserCartItems(userId))
     }
 }
 

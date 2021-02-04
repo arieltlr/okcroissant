@@ -10,16 +10,17 @@ const CartReducer = (state=[], action) => {
         }
         case CREATE_CART_ITEM: {
             debugger
-            const nextState = Object.assign([], state, { [action.item.data._id]: action.item.data });
+            const nextState = Object.assign([], state.cart, { [action.item.data]: action.item.data });
             return nextState;
         }
         case DELETE_CART_ITEM: {
-            const nextState = Object.assign([], state);
+            const nextState = Object.assign([], state.cart);
             delete nextState[action.breadId];
             return nextState;
 
         }
         default:
+            debugger
             return state;
     }
 }
