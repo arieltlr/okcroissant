@@ -8,6 +8,10 @@
     margin-right: auto;
 }
 
+.profile-carousel-image:hover {
+    cursor: pointer;
+}
+
 .profile-carousel-name {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -32,4 +36,8 @@
 .profile-carousel {
     height: 500px;
     width: 700px;
+}
+
+.profile-carousel:hover {
+    cursor: pointer;
 }

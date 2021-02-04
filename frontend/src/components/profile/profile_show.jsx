@@ -41,7 +41,7 @@ class ProfileShow extends React.Component {
                         </div>
                         <div className="breadProfile-suggestions">
                                 <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
-                                <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
+                                {/* <SuggestedSliderContainer breadProfile={this.props.breadProfile} /> */}
                             </div>
                     </div>
             )
