@@ -6,10 +6,6 @@ const ReviewSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'breads'
     },
-     bread_name: {
-        type: Schema.Types.name,
-        ref: 'breads'
-    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'users'

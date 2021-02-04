@@ -11,22 +11,24 @@ class Reviews extends React.Component {
     }
     render(){
 
-        
-        if (this.props.reviews === undefined){
+        if (this.props.reviews.body === undefined){
             return null
-        } else{
+        }else{
             const reviews = this.props.reviews.map(review => {
-                
+                <div>
+                    <div>
+                        <div>
+                            <p>Bread Name</p>
+                            <p>Bread Image</p>
+                            <p>{review.body}</p>
+                        </div>
+                    </div>
+                </div>
             })
-            return (
-            <div>
-                <h1>
-    
-                </h1>
-
-            </div>
-        )
         }
+        return (
+            <div>Hello Reviews</div>
+        )
         
     }
 }

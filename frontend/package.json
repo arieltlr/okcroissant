@@ -21,7 +21,8 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^0.2.4",
-    "webpack": "4.44.2"
+    "webpack": "4.44.2",
+    "react-elastic-carousel": "^0.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
