@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Cart from './cart';
 import {fetchUserCartItems} from "../../actions/cart_actions";
+import { deleteBreadItem } from "../../actions/cart_actions";
 const msp = (state, ownProps) => {
     // debugger  //check the cart
     return {
@@ -10,6 +11,7 @@ const msp = (state, ownProps) => {
 }
 const mdp = (dispatch) => {
     return {
+        deleteBreadItem: (itemId) => dispatch(deleteBreadItem(itemId)),
         fetchUserCartItems: (userId) => dispatch(fetchUserCartItems(userId))
     }
 }

@@ -6,7 +6,6 @@ const CartReducer = (state=[], action) => {
         case RECEIVE_CART_ITEMS: {
             // debugger
             return action.items;
-
         }
         case CREATE_CART_ITEM: {
             // debugger
@@ -15,7 +14,9 @@ const CartReducer = (state=[], action) => {
         }
         case DELETE_CART_ITEM: {
             const nextState = Object.assign([], state.cart);
-            delete nextState[action.breadId];
+            debugger
+            delete nextState[action.itemId];
+            debugger
             return nextState;
 
         }
