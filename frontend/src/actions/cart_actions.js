@@ -14,10 +14,10 @@ export const recieveCartItems = items => ({
 });
 
 
-export const removeCartItem = breadId => ({
+export const removeCartItem = (itemId)=> ({
     type: DELETE_CART_ITEM,
-    breadId: breadId
-});
+    itemId: itemId
+     });
 
 export const createUserCartItem = (item) => dispatch => {
     // debugger
@@ -33,10 +33,10 @@ export const fetchUserCartItems = userId => dispatch => {
             return (dispatch(recieveCartItems(items)))})
 }
 
-export const deleteBreadItem = breadId => dispatch => {
+export const deleteBreadItem = (itemId) => dispatch => {
     // debugger
-    return APIUtil.deleteBreadItem(breadId)
+    return APIUtil.deleteBreadItem(itemId)
         .then(() => {
             // debugger
-            return (dispatch(removeCartItem(breadId)))})
+            return (dispatch(removeCartItem(itemId)))})
 }
