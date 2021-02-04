@@ -6,15 +6,15 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
-       this.props.fetchAllReviews();
+        const breadId = this.props.breadId
+        this.props.fetchBreadReviews(breadId);
     }
     render(){
         // debugger
         if (this.props.reviews === undefined){
             return null
         }
-        debugger
+        // debugger
         const reviews = this.props.reviews.map(review => {
             // debugger
                 return(
@@ -22,19 +22,25 @@ class Reviews extends React.Component {
                     <div className="review-container">
                         <div className="review-info">
                             <p>Bread Name {this.props.bread.name}</p>
-                            <p>Bread Image</p>
                             <p>{review.body}</p>
                             <p>Review by: {review.author}</p>
                         </div>
                     </div>  
                 </div>)
             })
-        return (
+        if (reviews.length > 0){
+            return (
             <div>
                     {reviews}
             </div>
         )
-        
+        } else {
+            return(
+                <div>
+                    <h1>There aren't any reviews for this bread yet</h1>
+                </div>
+            )
+        }
     }
 }
 
