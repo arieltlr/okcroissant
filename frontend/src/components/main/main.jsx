@@ -51,7 +51,6 @@ class MainPage extends React.Component {
                                 <div className="bread-name-origin-master">
                                     <p className="bread-name">Say Hello To - {bread.name}</p>
                                     <p className="bread-origin">Originally from {bread.origin}</p>
-                                    <button className="button-splash1" id="main-carousel-button">Add to Cart</button>
                                 </div>
                                 <Link to={`/bread/${bread._id}`} className="learn-more-link" >Learn more about {bread.name}</Link>
                                         
