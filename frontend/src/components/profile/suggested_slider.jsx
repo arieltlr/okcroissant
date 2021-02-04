@@ -30,7 +30,7 @@ class SuggestedSlider extends React.Component {
         }
         // debugger
         const { breads } = this.props;
-        if (Object.keys(breads).length === 0) {
+        if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
             return null;
         } else {
             // debugger

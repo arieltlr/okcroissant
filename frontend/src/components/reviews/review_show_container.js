@@ -1,12 +1,16 @@
 import { connect } from 'react-redux';
 import { fetchAllReviews, fetchBreadReviews, fetchUsersReviews } from '../../actions/review_actions';
-import Reviews from './reviews';
+import Reviews from './review_show';
+import { withRouter } from 'react-router-dom';
 
-const mstp = (state) => {
-    // debugger
+const mstp = (state, ownProps) => {
+    const breadId = ownProps.match.params.breadId;
+    debugger
     return {
         reviews: state.reviews.data,
-        user: state.session.user
+        user: state.session.user,
+        breadId: ownProps.match.params.breadId,
+        bread: state.bread[breadId]
 
     };
 };
@@ -19,4 +23,4 @@ const mdtp = (dispatch) => {
     }
 }
 
-export default connect(mstp, mdtp)(Reviews);
+export default withRouter(connect(mstp, mdtp)(Reviews));

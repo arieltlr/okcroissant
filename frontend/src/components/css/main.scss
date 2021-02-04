@@ -70,20 +70,50 @@
   
   .main-content{
     padding-top: 70px;
-    margin: 40px;
+    width: 100%;
     line-height: 1.2;
     p{
-      font-size: 50px;
+      display: block;
+      height: 200px;
+      width: 1000px;
+      margin-left: 150px;
+      font-size: 40px;
       text-align: center;
+      font-family: $main-Roboto-font;
+    }
+  }
+
+  .main-content2 {
+    padding-top: 70px;
+    width: 100%;
+    line-height: 1.2;
+    p{
+      display: block;
+      height: 200px;
+      width: 1000px;
+      margin-right: 150px;
+      font-size: 40px;
+      text-align: center;
+      font-family: $main-Roboto-font;
     }
   }
   
   .main-pic-1{
     padding: 10px;
     align-items: center;
-      width:700px;
-      border-radius: 30px;
-      border: 1px solid $blue-border;
+    width:600px;
+    margin-right: 100px;
+    border-radius: 30px;
+    border: 1px solid $blue-border;
+  }
+
+  .main-pic-2 {
+    padding: 10px;
+    align-items: center;
+    width:600px;
+    margin-left: 100px;
+    border-radius: 30px;
+    border: 1px solid $blue-border;
   }
 }
 .master-nav{
@@ -92,23 +122,35 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fbf6f77a;
-    padding: 50px 25px 10px 25px;
+    padding: 20px 25px 20px 25px;
 
     .button-splash{
-      background-color: #FAEFD6;
-      border: 1px solid #352500;
-      border-radius: 3px;
-      padding: 10px 20px 10px 20px;
-      margin-right: 30px;
-
+      background-color: rgb(206, 149, 4);
+      color: white;
+      font-size: 18px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      margin-left: 20px;
+      border-radius: 14px;
+      padding: 10px 10px 10px 10px;
+      text-align: center;
     }
 
     .button-splash:hover{
-      background-color: #fad888;
-      border: 1px solid #352500;
-      border-radius: 3px;
-      padding: 10px 20px 10px 20px;
+      background-color: rgb(235, 213, 160);
+      color: white;
+      font-size: 18px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      margin-left: 20px;
+      border-radius: 14px;
+      padding: 10px 10px 10px 10px;
+      text-align: center;
       cursor: pointer;
+    }
+
+    .master-nav-buttons {
+      margin-right: 100px;
     }
 }
 

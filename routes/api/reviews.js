@@ -16,6 +16,7 @@ router.post('/',
             return res.status(400).json(errors);
         }
         const review = new Review({
+            author: req.body.username,
             user: req.body.user,
             bread: req.body.bread,
             body: req.body.body
