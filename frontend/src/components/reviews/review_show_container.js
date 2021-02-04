@@ -3,12 +3,8 @@ import { fetchAllReviews, fetchBreadReviews, fetchUsersReviews } from '../../act
 import Reviews from './review_show';
 import { withRouter } from 'react-router-dom';
 
-<<<<<<< HEAD:frontend/src/components/reviews/reviews_container.js
-const mstp = (state) => {
-=======
 const mstp = (state, ownProps) => {
     const breadId = ownProps.match.params.breadId;
->>>>>>> ebb79a11e6575ae4b8fa1680b91e60ddb115b0fd:frontend/src/components/reviews/review_show_container.js
     // debugger
     return {
         reviews: state.reviews.data,
