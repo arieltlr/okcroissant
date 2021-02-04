@@ -9,6 +9,9 @@ module.exports = function validateReviewInput(data){
     if(Validator.isEmpty(data.body)) {
         errors.body = 'Oops! Did you forget to write a review?';
     }
+    if(Validator.isEmpty(data.username)) {
+        errors.body = 'Oops! Who wrote this review? No user found';
+    }
 
     return {
         errors,
