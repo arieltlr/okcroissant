@@ -81,7 +81,7 @@ class EditBProfile extends React.Component {
                             <option value='false'>Satisfy my sweet tooth</option>
                             </select>         
                     </div>
-                    <button>Update my Profile</button>
+                    <button className="update-button">Update my Profile</button>
                 </form> 
             </div>
             

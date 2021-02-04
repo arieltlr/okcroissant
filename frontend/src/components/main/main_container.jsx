@@ -5,7 +5,8 @@ import { fetchAllBreads } from '../../actions/bread_actions';
 // THIS IS THE MAIN SPLASH CONTAINER!!!!
 const msp = (state, ownProps) => {
     return {
-        breads: Object.values(state.bread)
+        breads: Object.values(state.bread),
+        user: state.session.user.id
     }
 }
 const mdp = (dispatch) => {

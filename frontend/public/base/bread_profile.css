@@ -89,3 +89,28 @@
 .bread-show-price {
     margin-left: 70px;
 }
+
+.question-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.update-button {
+    padding: 15px 90px;
+    align-self: center;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #d6ab4682;
+    background-color: white;
+}
+
+.update-button:hover {
+    background-color: #d39f25;
+    cursor: pointer;
+    color: white;
+    transition: 2s;
+}

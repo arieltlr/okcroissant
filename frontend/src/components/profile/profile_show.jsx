@@ -23,29 +23,33 @@ class ProfileShow extends React.Component {
                 </button>
         } else{
             formButton = 
-                <Link className="link-to-form" to="/createBreadprofile">
-                    Complete Your Bread Profile
-                </Link>
+                <div className="create-bread-profile">
+                    <Link className="link-to-form2" to="/createBreadprofile">
+                        Complete Your Bread Profile
+                    </Link>
+                </div>
         } 
             return (
-                    <div className="profile-show-container">
+                <div>
+                <div className="main-profile-display">
+                    <h1 className="display-username"><span>Welcome Back, </span>{this.props.user.username}.</h1>
+                    <div className="profile-show-container"> 
                         <div className="prof-items-container">
                             <div className="name-container">
                                 <div className="profile-pic"></div>
-                                <p className="display-username">{this.props.user.username}</p>
-                            </div>
-                            <div className="user-info-container">
-                                <p className="user-info">Welcome Back</p>
-                                {formButton}
-                                <Link className="link-to-form" to="/reviews">Your Bread Reviews</Link>
+                                <div className="user-info-container">
+                                    {formButton}
+                                </div>
                             </div>
                         </div>
                         <div className="breadProfile-suggestions">
                                 <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
                                 <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
-                        </div>
-                        <Footer />
+                        </div>  
                     </div>
+                </div>
+                <Footer />
+                </div>
             )
         }
 }
