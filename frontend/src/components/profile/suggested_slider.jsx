@@ -7,6 +7,7 @@ class SuggestedSlider extends React.Component {
     }
 
     componentDidMount(){
+        this.props.getBreadProfileResposes(this.props.user.id)
         this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
@@ -24,20 +25,20 @@ class SuggestedSlider extends React.Component {
         }
         const { breads } = this.props;
         debugger
-        if (!breads) {
+        if (!this.props.breadProfile) {
             return null;
         } else {
             return (
                 <div>
                     <Slider {...settings}>
-                        {/* {
+                        {
                             breads.map( bread => {
                                 debugger
                                 return(
                                     <img width="100%" src={bread.image}></img>
                                 )
                             })
-                        } */}
+                        }
                     </Slider> 
                 </div>
             )

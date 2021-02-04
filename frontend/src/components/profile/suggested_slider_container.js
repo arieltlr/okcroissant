@@ -6,6 +6,7 @@ import { fetchSuggestBreads } from '../../actions/bread_actions';
 const mapStateToProps = (state) => {
     debugger
     return {
+        user: state.session.user,
         breadProfile: state.breadProfile,
         breads: state.bread
     }
@@ -13,7 +14,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        fetchSuggestBreads: breadData => dispatch(fetchSuggestBreads(breadData))
+        fetchSuggestBreads: breadData => dispatch(fetchSuggestBreads(breadData)),
+        getBreadProfileResponses: userId => dispatch(getBreadProfileResponses(userId))
     }
 }
 

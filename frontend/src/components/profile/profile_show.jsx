@@ -7,7 +7,7 @@ class ProfileShow extends React.Component {
         super(props)
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
         // debugger
         this.props.getBreadProfileResponses(this.props.user.id)
     }
