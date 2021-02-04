@@ -39,7 +39,7 @@ class ProfileShow extends React.Component {
                                 <p className="bread-reviews">Your Bread Reviews</p>
                             </div>
                             <div>
-                                <SuggestedSliderContainer />
+                                <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
                             </div>
                         </div>
                 

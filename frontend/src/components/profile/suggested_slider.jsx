@@ -6,12 +6,14 @@ class SuggestedSlider extends React.Component {
         super(props);
     }
 
-    componentDidUpdate(){
+    componentDidMount(){
+        // this.props.getBreadProfileResponses(this.props.user.id);
         this.props.fetchSuggestBreads(this.props.breadProfile);
+        debugger
     }
 
     render() {
-        // debugger
+        debugger
         const settings = {
             dots: true, 
             infinite: true,
@@ -23,15 +25,28 @@ class SuggestedSlider extends React.Component {
             cssEase: "linear",
             className: "profile-slides"
         }
+        const { breads } = this.props;
+        if (Object.keys(breads).length === 0) {
+            debugger
+            return null;
+        } else {
+            debugger
+            return (
+                <div>
+                    <Slider {...settings}>
+                        {
+                            breads.map(bread => {
+                                debugger
+                                return (
+                                    <img width="1000%" src={bread.image} />
+                                )
+                            })
+                        }
+                    </Slider> 
 
-        return (
-              <div>
-                <Slider {...settings}>
-                    
-                </Slider> 
-
-             </div>
-        )
+                </div>
+            )
+        }
     }
 }
  
