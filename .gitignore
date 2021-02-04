@@ -1,10 +1,8 @@
 /node_modules
 /frontend/node_modules
 /config/keys_dev.js
-/config/keys_prod.js
-/config/keys.js
+
 
 
 .eslintcache
-package.json
 package-lock.json
