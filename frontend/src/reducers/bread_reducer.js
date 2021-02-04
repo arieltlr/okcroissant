@@ -11,7 +11,7 @@ const breadReducer = (state = {}, action) => {
             return array
         case RECEIVE_A_BREAD:
             const newState = Object.assign({}, state, { [action.bread.data._id]: action.bread.data })
-            debugger 
+            // debugger 
             return newState;
         case RECEIVE_SUGGESTED_BREADS:
             // debugger

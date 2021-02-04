@@ -17,6 +17,7 @@
   --button background#FAEFD6;
   --button outline: #352500;
 } */
+/* #faefd6; */
 
 
 /* // applying to all elements */
@@ -88,7 +89,7 @@ div.button-master .button-splash{
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 80px;
-    background-color: #faefd6;
+    background-color: white;
     
 }
 .column{

@@ -4,7 +4,7 @@ import { fetchABread } from '../../actions/bread_actions';
 import { createUserCartItem, fetchUserCartItems } from "../../actions/cart_actions";
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         // array: state.bread.map(bread => bread.id),
         bread: state.bread[ownProps.match.params.breadId],

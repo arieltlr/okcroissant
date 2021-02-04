@@ -34,6 +34,8 @@
     "mongoose": "^5.11.14",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-leaf-carousel": "^2.0.3",
+    "styled-components": "^5.2.1",
     "validator": "^13.5.2"
   },
   "devDependencies": {
