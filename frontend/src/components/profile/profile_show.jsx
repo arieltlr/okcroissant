@@ -23,9 +23,11 @@ class ProfileShow extends React.Component {
                 </button>
         } else{
             formButton = 
-                <Link className="link-to-form" to="/createBreadprofile">
-                    Complete Your Bread Profile
-                </Link>
+                <div className="create-bread-profile">
+                    <Link className="link-to-form2" to="/createBreadprofile">
+                        Complete Your Bread Profile
+                    </Link>
+                </div>
         } 
             return (
                 <div>
