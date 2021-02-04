@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Logo from '../../images/croissant_icon.png';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -41,7 +42,10 @@ class SignupForm extends React.Component {
                 <div className="logo-container">
                     <div className="logo">
                     </div>
-                    <h2 className="form-brand">OkCroissant</h2>
+                    <div className="splash-nav1">
+                        <img className="logo1"src={Logo} alt="okCrossiantLogo" />
+                        <p className="logo-text">OkCroissant</p>
+                    </div>
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
@@ -72,8 +76,10 @@ class SignupForm extends React.Component {
                             />
                         <p className="error">{this.props.errors.password}</p>
                         </div>
-                        <button className="form-submit">Create Account</button>
-                        {this.props.otherForm}
+                            <button className="form-submit">Create Account</button>
+                        <div className="other-form-button-sign-up">
+                            {this.props.otherForm}
+                        </div>
                     </div>
                 </form>
             </div>

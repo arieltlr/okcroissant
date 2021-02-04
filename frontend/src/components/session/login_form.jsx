@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
+import Logo from '../../images/croissant_icon.png';
 import DemoLogIn from './demo_login_container'
 
 class LoginForm extends React.Component {
@@ -39,8 +39,10 @@ class LoginForm extends React.Component {
                 <div className="logo-container">
                     <div className="logo">
                     </div>
-                    <DemoLogIn />
-                    <h2 className="form-brand">OkCroissant</h2>
+                    <div className="splash-nav1">
+                        <img className="logo1"src={Logo} alt="okCrossiantLogo" />
+                        <p className="logo-text">OkCroissant</p>
+                    </div>
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="login-form">
@@ -63,7 +65,10 @@ class LoginForm extends React.Component {
                         <p className="error">{this.props.errors.password}</p>
                         </div>
                         <button className="form-submit">Log in</button>
-                        {this.props.otherForm}
+                        <div className="other-form-container">
+                            {this.props.otherForm}
+                        </div>
+                        <DemoLogIn />
                     </div>
                 </form>
             </div>

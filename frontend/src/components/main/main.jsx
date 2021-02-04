@@ -72,8 +72,8 @@ class MainPage extends React.Component {
                     <img className="main-pic-1" src={MainImage} alt="man holding bread" />
                 </div>
                 <div className="main-content-master">
-                    <img className="main-pic-1" src={MainImage2} alt="man holding bread" />
-                    <div className="main-content">
+                    <img className="main-pic-2" src={MainImage2} alt="man holding bread" />
+                    <div className="main-content2">
                         <p>Exquisite bread from the anywhere in the country at your fingertips</p>
                     </div>
                 </div>

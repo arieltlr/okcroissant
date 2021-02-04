@@ -11,8 +11,7 @@ class DemoLogIn extends React.Component{
     render(){
         return (
             <div className='demo-block'>
-
-                <button  id='demo-button' onClick={()=>this.props.login(this.state)}>Guest Login</button>
+                <button  className='demo-button' onClick={()=>this.props.login(this.state)}>Guest Login</button>
             </div>
 
             
