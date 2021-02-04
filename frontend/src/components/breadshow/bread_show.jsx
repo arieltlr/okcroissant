@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CreateReviewContainer from '../reviews/create_review_container'
+
 class BreadShow extends React.Component {
     constructor(props){
         super(props);
@@ -51,6 +53,9 @@ class BreadShow extends React.Component {
                         </div>
                         <div>
                             <label>Reviews</label>
+                        </div>
+                        <div>
+                            <CreateReviewContainer />
                         </div>
                     </div>
                 </div>
