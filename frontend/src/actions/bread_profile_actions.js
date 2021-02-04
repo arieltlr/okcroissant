@@ -9,7 +9,7 @@ export const receiveProfileRes = responses => ({
 });
 
 export const getBreadProfileResponses = userId => dispatch =>{
-    debugger
+    // debugger
     return APIUtil.getBreadprofileResponses(userId).then((responses) => (
         dispatch(receiveProfileRes(responses))
     ))
