@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getBreadprofileResponses = (userId) =>{
-    debugger
+    // debugger
     return axios.get(`/api/breadprofile/user/${userId}`)
 };
 

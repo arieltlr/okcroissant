@@ -9,7 +9,7 @@ class Reviews extends React.Component {
        this.props.fetchAllReviews();
     }
     render(){
-        debugger
+        // debugger
         return (
             <div>
                 <h1>

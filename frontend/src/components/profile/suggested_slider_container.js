@@ -4,13 +4,9 @@ import SuggestedSlider from './suggested_slider';
 import { fetchSuggestBreads } from '../../actions/bread_actions';
 
 const mapStateToProps = (state) => {
-    debugger
+    // debugger
     return {
         user: state.session.user,
-<<<<<<< HEAD
-=======
-        breadProfile: state.breadProfile,
->>>>>>> e738ac96067b6b9967ea1aa2c4ce8d4c3fb70c1c
         breads: state.bread
     }
 }
