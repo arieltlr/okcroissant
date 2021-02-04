@@ -32,9 +32,10 @@ router.post('/',
 router.get('/user/:user_id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
+        console.log(req.params)
         CartItem.find({user: req.params.user_id})
             .then(breadprofile => {
-                console.log(breadprofile)
+                console.log(`here at cartitems.js line 38${breadprofile}`)
                 return res.json(breadprofile)})
             .catch(err => 
                     res.status(404).json({ noItemFound: 'No Item Found' })

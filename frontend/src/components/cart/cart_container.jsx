@@ -6,7 +6,7 @@ const msp = (state, ownProps) => {
     debugger  //check the cart
     return {
         cart : state.cart,
-        user: state.session.user
+        userId: state.session.user.id
     }
 }
 const mdp = (dispatch) => {

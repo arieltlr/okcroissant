@@ -3,12 +3,14 @@ import React from 'react';
 class BreadShow extends React.Component {
     constructor(props){
         super(props);
+        this.state = this.props.items
     }
 
     componentDidMount(){
         // debugger
         this.props.fetchABread(this.props.match.params.breadId)
     }
+
 
     handleSubmit(){
         this.props.createUserCartItem(this.props.bread)

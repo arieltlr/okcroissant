@@ -10,7 +10,7 @@ class Cart extends React.Component {
 
     componentDidMount(){
         debugger
-        this.props.fetchUserCartItems(this.props.user.id)
+        this.props.fetchUserCartItems(this.props.userId)
     }
 
     deleteBread(){
