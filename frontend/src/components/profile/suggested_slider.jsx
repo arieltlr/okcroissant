@@ -3,17 +3,17 @@ import Slider from 'infinite-react-carousel';
 import { Link } from 'react-router-dom';
 
 class SuggestedSlider extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         // this.props.getBreadProfileResposes(this.props.user.id)
         this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
-    componentDidUpdate(prevProps, prevState){
-        if(prevProps.breadProfile !== this.props.breadProfile) {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.breadProfile !== this.props.breadProfile) {
             this.props.fetchSuggestBreads(this.props.breadProfile)
         }
     }
@@ -23,7 +23,7 @@ class SuggestedSlider extends React.Component {
 
         const settings = {
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 3000,
             autoplayScroll: 1,
             dots: true,
             dotsClass: "carousel-dots"
@@ -36,11 +36,11 @@ class SuggestedSlider extends React.Component {
             // debugger
             items = breads.map(bread => {
                 return (
-                        <div>
-                            <Link to={`/bread/${bread._id}`}> <img className="profile-carousel-image" src={bread.image} /></Link>
-                            <p className="profile-carousel-name">{bread.name}</p>
-                        </div>
-                    )
+                    <div>
+                        <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
+                        <p className="profile-carousel-name">{bread.name}</p>
+                    </div>
+                )
             })
         }
         return (
@@ -52,5 +52,5 @@ class SuggestedSlider extends React.Component {
         )
     }
 }
- 
+
 export default SuggestedSlider;

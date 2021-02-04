@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SuggestedSliderContainer from './suggested_slider_container';
+import Footer from '../splash/footer';
 
 class ProfileShow extends React.Component {
     constructor(props) {
@@ -41,8 +42,9 @@ class ProfileShow extends React.Component {
                         </div>
                         <div className="breadProfile-suggestions">
                                 <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
-                                {/* <SuggestedSliderContainer breadProfile={this.props.breadProfile} /> */}
-                            </div>
+                                <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
+                        </div>
+                        <Footer />
                     </div>
             )
         }

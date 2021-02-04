@@ -30,6 +30,9 @@ class MainPage extends React.Component {
             slidesToshow:1,
             arrows: true,
             slidesToScroll:1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: true,
             className: "slider variable-width",
         };
         let items;
@@ -38,21 +41,24 @@ class MainPage extends React.Component {
                 // debugger
                 return (
                     <div className="carasal" key={i}>
-                        <img className="bread-carasal" width="100%" src={bread.image}/>
-                        <div className="master">
-                            <div className="bread-description-main">
-                                <p className="bread-description">{bread.description}</p>
+                        <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}>
+                            <img className="bread-carasal" width="100%" src={bread.image} />
+                        </Link>
+                            <div className="master">
+                                <div className="bread-description-main">
+                                    <p className="bread-description">{bread.description}</p>
+                                </div>
+                                <div className="bread-name-origin-master">
+                                    <p className="bread-name">{bread.name}</p>
+                                    <p className="bread-origin">From:{bread.origin}</p>
+                                </div>
+                                {/* <img className="bread-carasal" width="100%" src={bread.image}/> */}
+                                {/* <div className="master">
+                                    <div className="bread-description-main">
+                                        <p className="bread-description">{bread.description}</p>
+                                    </div>
+                                </div> */}
                             </div>
-                            <div className="bread-name-origin-master">
-                                <p className="bread-name">{bread.name}</p>
-                                <p className="bread-origin">From:{bread.origin}</p>
-                            </div>
-                            <div className="position-button">
-                                <Link to={`/bread/${bread._id}`} >
-                                    Show Page Button
-                                </Link>
-                            </div>
-                        </div>
                     </div>
                 )
             })
@@ -83,9 +89,7 @@ class MainPage extends React.Component {
                     </div>
                     <img className="main-pic-1" src={MainImage3} alt="man holding bread" />
                 </div>
-                <div className="footer">
-                    <Footer/>
-                </div>
+                <Footer />
             </div>
 
         )

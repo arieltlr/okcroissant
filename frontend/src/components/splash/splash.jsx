@@ -48,8 +48,6 @@ class SplashPage extends React.Component {
                     <img src={image2}/>
                     <img src={image3}/>
                 </div>
-                
-                <Footer/>
             </div>
         );
     }

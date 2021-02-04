@@ -25,8 +25,10 @@ class MainNavBar extends React.Component {
         return (
             <nav className="master-nav">
                 <div className="splash-nav1">
-                    <img className="logo1"src={Logo} alt="okCrossiantLogo" />
-                    <p className="logo-text">OkCroissant</p>
+                    <Link to="/main" style={{ textDecoration: 'none' }} className="main-nav-logo">
+                        <img className="logo1"src={Logo} alt="okCrossiantLogo" />
+                        <p className="logo-text1">OkCroissant</p>
+                    </Link>
                 </div>
                 <div className="master-nav-buttons">
                     <Link to="/profile"><button className="button-splash">Profile</button></Link>
