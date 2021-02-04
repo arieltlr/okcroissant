@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../splash/footer';
-// import CartItem from "./cart_item_container";
+import CartItem from "./cart_item_container";
 
 class Cart extends React.Component {
     
@@ -12,23 +12,20 @@ class Cart extends React.Component {
     render() {
         let breads;
         // debugger
-        // if (this.props.cart !== undefined){
-        //     breads = this.props.cart.map((items, i) => {
-        //         debugger
-        //         return (
-        //             <div key={i}>
-        //                 <CartItem breadId={items.bread}/>
-        //             </div>
-        //         )
-        //     })
-        // }
+        if (this.props.cart !== undefined){
+            breads = this.props.cart.map((items, i) => {
+                debugger
+                return (
+                    <div key={i}>
+                        <CartItem breadId={items.bread}/>
+                    </div>
+                )
+            })
+        }
         return (
             <div>
                 <div> {/* the breads are all below */}
-                    {/* {breads} */}
-                </div>
-                <div className="footer">
-                    <Footer />
+                    {breads}
                 </div>
             </div>
 

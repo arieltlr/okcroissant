@@ -1,33 +1,36 @@
 import React from 'react';
 import Footer from '../splash/footer';
 
-
 class CartItem extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+        debugger
+        this.state = {
+            bread:""
+        }
     }
 
-    // componentDidMount(){
-    //     this.props.fetchABread(this.props)
-    // }
+    componentDidMount(){
+       this.state = this.setState({ bread: this.props.fetchABread(this.props.breadId)});
+    }
 
-    // deleteBread(breadId) {
-    //     debugger //need to place correct breadId
-    //     this.props.deleteBreadItem(breadId)
-    // }
-    
+    handleDelete(bread) {
+        // debugger
+        this.props.deleteBreadItem(bread)
+    }
 
     render() {
-        let totalsum = 0
+        let totalsum = 0;
         // debugger
         return (
             <div>
                 <div> 
-                </div>
-                <div className="footer">
-                    {/* <button onClick={()=>deleteBread(this.props.breadId)}>Delete Bread</button> */}
-                    <Footer />
+                    {/* {bread} */}
+                    {/* <p>{this.state.bread}</p> */}
+                    <p>{this.props.breadId}</p>
+                    {/* {console.log(this.state.bread)} */}
+                    {/* onClick={() => this.handleDelete(.....)} */}
+                    <button >Delete Bread</button>
                 </div>
             </div>
 
