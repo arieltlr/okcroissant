@@ -41,9 +41,9 @@ class MainPage extends React.Component {
                 // debugger
                 return (
                     <div className="carasal" key={i}>
-<<<<<<< HEAD
                         <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}>
                             <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>
+                        </Link>
                             <div className="master">
                                 <div className="bread-description-main">
                                     <p className="bread-description">{bread.description}</p>
@@ -52,14 +52,13 @@ class MainPage extends React.Component {
                                     <p className="bread-name">{bread.name}</p>
                                     <p className="bread-origin">From:{bread.origin}</p>
                                 </div>
-=======
-                        <img className="bread-carasal" width="100%" src={bread.image}/>
-                        <div className="master">
-                            <div className="bread-description-main">
-                                <p className="bread-description">{bread.description}</p>
->>>>>>> ebb79a11e6575ae4b8fa1680b91e60ddb115b0fd
+                                <img className="bread-carasal" width="100%" src={bread.image}/>
+                                <div className="master">
+                                    <div className="bread-description-main">
+                                        <p className="bread-description">{bread.description}</p>
+                                    </div>
+                                </div>
                             </div>
-                        </Link>
                     </div>
                 )
             })
