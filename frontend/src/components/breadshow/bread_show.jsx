@@ -11,9 +11,51 @@ class BreadShow extends React.Component {
     }
 
     render(){
-        return (
-            <h1>hello</h1>
-        )
+        debugger
+        const { bread } = this.props;
+        if (!bread) {
+            return null;
+        } else {
+            return (
+                <div>
+                    <div className="bread-show-container">
+                        <div className="bread-show-intro">
+                            <div>
+                                <img className="bread-show-img" src={bread.image} />
+                            </div>
+                            <div className="bread-show-name-main">
+                                <div className="bread-show-name-container">
+                                    <label className="bread-show-name-label">Name</label>
+                                    <h3 className="bread-show-name">{bread.name}</h3>
+                                </div>
+                                <div className="bread-show-info-container">
+                                    <div className="bread-show-info" >
+                                        <div className="bread-show-origin-container">
+                                            <label className="bread-show-origin-label">Origin</label>
+                                            <p className="bread-show-origin">{bread.origin}</p>
+                                        </div>
+                                        <div className="bread-show-description-container">
+                                            <label className="bread-show-description-label">Description</label>
+                                            <p className="bread-show-description">{bread.description}</p>
+                                        </div>
+                                        <div className="bread-show-price-container">
+                                            <label className="bread-show-price-label">Price</label>
+                                            <p className="bread-show-price">${bread.price}</p>
+                                        </div>
+                                        <div className="bread-show-add-button">
+                                            <button className="bread-show-button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Reviews</label>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
     }
 }
 

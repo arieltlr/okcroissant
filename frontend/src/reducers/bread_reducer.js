@@ -4,9 +4,15 @@ const breadReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_BREADS:
-            return action.breads.data
+            let array = {}
+            action.breads.data.forEach(bread => {
+                array[bread._id] = bread
+            })
+            return array
         case RECEIVE_A_BREAD:
-            return Object.assign({}, state, { [action.bread.id]: action.bread })
+            const newState = Object.assign({}, state, { [action.bread.data._id]: action.bread.data })
+            debugger 
+            return newState;
         case RECEIVE_SUGGESTED_BREADS:
             // debugger
             return action.breads.data

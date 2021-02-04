@@ -33,8 +33,9 @@ class MainPage extends React.Component {
             className: "slider variable-width",
         };
         let items;
+        // const arrayId = this.props.breads.map(bread => bread._id)
             items = this.props.breads.map((bread, i) => {
-                // debugger
+                debugger
                 return (
                     <div className="carasal" key={i}>
                         <img className="bread-carasal" width="100%" src="/img/bread_images/paska.jpg"/>

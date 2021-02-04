@@ -13,7 +13,7 @@ class ProfileShow extends React.Component {
     }
 
     render(){
-        // debugger
+        debugger
         const hasProfile = Boolean(this.props.breadProfile.thin !== undefined);
         let formButton;
         if(hasProfile){
