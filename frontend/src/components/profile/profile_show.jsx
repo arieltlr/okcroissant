@@ -13,7 +13,7 @@ class ProfileShow extends React.Component {
     }
 
     render(){
-        // debugger
+        debugger
         const hasProfile = Boolean(this.props.breadProfile.thin !== undefined);
         let formButton;
         if(hasProfile){
@@ -36,7 +36,7 @@ class ProfileShow extends React.Component {
                             <div className="user-info-container">
                                 <p className="user-info">Welcome Back</p>
                                 {formButton}
-                                <p className="bread-reviews">Your Bread Reviews</p>
+                                <Link className="link-to-form" to="/reviews">Your Bread Reviews</Link>
                             </div>
                             <div>
                                 <SuggestedSliderContainer breadProfile={this.props.breadProfile} />

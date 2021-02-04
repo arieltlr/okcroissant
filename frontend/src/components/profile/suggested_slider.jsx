@@ -7,17 +7,16 @@ class SuggestedSlider extends React.Component {
     }
 
     componentDidMount(){
-        // this.props.getBreadProfileResponses(this.props.user.id);
+        this.props.getBreadProfileResposes(this.props.user.id)
         this.props.fetchSuggestBreads(this.props.breadProfile);
         debugger
     }
 
     render() {
-        debugger
         const settings = {
             dots: true, 
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: true,
             speed: 3000,
@@ -43,7 +42,6 @@ class SuggestedSlider extends React.Component {
                             })
                         }
                     </Slider> 
-
                 </div>
             )
         }
