@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 class Cart extends React.Component {
     constructor(props) {
         super(props)
-        debugger
     }
 
     componentDidMount(){
@@ -18,6 +17,7 @@ class Cart extends React.Component {
         debugger //need to place correct breadId
         this.props.deleteBreadItem()
     }
+
     render() {
         let totalsum = 0
         let number;
@@ -42,8 +42,9 @@ class Cart extends React.Component {
                 <div>
                     <div>
                         <label htmlFor="quantity">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" min="1" max="5"/>
-                        
+                        <button onClick={this.decrement}>-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value={this.state.value}/>
+                        <button onClick={this.increment}>+</button>
                     </div>
                 </div>
                 <div> {/* the breads are all below */}
