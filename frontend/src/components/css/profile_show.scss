@@ -22,14 +22,14 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    left: 17%;
+    left: 19%;
     top: 24%;
     border: 1px solid rgb(9, 152, 194);
 }
 
 .user-info-container {
     position: absolute;
-    left: 16.5%;
+    left: 19%;
     top: 63%;
 }
 
@@ -57,9 +57,31 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.link-to-form:hover{
+.link-to-form:hover, .link-to-form2:hover{
     cursor: pointer;
     background-color: rgb(206, 149, 4);
     transition: 2s;
     color: white;
+}
+
+.create-bread-profile {
+    position: absolute;
+    left: 19%;
+    top: 63%;
+}
+
+.link-to-form2 {
+    margin-top: 60px;
+    text-decoration: none;
+    color: tan;
+    margin-bottom: 60px;
+    background-color: white;
+    padding: 30px 20px;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    display: block;
+    height: 30px;
+    width: 380px;
+    text-align: center;
+    border-radius: 20px;
 }
