@@ -3,7 +3,7 @@ import { fetchAllReviews, fetchBreadReviews, fetchUsersReviews } from '../../act
 import Reviews from './reviews';
 
 const mstp = (state) => {
-    debugger
+    // debugger
     return {
         reviews: state.reviews.data,
         user: state.session.user,

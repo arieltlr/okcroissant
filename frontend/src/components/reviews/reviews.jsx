@@ -14,7 +14,7 @@ class Reviews extends React.Component {
         if (this.props.reviews === undefined){
             return null
         }
-        debugger
+        // debugger
         const reviews = this.props.reviews.map(review => {
             // debugger
                 return(

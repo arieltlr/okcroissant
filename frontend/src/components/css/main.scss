@@ -4,7 +4,6 @@
   height: 500px;
 
   .bread-carasal{
-    
       height: 100%;
       object-fit: cover;
       // -webkit-overflow-scrolling: touch; dont know if i want this
@@ -28,12 +27,11 @@
       margin-left: 80px;
       position: relative;
       top: -450px;
+      color: black;
     }
       .bread-description{
       font-family: $main-Roboto-font;
       font-size: 40px;
-      
-      
     }
 
     .bread-name-origin-master{
@@ -44,6 +42,7 @@
       border-radius: 10px;
       padding: 10px;
       height: 60px;
+      color: black;
       .bread-name{
         font-family: $main-Roboto-font;
         font-size: 30px;
@@ -121,7 +120,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #fbf6f77a;
+    background-color: white;
     padding: 20px 25px 20px 25px;
 
     .button-splash{
