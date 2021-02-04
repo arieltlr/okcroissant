@@ -5,6 +5,7 @@ import modalReducer from './modal_reducer';
 import uiReducer from './ui_reducer';
 import breadProfileReducer from './bread_profile_reducer';
 import breadReducer from './bread_reducer';
+import CartReducer from "./cart_reducer";
 
 const RootReducer = combineReducers({
     session,
@@ -12,7 +13,8 @@ const RootReducer = combineReducers({
     modal: modalReducer,
     ui: uiReducer,
     breadProfile: breadProfileReducer,
-    bread: breadReducer
+    bread: breadReducer,
+    cart: CartReducer
 });
 
 export default RootReducer;
