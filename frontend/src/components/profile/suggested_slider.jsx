@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import Carousel from 'react-elastic-carousel';
+import Slider from 'infinite-react-carousel';
 import { Link } from 'react-router-dom';
 
 class SuggestedSlider extends React.Component {
@@ -21,6 +20,14 @@ class SuggestedSlider extends React.Component {
 
     render() {
         let items;
+
+        const settings = {
+            autoplay: true,
+            autoplaySpeed: 4000,
+            autoplayScroll: 1,
+            dots: true,
+            dotsClass: "carousel-dots"
+        }
         debugger
         const { breads } = this.props;
         if (Object.keys(breads).length === 0) {
@@ -38,9 +45,9 @@ class SuggestedSlider extends React.Component {
         }
         return (
             <div className="profile-carousel">
-                <Carousel>
+                <Slider {...settings}>
                     {items}
-                </Carousel>
+                </Slider>
             </div>
         )
     }
