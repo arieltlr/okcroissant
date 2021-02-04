@@ -13,31 +13,43 @@
 }
 
 .profile-carousel-name {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
     text-align: center;
     padding-top: 10px;
     font-size: 30px;
 }
 
 .breadProfile-label {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    margin-right: 80px;
-    margin-top: 100px;
+    padding-bottom: 30px;
+    /* margin-right: 80px; */
+    /* margin-top: 120px; */
 }
 
 .breadProfile-suggestions {
-    display: flex;
-    margin-left: 300px;
+   margin-right: 60px;
+   margin-top: 60px;
 }
 
 .profile-carousel {
     height: 500px;
     width: 700px;
+    margin-top: 30px;
 }
 
 .profile-carousel:hover {
     cursor: pointer;
+}
+
+.main-profile-display {
+    display: block;
+    height: 800px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: #f5f3ef;
+    border-radius: 30px;
+    font-family:'Nunito', sans-serif;
 }
