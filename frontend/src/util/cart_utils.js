@@ -12,7 +12,7 @@ export const createCartItem = (data) => {
     return axios.post("/api/cartitems/", data)
 }
 
-export const deleteBreadItem = (breadId) => {
-    // debugger  //assuming the key value pair is breadId
-    return axios.delete(`/api/cartitems/${breadId}`)
+export const deleteBreadItem = (itemId) => {
+    // debugger  //assuming the key value pair is itemId
+    return axios.delete(`/api/cartitems/${itemId}`)
 };
