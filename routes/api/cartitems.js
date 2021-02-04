@@ -16,13 +16,11 @@ router.post('/',
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        // debugger
         const item = new CartItem({
             user: req.body.user_id,
             bread: req.body.bread_id,
             price: req.body.price
           });
-        // debugger
         item.save()
             .then(item => res.json(item))
             .catch(err =>res.status(400).json({ err }))
@@ -32,10 +30,8 @@ router.post('/',
 router.get('/user/:user_id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        console.log(req.params)
         CartItem.find({user: req.params.user_id})
             .then(breadprofile => {
-                console.log(`here at cartitems.js line 38${breadprofile}`)
                 return res.json(breadprofile)})
             .catch(err => 
                     res.status(404).json({ noItemFound: 'No Item Found' })

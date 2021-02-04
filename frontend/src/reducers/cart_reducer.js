@@ -4,12 +4,12 @@ const CartReducer = (state=[], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CART_ITEMS: {
-            debugger
+            // debugger
             return action.items;
 
         }
         case CREATE_CART_ITEM: {
-            debugger
+            // debugger
             const nextState = Object.assign([], state.cart, { [action.item.data]: action.item.data });
             return nextState;
         }
@@ -20,7 +20,7 @@ const CartReducer = (state=[], action) => {
 
         }
         default:
-            debugger
+            // debugger
             return state;
     }
 }

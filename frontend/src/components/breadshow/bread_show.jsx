@@ -4,31 +4,27 @@ class BreadShow extends React.Component {
     constructor(props){
         super(props);
         // this.state = this.props.items
-        debugger
-        this.state = {
-            userId: this.props.userId,
-            price: "",
-            bread: ""
-        }
-        debugger
+        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount(){
         // debugger
         this.props.fetchABread(this.props.match.params.breadId)
-        this.props.fetchUserCartItems(this.props.userId)
     }
     
 
 
 
     handleSubmit(e){
-        debugger
+        // debugger
         e.preventDefault();
-        this.setState({"price": this.props.bread.price,
-                        "bread": this.props.bread._id})
-        debugger
+        this.state = {
+            user_id: this.props.user,
+            price: this.props.bread.price,
+            bread_id: this.props.bread._id
+        }
+        // debugger
         this.props.createUserCartItem(this.state)
     }
 

@@ -20,23 +20,23 @@ export const removeCartItem = breadId => ({
 });
 
 export const createUserCartItem = (item) => dispatch => {
-    debugger
+    // debugger
     return APIUtil.createCartItem(item)
         .then((item) => dispatch(createCartItem(item)))
 }
 
 export const fetchUserCartItems = userId => dispatch => {
-    debugger
+    // debugger
     return APIUtil.fetchUsersBreads(userId)
         .then((items) => {
-            debugger
+            // debugger
             return (dispatch(recieveCartItems(items)))})
 }
 
 export const deleteBreadItem = breadId => dispatch => {
-    debugger
+    // debugger
     return APIUtil.deleteBreadItem(breadId)
         .then(() => {
-            debugger
+            // debugger
             return (dispatch(removeCartItem(breadId)))})
 }
