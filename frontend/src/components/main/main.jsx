@@ -52,12 +52,12 @@ class MainPage extends React.Component {
                                     <p className="bread-name">{bread.name}</p>
                                     <p className="bread-origin">From:{bread.origin}</p>
                                 </div>
-                                <img className="bread-carasal" width="100%" src={bread.image}/>
-                                <div className="master">
+                                {/* <img className="bread-carasal" width="100%" src={bread.image}/> */}
+                                {/* <div className="master">
                                     <div className="bread-description-main">
                                         <p className="bread-description">{bread.description}</p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                     </div>
                 )

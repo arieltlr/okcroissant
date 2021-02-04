@@ -22,13 +22,13 @@ export const receiveSuggestedBread = breads => ({
 export const fetchAllBreads = () => dispatch => (
     BreadApiUtil.fetchBreads()
         .then(breads => dispatch(receiveBreads(breads)))
-        .catch(err => console.log(err))
+        // .catch(err => console.log(err))
 )
 
 export const fetchABread = (breadId) => dispatch => (
     BreadApiUtil.fetchBread(breadId)
         .then(bread => dispatch(receiveBread(bread)))
-        .catch(err => console.log(err))
+        // .catch(err => console.log(err))
 )
 
 export const fetchSuggestBreads = breadData => dispatch => {
