@@ -2,17 +2,23 @@ import * as APIUtil from '../util/reviews_util';
 
 export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
 export const RECEIVE_SINGLE_REVIEW = "RECEIVE_SINGLE_REVIEW";
+export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 
 export const receiveReviews = (reviews) => ({
-    type: RECEIVE_REVIEWS,
+    type: RECEIVE_ALL_REVIEWS,
     reviews
 });
 export const receiveSingleReview = (review) => ({
     type: RECEIVE_SINGLE_REVIEW,
     review
 });
+export const receiveErrors = (errors) => ({
+    type: RECEIVE_REVIEW_ERRORS,
+    errors
+});
 
 export const fetchAllReviews = () => dispatch =>{
+    debugger
     return APIUtil.fetchAllReviews().then((reviews) => (
         dispatch(receiveReviews(reviews))
     ))
@@ -29,11 +35,12 @@ export const fetchUsersReviews = (userId) => dispatch =>{
 }
 export const createReview = review => dispatch => {
     return APIUtil.createReview(review).then(review => (
-        dispatch(receiveSingleReviews(review))
+        dispatch(receiveSingleReview(review))
     ))  
     }
 export const updateReview = review => dispatch => (
     APIUtil.updateReview(review).then(review => (
         dispatch(receiveSingleReview(review))
+        .catch(err => receiveErrors(err))
     ))  
 )
