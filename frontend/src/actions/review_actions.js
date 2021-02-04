@@ -36,7 +36,11 @@ export const fetchUsersReviews = (userId) => dispatch =>{
 export const createReview = review => dispatch => {
     return APIUtil.createReview(review).then(review => (
         dispatch(receiveSingleReview(review))
-    ))  
+    ),
+        err => (
+            dispatch(receiveErrors(err.response.data))
+    )
+    )  
     }
 export const updateReview = review => dispatch => (
     APIUtil.updateReview(review).then(review => (
