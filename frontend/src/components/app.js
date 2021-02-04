@@ -12,7 +12,7 @@ import create_profile_container from '../components/profile/create_profile_conta
 import BreadShowContainer from './breadshow/bread_show_container';
 import ReviewShowContainer from '../components/reviews/review_show_container';
 
-import cart from "./cart/cart_container"
+import cart from "../components/cart/cart_container"
 const App = () => (
     
     <div>

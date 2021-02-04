@@ -6,11 +6,29 @@ import CreateReviewContainer from '../reviews/create_review_container'
 class BreadShow extends React.Component {
     constructor(props){
         super(props);
+        // this.state = this.props.items
+        // debugger
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount(){
         // debugger
         this.props.fetchABread(this.props.match.params.breadId)
+    }
+    
+
+
+
+    handleSubmit(e){
+        // debugger
+        e.preventDefault();
+        this.state = {
+            user_id: this.props.user,
+            price: this.props.bread.price,
+            bread_id: this.props.bread._id
+        }
+        // debugger
+        this.props.createUserCartItem(this.state)
     }
 
     render(){
@@ -46,7 +64,7 @@ class BreadShow extends React.Component {
                                             <p className="bread-show-price">${bread.price}</p>
                                         </div>
                                         <div className="bread-show-add-button">
-                                            <button className="bread-show-button">Add to Cart</button>
+                                            <button onClick={this.handleSubmit} className="bread-show-button">Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>

@@ -1,18 +1,31 @@
 import React from 'react';
 import Footer from '../splash/footer';
-import { Link } from 'react-router-dom';
-// THIS IS THE MAIN SPLASH 
-// onclickk
+import CartItem from "./cart_item_container";
+
 class Cart extends React.Component {
-    constructor(props) {
-        super(props)
+    
+    componentDidMount(){
+        // debugger
+        this.props.fetchUserCartItems(this.props.user)
     }
 
     render() {
+        let breads;
+        // debugger
+        if (this.props.cart !== undefined){
+            breads = this.props.cart.map((items, i) => {
+                // debugger
+                return (
+                    <div key={i}>
+                        <CartItem breadId={items.bread}/>
+                    </div>
+                )
+            })
+        }
         return (
             <div>
-                <div className="footer">
-                    <Footer />
+                <div> {/* the breads are all below */}
+                    {breads}
                 </div>
             </div>
 
