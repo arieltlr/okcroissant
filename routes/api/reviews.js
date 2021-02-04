@@ -26,16 +26,28 @@ router.post('/',
     }
 );
 
-router.get('/user/:user_id/reviews', 
+router.get('/user/:user_id', 
     (req, res) => {
-        debugger
         Review.find({user: req.params.user_id})
             .then(reviews => res.json(reviews))
         }
 );
 router.get('/', (req, res) => {
-        debugger
         Review.find({})
+            .then(reviews => res.json(reviews))
+            .catch(err => res.status(400).json({ err }))
+        }
+);
+router.get('/:review_id', (req, res) => {
+        Review.find({_id: req.params.review_id})
+            .then(review => res.json(review))
+            .catch(err => res.status(400).json({ err }))
+        }
+);
+router.get('/bread/:bread_id', 
+    (req, res) => {
+        debugger
+        Review.find({bread: req.params.bread_id})
             .then(reviews => res.json(reviews))
             .catch(err => res.status(400).json({ err }))
         }
