@@ -4,7 +4,7 @@ import Footer from '../splash/footer';
 class CartItem extends React.Component {
     constructor(props) {
         super(props)
-        debugger
+        // debugger
         this.state = {
             bread:""
         }

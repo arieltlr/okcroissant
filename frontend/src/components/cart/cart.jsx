@@ -14,7 +14,7 @@ class Cart extends React.Component {
         // debugger
         if (this.props.cart !== undefined){
             breads = this.props.cart.map((items, i) => {
-                debugger
+                // debugger
                 return (
                     <div key={i}>
                         <CartItem breadId={items.bread}/>
