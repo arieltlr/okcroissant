@@ -5,12 +5,12 @@ import { withRouter } from 'react-router-dom';
 
 const mstp = (state, ownProps) => {
     const breadId = ownProps.match.params.breadId;
-    // debugger
+    debugger
     return {
-        reviews: state.reviews.data,
+        reviews: state.reviews,
         user: state.session.user,
         breadId: ownProps.match.params.breadId,
-        bread: state.bread[breadId]
+        bread: state.bread[breadId],
 
     };
 };
