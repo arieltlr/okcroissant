@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from 'react-elastic-carousel';
+import Slider from 'infinite-react-carousel';
 import { Link } from 'react-router-dom';
 
 class SuggestedSlider extends React.Component {
@@ -19,19 +19,25 @@ class SuggestedSlider extends React.Component {
     }
 
     render() {
-        const breakpoints= [
-            {width: 1, itemsToShow:1},
-            {width: 550, itemsToShow: 2, itemsToScroll: 2}
-        ]
         let items;
+
+        const settings = {
+            autoplay: true,
+            autoplaySpeed: 4000,
+            autoplayScroll: 1,
+            dots: true,
+            dotsClass: "carousel-dots"
+        }
+        debugger
         const { breads } = this.props;
         if (Object.keys(breads).length === 0) {
             return null;
         } else {
+            debugger
             items = breads.map(bread => {
                 return (
                         <div>
-                            <Link to={`/breads/${bread._id}`}> <img className="profile-carousel-image" src={bread.image} /></Link>
+                            <Link to={`/bread/${bread._id}`}> <img className="profile-carousel-image" src={bread.image} /></Link>
                             <p className="profile-carousel-name">{bread.name}</p>
                         </div>
                     )
@@ -39,9 +45,9 @@ class SuggestedSlider extends React.Component {
         }
         return (
             <div className="profile-carousel">
-                <Carousel>
+                <Slider {...settings}>
                     {items}
-                </Carousel>
+                </Slider>
             </div>
         )
     }
