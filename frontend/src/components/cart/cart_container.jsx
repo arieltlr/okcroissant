@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 import Cart from './cart';
-import { fetchAllBreads } from '../../actions/bread_actions';
-
-// THIS IS THE MAIN SPLASH CONTAINER!!!!
+import {fetchUserCartItems} from "../../actions/cart_actions";
 const msp = (state, ownProps) => {
+    // debugger  //check the cart
     return {
+        cart : state.cart.data,
+        user: state.session.user.id
     }
 }
 const mdp = (dispatch) => {
     return {
+        fetchUserCartItems: (userId) => dispatch(fetchUserCartItems(userId))
     }
 }
 
