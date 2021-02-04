@@ -34,9 +34,9 @@ export const fetchUserCartItems = userId => dispatch => {
 }
 
 export const deleteBreadItem = (itemId) => dispatch => {
-    debugger
+    // debugger
     return APIUtil.deleteBreadItem(itemId)
         .then(() => {
-            debugger
+            // debugger
             return (dispatch(removeCartItem(itemId)))})
 }

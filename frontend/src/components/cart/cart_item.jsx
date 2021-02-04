@@ -4,13 +4,13 @@ import React from 'react';
 class CartItem extends React.Component {
     constructor(props) {
         super(props)
-        debugger
+        // debugger
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.fetchABread(this.props.breadId)
-        debugger
+        // debugger
     }
 
 

@@ -14,9 +14,9 @@ const CartReducer = (state=[], action) => {
         }
         case DELETE_CART_ITEM: {
             const nextState = Object.assign([], state.cart);
-            debugger
+            // debugger
             delete nextState[action.itemId];
-            debugger
+            // debugger
             return nextState;
 
         }
