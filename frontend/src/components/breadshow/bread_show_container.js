@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     return {
         // array: state.bread.map(bread => bread.id),
         bread: state.bread[ownProps.match.params.breadId],
-        user: state.session.user
+        user: state.session.user.id
     }
 }
 
