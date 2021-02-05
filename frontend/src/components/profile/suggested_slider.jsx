@@ -30,14 +30,14 @@ class SuggestedSlider extends React.Component {
         }
         // debugger
         let {breads} = this.props;
-        debugger
+        // debugger
         if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
             return [];
         } else {
-            debugger
+            // debugger
             breads = Object.values(breads)
             items = breads.map(bread => {
-                debugger
+                // debugger
                 return (
                     <div key = {bread._id}>
                             <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
