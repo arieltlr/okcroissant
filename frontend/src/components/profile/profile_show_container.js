@@ -4,7 +4,7 @@ import ProfileShow from './profile_show';
 import { openModal } from '../../actions/modal_actions';
 
 const mstp = (state) => {
-    // debugger
+    debugger
     return {
         breadProfile: state.breadProfile,
         user: state.session.user
@@ -13,6 +13,7 @@ const mstp = (state) => {
 };
 
 const mdtp = (dispatch) => {
+    debugger
     return {
         getBreadProfileResponses: (userId) => dispatch(getBreadProfileResponses(userId)),
         createBreadProfile: breadProfile => dispatch(createBreadProfile(breadProfile)),
