@@ -24,9 +24,9 @@ class Cart extends React.Component {
     // }
 
     handleCheckout(){
-        debugger
+        // debugger
         this.props.cart.map(item =>{
-            debugger
+            // debugger
             this.props.deleteBreadItem(item._id)
         })
     }
@@ -46,7 +46,7 @@ class Cart extends React.Component {
         }
         else {
             breads = this.props.cart.map((items, i) => {
-                debugger
+                // debugger
                 price += items.price
                 return (
                     <div>
