@@ -2,7 +2,6 @@
   <img src="https://github.com/arieltlr/okcroissant/blob/main/frontend/src/images/croissant_icon.png" />
 </p>
 
-
 [Click here to view the live site!](https://okcroissant.herokuapp.com/#/)
 <p align="center">
   <img src="https://github.com/arieltlr/okcroissant/blob/main/gifs/splash.gif" />
