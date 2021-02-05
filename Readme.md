@@ -66,3 +66,32 @@ Finally, all your bread dreams are fulfilled!
 <p align="center">
   <img src="https://github.com/arieltlr/okcroissant/blob/main/gifs/cart.gif" />
 </p>
+
+
+## Code Highlights
+
++ Ariel: 
+
+
+
++ Kai: 
+
+
+
++ Monica: 
+```javascript
+export const fetchSuggestedBreads = (breadData) => {
+    const totalqueryString = `thin=${breadData.thin}&wholewheat=${breadData.wholewheat}&savory=${breadData.savory}&filling=${breadData.filling}`
+    return axios.get(`/api/breads/matches?${totalqueryString}`)
+}
+```
+```javascript
+        case RECEIVE_ALL_BREADS:
+            let array = {}
+            action.breads.data.forEach(bread => {
+                array[bread._id] = bread
+            })
+            return array
+```
+
++ Jane:
