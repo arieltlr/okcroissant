@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/arieltlr/okcroissant/blob/main/frontend/src/images/croissant_icon.png" />
+  <img src="https://github.com/arieltlr/okcroissant/blob/main/frontend/src/images/OkCroissantLogo.png" />
 </p>
 
 [Click here to view the live site!](https://okcroissant.herokuapp.com/#/)
