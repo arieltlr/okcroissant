@@ -1,0 +1,64 @@
+@import "./variables.scss";
+.No-bread{
+    font-family: $main-Roboto-font;
+    text-align: center;
+    font-size: 280px;
+    background-image: url("../../images/orlova-maria-background-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #1b1405e8;
+    font-weight: bold;
+    margin-bottom: 30px;
+    }
+.cart-master{
+    padding: 40px;
+    font-family: $main-Roboto-font;
+    font-weight: 300;
+    .quantity{
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        margin-top: 120px;
+        padding:10px;
+        border: $blue-border solid 1px;
+    }
+    hr{
+        border: 1px solid #7b7b7b1c;
+    }
+
+    .cart-items{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 87px;
+        padding-top: 20px;
+        .cart-items-master{
+            margin-left: 30px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            
+        }
+        .button-cart{
+            padding-top: 15px;
+        }
+        .item-info{
+            p{
+                font-size: 30px;
+                line-height: 1.4;
+            }
+        }
+        .img-cart{
+            width: 135px;
+            border-radius: 10px;
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: red;
+            cursor: url('../../images/croissant_icon.png'), auto;
+        }
+    }
+    .button-checkout{
+        margin-top:50px;
+    }
+}
