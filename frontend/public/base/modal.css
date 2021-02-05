@@ -9,7 +9,7 @@
     z-index: 10;
 }
 
-.signup-modal, .login-modal, .edit-bprofile-modal {
+.signup-modal, .login-modal, .edit-bprofile-modal, .create-review-modal {
     width: 400px;
     height: 430px;
     position: absolute;
@@ -28,6 +28,9 @@
 }
 .edit-bprofile-modal {
     height: 650px;
+}
+.create-review-modal {
+    height: 390px;
 }
 .logo-container {
     display: flex;

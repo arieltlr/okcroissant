@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import SignupContainer from '../../components/session/signup_container';
 import LoginContainer from '../../components/session/login_container';
 import EditBProfileContainer from '../../components/profile/edit_bprofile_container';
+import CreateReviewContainer from '../../components/reviews/create_review_container';
 
 function Modal ({modal, closeModal}) {
     if (!modal) {
@@ -23,6 +24,10 @@ function Modal ({modal, closeModal}) {
         case 'edit-bprofile': 
             component = <EditBProfileContainer /> 
             form = "edit-bprofile-modal";
+            break;
+        case 'review': 
+            component = <CreateReviewContainer /> 
+            form = "create-review-modal";
             break;
         default: 
             return null;
