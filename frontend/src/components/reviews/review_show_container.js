@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const mstp = (state, ownProps) => {
     const breadId = ownProps.match.params.breadId;
-    debugger
+     
     return {
         reviews: state.reviews,
         user: state.session.user,

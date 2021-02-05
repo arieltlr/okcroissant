@@ -4,8 +4,9 @@ import { createBreadProfile } from '../../actions/bread_profile_actions';
 
 import  NewProfile from './create_profile_form'
 const msp = state =>{
+     
     return ({
-       user: state.session.user
+       user: state.session.user.id
     })
 }
 

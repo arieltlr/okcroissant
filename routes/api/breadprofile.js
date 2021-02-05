@@ -10,8 +10,9 @@ const validateBreadprofileInput = require('../../validation/breadprofile');
 router.post('/',
         passport.authenticate('jwt', { session: false }),
         (req, res) => {
+            console.log(req)
             Breadprofile.findOne({user: req.user.id}).then(user =>{
-                // debugger
+                //  
                 if(user){
                     return res.status(400).json({user: "Bread profile created already!"})
                 }else{
@@ -22,7 +23,7 @@ router.post('/',
                     }
                 
                     const newBreadprofile = new Breadprofile({
-                      user: req.user.id,
+                      user: req.body.user,
                       thin: req.body.thin,
                       wholewheat: req.body.wholewheat,
                       filling: req.body.filling,
@@ -49,13 +50,13 @@ router.post('/',
 router.patch('/:breadprofile_id', 
         passport.authenticate('jwt', { session: false }),
         (req, res) => {
-            // debugger
+            //  
             const { errors, isValid } = validateBreadprofileInput(req.body);
               
             if (!isValid) {
                 return res.status(400).json(errors);
             }
-            // debugger
+            //  
             Breadprofile.findByIdAndUpdate(
                 req.params.breadprofile_id,
                 req.body,

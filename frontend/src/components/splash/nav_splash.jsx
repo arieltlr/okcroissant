@@ -6,11 +6,11 @@ import Logo from '../../images/croissant_icon.png';
 class NavSplash extends React.Component{
     constructor(props){
         super(props)
-        // debugger
+        //  
     }
 
     render(){
-        // debugger
+        //  
         return (
             <nav className="master-nav1">
                 <div className="splash-nav1">

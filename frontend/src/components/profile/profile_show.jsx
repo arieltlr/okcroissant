@@ -9,21 +9,21 @@ class ProfileShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+        //  
         this.props.getBreadProfileResponses(this.props.user.id)
     }
 
     render(){
-        debugger
+         
         const hasProfile = Boolean(this.props.breadProfile.thin !== undefined);
-        debugger
+         
         let formButton;
         if(hasProfile){
                 formButton = <button className="link-to-form" onClick={() => this.props.openModal('edit-bprofile')}>
                 Edit Your Bread Profile
                 </button>
         } else{
-            debugger
+             
             formButton = 
                 <div className="create-bread-profile">
                     <Link className="link-to-form2" to="/createBreadprofile">

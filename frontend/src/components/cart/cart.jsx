@@ -8,7 +8,7 @@ class Cart extends React.Component {
     }
     
     componentDidMount(){
-        // debugger
+        //  
         this.props.fetchUserCartItems(this.props.user)
     }
 
@@ -24,7 +24,7 @@ class Cart extends React.Component {
 
     render() {
         let breads;
-        // debugger
+        //  
         if (this.props.cart !== undefined){
             breads = this.props.cart.map((items, i) => {
                 return (

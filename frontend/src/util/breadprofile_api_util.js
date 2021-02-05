@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 export const getBreadprofileResponses = (userId) =>{
-    // debugger
+    //  
     return axios.get(`/api/breadprofile/user/${userId}`)
 };
 
 export const createBreadprofile = (breadprofile) =>{
-    // debugger
-    return axios.post(`/api/breadprofile`, breadprofile)
+     
+    return axios.post(`/api/breadprofile/`, breadprofile)
 };
 
 export const updateBreadprofile = (breadprofile) =>{

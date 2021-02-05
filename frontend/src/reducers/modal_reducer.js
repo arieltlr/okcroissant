@@ -4,7 +4,7 @@ import { RECEIVE_BREAD_PROFILE_RESPONSES } from '../actions/bread_profile_action
 
 const modalReducer = (state=null, action) => {
     Object.freeze(state);
-    // debugger
+    //  
     switch (action.type) {
         case OPEN_MODAL:
             return action.modal;
