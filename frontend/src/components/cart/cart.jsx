@@ -69,7 +69,7 @@ class Cart extends React.Component {
                     </div>
                     <p className="quantity">
                         <p>${price}</p>
-                        <p>{quantity} breads comming your way</p>
+                        <p>{quantity} breads coming your way</p>
                     </p>
                     <Footer />
                 </div>
