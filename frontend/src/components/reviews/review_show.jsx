@@ -6,28 +6,14 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-<<<<<<< HEAD
-        //  
-=======
-        // debugger
->>>>>>> main
         const breadId = this.props.breadId
         this.props.fetchBreadReviews(breadId);
     }
     render(){
-        //  
         if (Object.values(this.props.reviews).length < 1){
             return null
         }
-<<<<<<< HEAD
-        //  
         const reviews = Object.values(this.props.reviews).map((review, i) => {
-            //  
-=======
-        // debugger
-        const reviews = Object.values(this.props.reviews).map((review, i) => {
-            // debugger
->>>>>>> main
                 return(
                     
                     <div key={i} className="review-container">
