@@ -26,7 +26,7 @@
 .review-body-holder{
     height: 200px;
     width: 200px;
-    background: none;
+    background-color: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,17 +35,15 @@
 .review-body{
     height: 200px;
     width: 200px;
-    border-radius: 50%;
-    border: 2px solid $new-blue;
     background-color: $new-blue;
+    border-radius: 50%;
+    display: block;
     font-family: $nunito;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: white;
     line-height: 200px;
-
-   
 }
 
 
