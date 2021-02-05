@@ -28,23 +28,31 @@ class SuggestedSlider extends React.Component {
             dots: true,
             dotsClass: "carousel-dots"
         }
-        //  
-        const { breads } = this.props;
+        // debugger
+        let {breads} = this.props;
+        // debugger
         if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
-            return null;
+            return [];
         } else {
-            //  
-            items = breads.map((bread, i )=> {
+            // debugger
+            breads = Object.values(breads)
+            items = breads.map(bread => {
+                // debugger
                 return (
                     <div key = {bread._id}>
-                       
                             <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
                             <p className="profile-carousel-name">{bread.name}</p>
-                      
-                            
                     </div>
                 )
             })
+            // for (const [key, value] of Object.entries(breads)){
+            //         return (
+            //             <div key = {value._id}>
+            //                     <Link to={`/bread/${value._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={value.image} /></Link>
+            //                     <p className="profile-carousel-name">{value.name}</p>
+            //             </div>
+            //         )
+            // }
         }
         return (
             <div className="profile-carousel">
