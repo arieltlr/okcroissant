@@ -206,3 +206,9 @@ export const fetchSuggestedBreads = (breadData) => {
             
         }
  ```
+
+
+## Our challenges 
+
++ Managing git workflow between the group. -- We developed a flow between our group to make we are pushing and merging the correct way so we don't break anyone's existing code. 
++ Understanding the data flow for MongoDB from backend-to-frontend in four days 
