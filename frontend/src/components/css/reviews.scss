@@ -3,13 +3,15 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     padding: 30px 30px 30px 30px;
-
+    margin-left: 100px;
     
 }
 .review-header {
     font-family: $nunito;
     font-size: 36px;
     font-weight: 700;
+    margin-left: 120px;
+    margin-top: 40px;
 }
 .review-container {
     height: 250px;
@@ -22,30 +24,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 300px;
+    width: 300px;
+    position: relative;
 }
+
 .review-body-holder{
     height: 200px;
     width: 200px;
-    background-color: none;
-    display: flex;
+    display:block;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
+    background-color: rgba(9, 152, 194, 1);
+    border-radius: 20px;
 }
+
 .review-body{
-    height: 200px;
-    width: 200px;
-    background-color: $new-blue;
-    border-radius: 50%;
-    display: block;
     font-family: $nunito;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: white;
-    line-height: 200px;
+    line-height: 1.25;
+    padding: 0;
+    display:block;
+    height: 200px;
+    width: 200px;
+    overflow-wrap: break-word;
+    margin: 5px 0px;
 }
-
 
 .review-author {
     border: 2px solid $mustard;
