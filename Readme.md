@@ -95,3 +95,34 @@ export const fetchSuggestedBreads = (breadData) => {
 ```
 
 + Jane:
+```javascript
+    breads = this.props.cart.map((items, i) => {
+                // debugger
+                price += items.price
+                return (
+                    <div>
+                        <hr />
+                        <div className="cart-items" key={i}>
+                            <CartItem className breadId={items.bread} />
+                            <div className="button-cart">
+                                <button className="button-splash1" value={items._id} onClick={this.handleDelete(items._id)}>Delete Bread</button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })
+ ```
+ ```css
+     .cart-items{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 85px;
+        padding-top: 20px;
+        .cart-items-master{
+            margin-left: 30px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            
+        }
+ ```
