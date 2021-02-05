@@ -5,6 +5,7 @@ import Footer from './footer';
 import image1 from '../../images/natsuki-buns2-unsplash.jpg';
 import image2 from '../../images/maria-petersson-aajFDq9XugA-unsplash.jpg';
 import image3 from '../../images/victoria-shes--IXuIVhA-rE-unsplash.jpg';
+
 class SplashPage extends React.Component {
     constructor(props){
         super(props)
@@ -48,6 +49,7 @@ class SplashPage extends React.Component {
                     <img src={image2}/>
                     <img src={image3}/>
                 </div>
+                <Footer />
             </div>
         );
     }
