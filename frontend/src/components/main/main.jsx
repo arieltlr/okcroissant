@@ -13,7 +13,7 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.bread
-        // debugger
+        //  
     }
 
     componentDidMount(){
@@ -38,7 +38,7 @@ class MainPage extends React.Component {
         let items;
         // const arrayId = this.props.breads.map(bread => bread._id)
             items = this.props.breads.map((bread, i) => {
-                // debugger
+                //  
                 return (
                     <div className="carasal" key={i}>
                         <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}>

@@ -37,9 +37,12 @@ class SuggestedSlider extends React.Component {
             breads = breads.split(",")
             items = breads.map(bread => {
                 return (
-                    <div>
-                        <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
-                        <p className="profile-carousel-name">{bread.name}</p>
+                    <div key = {bread._id}>
+                       
+                            <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
+                            <p className="profile-carousel-name">{bread.name}</p>
+                      
+                            
                     </div>
                 )
             })

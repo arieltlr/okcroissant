@@ -16,14 +16,14 @@ class EditBProfile extends React.Component {
 
     handleChange(event){
         const {name, value} = event.target;
-        // debugger
+        //  
         this.setState({
             [name]: value
         })
     }
     handleSubmit(e){
         e.preventDefault();
-        // debugger
+        //  
         let breadProfile = {
             id: this.props.breadProfile._id,
             thin: this.state.thin,
@@ -31,7 +31,7 @@ class EditBProfile extends React.Component {
             filling: this.state.filling,
             savory: this.state.savory,
         }
-        // debugger
+        //  
         this.props.updateBreadProfile(breadProfile)
     }
 

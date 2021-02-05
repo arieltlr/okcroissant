@@ -6,18 +6,18 @@ import {Link} from 'react-router-dom';
 class MainNavBar extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+        //  
         this.handleLogout = this.handleLogout.bind(this);
     }
 
     componentDidMount(){
         this.props.fetchUser(this.props.currentUser);
-        // debugger
+        //  
     }
 
     handleLogout(e){
         e.preventDefault();
-        // debugger
+        //  
         this.props.logout();
     }
 

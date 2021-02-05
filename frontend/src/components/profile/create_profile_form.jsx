@@ -10,12 +10,13 @@ class NewProfile extends React.Component{
         super(props);
         this.state = {
             currentPage: 1,
-            thin: false,
-            wholewheat: false,
-            filling: false,
-            savory: false,
-
+            thin: "false",
+            wholewheat: "false",
+            filling: "false",
+            savory: "false",
+            user: this.props.user
         }
+         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.next = this.next.bind(this);
@@ -24,9 +25,12 @@ class NewProfile extends React.Component{
         this.prevButton=this.prevButton.bind(this);
     }
     handleSubmit(event){
+         
         event.preventDefault();
+        // this.setState({[user]: this.props.user})
         let newState =Object.assign({}, this.state);
         delete newState['currentPage'];
+         
         this.props.createBreadProfile(newState)
             .then((project)=>{
                 return  this.props.history.push(`/main`)})

@@ -18,7 +18,7 @@ export const receiveErrors = (errors) => ({
 });
 
 export const fetchAllReviews = () => dispatch =>{
-    // debugger
+    //  
     return APIUtil.fetchAllReviews().then((reviews) => (
         dispatch(receiveReviews(reviews))
     ))
