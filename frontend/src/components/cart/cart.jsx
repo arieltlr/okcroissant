@@ -17,11 +17,11 @@ class Cart extends React.Component {
         return e => this.props.deleteBreadItem(value)
     }
 
-    // componentDidUpdate(prevProps, prevState){
-    //     if(prevProps.cart !== this.props.cart){
-    //         this.props.fetchUserCartItems(this.props.user)
-    //     }
-    // }
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.cart !== this.props.cart){
+            this.props.fetchUserCartItems(this.props.user)
+        }
+    }
 
     handleCheckout(){
         // debugger
