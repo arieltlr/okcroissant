@@ -14,7 +14,7 @@ class CreateReviewForm extends React.Component{
     }
 
     handleSubmit(e){
-        debugger
+        // debugger
         e.preventDefault();
         this.props.createReview(this.state)
     }
