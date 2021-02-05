@@ -29,11 +29,12 @@ class SuggestedSlider extends React.Component {
             dotsClass: "carousel-dots"
         }
         // debugger
-        const { breads } = this.props;
+        let breads = { ...this.props.bread};
         if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
             return null;
         } else {
             // debugger
+            breads = breads.split(",")
             items = breads.map(bread => {
                 return (
                     <div>
