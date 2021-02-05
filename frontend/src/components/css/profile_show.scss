@@ -1,6 +1,7 @@
 .profile-show-container {
     width: 100%;
     height: 400px;
+    display: flex;
 }
 .prof-items-container {
     width: 80%;
@@ -11,35 +12,82 @@
     justify-content: space-evenly;
     margin-top: 30px;
 }
-.name-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.review-header {
+    font-family: $nunito;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgb(50, 49, 49);
+    padding-left: 80px;
 }
 .profile-pic {
-    height: 260px;
-    width: 260px;
+    position: absolute;
+    height: 400px;
+    width: 400px;
     background-image: url('../../images/pexels-mariana-kurnyk-many_breads.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
+    left: 19%;
+    top: 24%;
+    border: 1px solid rgb(9, 152, 194);
 }
-.display-username, .user-info-container {
-            margin-top: 8px;
-            font-size: 34px;
-            font-family: 'Raleway', sans-serif;
-            color: tan;
-        }
+
 .user-info-container {
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    position: absolute;
+    left: 19%;
+    top: 63%;
 }
+
+.display-username{
+    padding-top: 50px;
+    font-size: 34px;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(9, 152, 194);
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    span {
+        font-weight: 300;
+    }
+}
+
 .link-to-form {
     margin-top: 60px;
     text-decoration: none;
     color: tan;
     margin-bottom: 60px;
+    background-color: white;
+    padding: 30px 60px;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.link-to-form:hover, .link-to-form2:hover{
+    cursor: pointer;
+    background-color: rgb(206, 149, 4);
+    transition: 2s;
+    color: white;
+}
+
+.create-bread-profile {
+    position: absolute;
+    left: 19%;
+    top: 63%;
+}
+
+.link-to-form2 {
+    margin-top: 60px;
+    text-decoration: none;
+    color: tan;
+    margin-bottom: 60px;
+    background-color: white;
+    padding: 30px 20px;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    display: block;
+    height: 30px;
+    width: 380px;
+    text-align: center;
+    border-radius: 20px;
 }

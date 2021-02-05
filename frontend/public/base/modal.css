@@ -9,7 +9,7 @@
     z-index: 10;
 }
 
-.signup-modal, .login-modal, .edit-bprofile-modal {
+.signup-modal, .login-modal, .edit-bprofile-modal, .create-review-modal {
     width: 400px;
     height: 430px;
     position: absolute;
@@ -21,15 +21,16 @@
     background-color: white;
     display: flex;
     justify-content: center;
-    box-shadow: grey;
-    font-family: 'Raleway', sans-serif;
-    
+    box-shadow: grey;   
 }
 .signup-modal {
     height: 430px;
 }
 .edit-bprofile-modal {
     height: 650px;
+}
+.create-review-modal {
+    height: 390px;
 }
 .logo-container {
     display: flex;
@@ -99,6 +100,7 @@
     font-size: 18px;
     padding-bottom: 4px;
     font-weight: 500;
+    font-family: 'Raleway', sans-serif;
 }
 .form-submit{
     border-radius: 10px;

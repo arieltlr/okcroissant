@@ -14,7 +14,7 @@ class CreateReviewForm extends React.Component{
     }
 
     handleSubmit(e){
-        // debugger
+        debugger
         e.preventDefault();
         this.props.createReview(this.state)
     }
@@ -28,11 +28,12 @@ class CreateReviewForm extends React.Component{
         
         return (
             <div>
-                <h3>Create New Review</h3>
+                <h3 className="welcome-message">Write a New Review</h3>
                 <p>{errors.body}</p>
-                <form onSubmit= {this.handleSubmit}>
-                    <textarea name="review-body" id="review-body" value={this.state.body} onChange={this.update('body')}></textarea>
-                    <button type='submit'> Create Your Review</button>
+                <form className="review-form1" onSubmit= {this.handleSubmit}>
+                    <textarea name="review-body-new" id="review-body" value={this.state.body} onChange={this.update('body')}></textarea>
+                    {/* <p className="author-name">Author: {this.props.user.username}</p> */}
+                    <button className="button-splash1" id="review-button"type='submit'> Create Review</button>
                 </form>
             </div>
         )

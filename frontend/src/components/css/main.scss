@@ -5,13 +5,20 @@
 
   .bread-carasal{
       height: 100%;
+      width: 100%;
       object-fit: cover;
       // -webkit-overflow-scrolling: touch; dont know if i want this
   }
 
   .master{
     display: flex;
-    background-color: $main-background-color;
+    background-color: none;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
 
     .position-button{
       position: relative;
@@ -35,84 +42,124 @@
     }
 
     .bread-name-origin-master{
-      background-color: $main-background-tan;
-      margin-left: 80px;
-      position: relative;
-      top: -300px;
-      border-radius: 10px;
-      padding: 10px;
-      height: 60px;
-      color: black;
-      .bread-name{
-        font-family: $main-Roboto-font;
-        font-size: 30px;
+      // background-color: $main-background-tan;
+      // margin-left: 80px;
+      // position: relative;
+      // top: -300px;
+      // border-radius: 10px;
+      // padding: 10px;
+      // height: 60px;
+      // color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .bread-name, .learn-more-link{
+        font-family: $nunito;
+        font-weight: 900;
+        font-size: 60px;
         text-align: center;
         margin-bottom: 10px;
-        
-
+        color: $new-blue;
       }
-      .bread-origin{
-        font-family: $main-Roboto-font;
-        font-size: 15px;
-        text-align: center;
       }
+      
     }
-  }
 
 }
+.bread-origin {
+        color: $new-blue;
+        font-family: $nunito;
+        font-size: 45px;
+        font-weight: 700;
+        text-align:center;
+      }
+.learn-more-link{
+        font-family: $nunito;
+        font-size: 30px;
+        font-weight: 700;
+        align-self: flex-end;
+        position: absolute;
+        top: 400px;
+        right: 50px;
+        text-decoration: none;
+        color: $new-blue;
 
-
-.main-content-master{
-  background-color: $main-background-color;
-  padding-top: 100px;
+}
+#main-carousel-button {
+  width: 200px;
+  font-size: 22px;
+  margin-top: 15px;
+}
+.maincontentcontainer {
   display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.main-content-master{
+  background-color: white;
+  padding-top: 40px;
+  display: flex;
+  padding-left: 50px;
   
   .main-content{
-    padding-top: 70px;
+    padding-top: 120px;
     width: 100%;
     line-height: 1.2;
     p{
       display: block;
       height: 200px;
-      width: 1000px;
+      width: 600px;
       margin-left: 150px;
       font-size: 40px;
       text-align: center;
-      font-family: $main-Roboto-font;
+      font-family: $nunito;
+      font-weight: 600;
     }
   }
 
   .main-content2 {
-    padding-top: 70px;
-    width: 100%;
+    padding-top: 120px;
+    width: 50%;
     line-height: 1.2;
     p{
       display: block;
       height: 200px;
-      width: 1000px;
+      width: 600px;
       margin-right: 150px;
       font-size: 40px;
       text-align: center;
-      font-family: $main-Roboto-font;
+      font-family: $nunito;
+      font-weight: 600;
     }
   }
   
   .main-pic-1{
     padding: 10px;
     align-items: center;
-    width:600px;
-    margin-right: 100px;
-    border-radius: 30px;
-    border: 1px solid $blue-border;
+    width:500px;
+    height: 400px;
+    // margin-right: 100px;
+    border-radius: 50%;
+    border: 1px solid $new-blue;
+    object-fit: cover;
   }
 
   .main-pic-2 {
     padding: 10px;
     align-items: center;
-    width:600px;
+    width:400px;
+    height: 400px;
     margin-left: 100px;
-    border-radius: 30px;
-    border: 1px solid $blue-border;
+    border-radius: 50%;
+    border: 1px solid $new-blue;
+    object-fit: cover;
   }
 }
 .master-nav{
