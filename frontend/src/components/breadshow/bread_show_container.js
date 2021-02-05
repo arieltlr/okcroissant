@@ -5,7 +5,7 @@ import { createUserCartItem } from "../../actions/cart_actions";
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         // array: state.bread.map(bread => bread.id),
         bread: state.bread[ownProps.match.params.breadId],
