@@ -3,7 +3,7 @@ import CartItem from './cart_item';
 import { fetchABread} from "../../actions/bread_actions";
 
 const msp = (state, ownProps) => {
-    // debugger  
+    //    
     return {
         breadId: ownProps.breadId,
         bread: state.bread[ownProps.breadId]

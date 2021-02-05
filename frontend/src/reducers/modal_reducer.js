@@ -5,7 +5,7 @@ import { RECEIVE_SINGLE_REVIEW } from '../actions/review_actions';
 
 const modalReducer = (state=null, action) => {
     Object.freeze(state);
-    // debugger
+    //  
     switch (action.type) {
         case OPEN_MODAL:
             return action.modal;

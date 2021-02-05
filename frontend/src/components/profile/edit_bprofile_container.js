@@ -3,7 +3,7 @@ import { getBreadProfileResponses, updateBreadProfile } from '../../actions/brea
 import EditBProfile from './edit_bprofile';
 
 const mstp = (state) => {
-    // debugger
+    //  
     return {
         breadProfile: state.breadProfile,
         user: state.session.user

@@ -10,11 +10,13 @@ const validateLoginInput = require('../../validation/login');
 
 router.post('/register', (req, res) => {
     // Check to make sure nobody has already registered with a duplicate email
+     
     const { errors, isValid } = validateRegisterInput(req.body);
 
     if(!isValid){
         return res.status(400).json(errors);
     }
+     
     User.findOne({ username: req.body.username })
       .then(user => {
         if (user) {
@@ -26,13 +28,30 @@ router.post('/register', (req, res) => {
             username: req.body.username,
             password: req.body.password
           })
-  
+           
           bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(newUser.password, salt, (err, hash) => {
               if (err) throw err;
               newUser.password = hash;
               newUser.save()
-                .then(user => res.json(user))
+                .then(user =>{ 
+                    const payload = {
+                        id: user.id,
+                        username: user.username
+                    }
+                    jwt.sign(
+                        payload,
+                        keys.secretOrKey,
+                        {expiresIn: 3600},
+                        (err, token) => {
+                             
+                            res.json({
+                                success: true,
+                                token: "Bearer " + token
+                            })
+                        }
+                    )
+                })
                 .catch(err => console.log(err));
             })
           })

@@ -3,7 +3,7 @@ import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW} from '../actions/review_act
 
 const reviews = (state = {}, action) => {
     Object.freeze(state);
-    // debugger
+    //  
     switch (action.type) {
         case RECEIVE_ALL_REVIEWS:
             // debugger
@@ -16,7 +16,7 @@ const reviews = (state = {}, action) => {
             return array
         case RECEIVE_SINGLE_REVIEW:
             const newState = Object.assign({}, state, { [action.review.data._id]: action.review.data })
-            // debugger 
+            //   
             return newState;
         default:
             return state;

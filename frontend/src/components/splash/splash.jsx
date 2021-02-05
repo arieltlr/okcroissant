@@ -8,7 +8,7 @@ import image3 from '../../images/victoria-shes--IXuIVhA-rE-unsplash.jpg';
 class SplashPage extends React.Component {
     constructor(props){
         super(props)
-        // debugger
+        //  
     }
     render() {
         return (
