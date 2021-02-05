@@ -68,8 +68,8 @@ class Cart extends React.Component {
                         <button className="button-splash1" onClick={()=>this.handleCheckout()}>Checkout</button>
                     </div>
                     <p className="quantity">
-                        <p>${price}</p>
-                        <p>{quantity} breads coming your way</p>
+                        <p>$ {price = parseFloat(price).toFixed(2)}</p>
+                        <p>{quantity} breads comming your way</p>
                     </p>
                     <Footer />
                 </div>
