@@ -22,6 +22,7 @@ class BreadShow extends React.Component {
     handleSubmit(e){
         // debugger
         e.preventDefault();
+        alert("Added to the Cart!");
         this.state = {
             user_id: this.props.user,
             price: this.props.bread.price,
