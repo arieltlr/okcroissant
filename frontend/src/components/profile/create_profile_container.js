@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import { createBreadProfile } from '../../actions/bread_profile_actions';
-
-
 import  NewProfile from './create_profile_form'
+
 const msp = state =>{
      
     return ({

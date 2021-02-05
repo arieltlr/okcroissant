@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
-
 import CreateReviewForm from './create_review_form';
 import {createReview} from '../../actions/review_actions'
 
 const msp = (state, ownprops )=>{
-    //  
     return ({
        user: state.session.user.id,
-       bread: ownprops.match.params.breadId,
+       bread: Object.keys(state.bread)[0],
        author: state.session.user.username,
        errors: state.errors.review
     })
 }
+
 
 const mdp = dispatch=>{
     return ({

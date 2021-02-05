@@ -6,10 +6,13 @@ const reviews = (state = {}, action) => {
     //  
     switch (action.type) {
         case RECEIVE_ALL_REVIEWS:
+            // debugger
             let array = {}
             action.reviews.data.forEach(review => {
+
                 array[review._id] = review
             })
+            // debugger
             return array
         case RECEIVE_SINGLE_REVIEW:
             const newState = Object.assign({}, state, { [action.review.data._id]: action.review.data })
