@@ -6,10 +6,11 @@
     margin-left: 300px;
     border-radius: 50%;
     margin-top: 10px;
+    border: 1px solid rgb(9, 152, 194);
 }
 
 .bread-show-container {
-    font-family: 'Raleway', sans-serif;
+    font-family:'Nunito', sans-serif;
 }
 
 .bread-show-intro {
@@ -52,8 +53,8 @@
     display: flex;
     flex-direction: column;
     margin-right: 250px;
-    padding: 10px 50px;
-    background-color: #faefd682;
+    padding: 35px 50px;
+    background-color: #f5f3ef;
     border-radius: 20px;
     margin-top: 10px;
 }
@@ -74,7 +75,9 @@
     border-radius: 50px;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: tan;
 }
 
 .bread-show-button1 {
@@ -83,11 +86,16 @@
     border-radius: 50px;
     font-size: 30px;
     font-weight: bold;
+    background-color: white;
+    color: tan;
+    margin-bottom: 20px;
 }
 
 .bread-show-button:hover, .bread-show-button1:hover {
-    opacity: 0.5;
-    transition: 1s;
+    cursor: pointer;
+    background-color: rgb(206, 149, 4);
+    transition: 2s;
+    color: white;
 }
 
 .bread-show-price-container {
