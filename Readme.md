@@ -75,8 +75,46 @@ Finally, all your bread dreams are fulfilled!
 
 
 + Kai: 
-
-
+```javascript
+export const signup = user => dispatch => (
+    APIUtil.signup(user).then((res) => {
+        const { token } = res.data;
+        localStorage.setItem('jwtToken', token);
+        APIUtil.setAuthToken(token);
+        const decoded = jwt_decode(token);
+        dispatch(receiveCurrentUser(decoded))
+    }, err => (
+        dispatch(receiveErrors(err.response.data))
+    ))
+);
+```
+```javascript
+  bcrypt.genSalt(10, (err, salt) => {
+            bcrypt.hash(newUser.password, salt, (err, hash) => {
+              if (err) throw err;
+              newUser.password = hash;
+              newUser.save()
+                .then(user =>{ 
+                    const payload = {
+                        id: user.id,
+                        username: user.username
+                    }
+                    jwt.sign(
+                        payload,
+                        keys.secretOrKey,
+                        {expiresIn: 3600},
+                        (err, token) => {
+                             
+                            res.json({
+                                success: true,
+                                token: "Bearer " + token
+                            })
+                        }
+                    )
+                })
+                .catch(err => console.log(err));
+            })
+```
 
 + Monica: 
 ```javascript
