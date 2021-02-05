@@ -66,16 +66,21 @@ class BreadShow extends React.Component {
                                         <div className="bread-show-add-button">
                                             <button onClick={this.handleSubmit} className="bread-show-button">Add to Cart</button>
                                         </div>
+                                        <div className="bread-show-add-button">
+                                            <button onClick={()=> this.props.openModal('review')} className="bread-show-button">Write a Review</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div>
+                            <h2 className="review-header">Reviews:</h2>
                             <ReviewShowContainer bread={bread}/>
                         </div>
-                        <div>
+                        {/* <div>
+                            
                             <CreateReviewContainer />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )

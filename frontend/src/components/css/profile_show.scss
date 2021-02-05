@@ -12,7 +12,13 @@
     justify-content: space-evenly;
     margin-top: 30px;
 }
-
+.review-header {
+    font-family: $nunito;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgb(50, 49, 49);
+    padding-left: 80px;
+}
 .profile-pic {
     position: absolute;
     height: 400px;
