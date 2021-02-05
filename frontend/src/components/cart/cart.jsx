@@ -29,6 +29,7 @@ class Cart extends React.Component {
             // debugger
             this.props.deleteBreadItem(item._id)
         })
+        alert("Good for you!! Bread is coming your way");
     }
 
     render() {
