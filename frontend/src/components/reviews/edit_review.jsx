@@ -6,9 +6,9 @@ class EditReview extends React.Component{
         this.state = {
             author: this.props.author,
             user: this.props.user,
-            bread: this.props.bread[0],
+            bread: this.props.bread,
             body: this.props.review.body,
-            id: this.props.review._id
+            id: this.props.review,
         }
         // this.errors = [];
         this.handleSubmit =this.handleSubmit.bind(this);
