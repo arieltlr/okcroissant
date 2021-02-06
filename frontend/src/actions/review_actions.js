@@ -4,6 +4,7 @@ export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
 export const RECEIVE_SINGLE_REVIEW = "RECEIVE_SINGLE_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 export const RECEIVE_REVIEW_EDIT = "RECEIVE_REVIEW_EDIT";
+export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 export const receiveReviews = (reviews) => ({
     type: RECEIVE_ALL_REVIEWS,
@@ -21,6 +22,10 @@ export const receiveErrors = (errors) => ({
 export const receiveReviewToUpdate = (review) => ({
     type: RECEIVE_REVIEW_EDIT,
     review
+})
+export const removeReview = (reviewId) => ({
+    type: REMOVE_REVIEW,
+    reviewId
 })
 
 export const fetchReviewEdit = (reviewId) => dispatch => {
@@ -66,6 +71,14 @@ export const updateReview = review => dispatch => {
     debugger
     return APIUtil.updateReview(review).then(review => (
         dispatch(receiveSingleReview(review))  
+    ), 
+    err => console.log(err)
+    )
+}
+export const deleteReview = reviewId => dispatch => {
+    debugger
+    return APIUtil.deleteReview(reviewId).then(() => (
+        dispatch(removeReview(reviewId))  
     ), 
     err => console.log(err)
     )
