@@ -5,9 +5,15 @@ import {createReview} from '../../actions/review_actions'
 
 const msp = (state, ownprops )=>{
     debugger
+    let grabBread;
+    if (Object.keys(state.breadProfile).length > 1){
+        grabBread = state.breadProfile._id;
+    } else {
+        grabBread = Object.keys(state.bread)[0]
+    };
     return ({
        user: state.session.user.id,
-       bread: state.breadProfile._id,
+       bread: grabBread,
        author: state.session.user.username,
        errors: state.errors.review
     })

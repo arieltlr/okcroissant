@@ -31,12 +31,19 @@
 }
 #hero-text-1 {
     margin-top: 40px;
+    padding-left: 8px;
+    background-image: url('../../images/gourmet-background.png');
+    background-repeat: no-repeat;
+    background-position: left;
 }
 #hero-text-2 {
         text-align: right;
         align-self: flex-end;
         position: absolute;
         top: 390px;
+        background-image: url('../../images/warm-background.png');
+        background-repeat: no-repeat;
+        background-position: right;
 }
 .about-container {
     height: 300px;
@@ -45,16 +52,16 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 75px;
 
     p {
         font-family: 'Nunito', sans-serif;
         font-weight: 600;
         width: 80%;
         text-align: center;
-        font-size: 20px;
-        width: 220px;
-        padding: 8px;
+        font-size: 26px;
+        width: 260px;
+        padding: 15px;
         color: rgb(206, 149, 4)
     }
 }
@@ -67,8 +74,8 @@
 }
 
 .how-it-works-img2{
-    height: 180px;
-    width: 180px;
+    height: 220px;
+    width: 220px;
     background-image: url('../../images/orlova-maria-background-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,9 +83,19 @@
     border-radius: 50%;
     
 }
+.pic-outer-div {
+    height: 245px;
+    width: 245px;
+    background-color: none;
+    border: 2px solid $new-blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .how-it-works-img1{
-    height: 180px;
-    width: 180px;
+    height: 220px;
+    width: 220px;
     background-image: url('../../images/henry-co-bread1-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,8 +104,8 @@
 
 }
 .how-it-works-img3{
-    height: 180px;
-    width: 180px;
+    height: 220px;
+    width: 220px;
     background-image: url('../../images/sergio-arze-minicroissant-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,7 +119,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
+    padding-top: 75px;
     img {
         height: 500px;
         width: 340px;

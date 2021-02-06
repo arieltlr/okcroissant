@@ -24,7 +24,9 @@ class SplashPage extends React.Component {
                 </div>
                 <div className="about-container">
                     <div className="about-point">
-                        <div className="how-it-works-img1"></div>
+                        <div className="pic-outer-div">
+                            <div className="how-it-works-img1"></div>
+                        </div>
                         <p className="how-it-works-text" id="1">
                             Select bread vendors around the world
                         </p> 
@@ -33,10 +35,15 @@ class SplashPage extends React.Component {
                         <p className="how-it-works-text" id="2">
                             Browse our colletion of gourmet options
                         </p> 
+                        <div className="pic-outer-div">
                         <div className="how-it-works-img2"></div>
+                        </div>
                     </div>
                     <div className="about-point">
-                        <div className="how-it-works-img3"></div>
+                        <div className="pic-outer-div">
+                            <div className="how-it-works-img3"></div>
+                        </div>
+                        
                         <p className="how-it-works-text" id="3">
                             Delivered on time for breakfast ...by jet
                         </p> 

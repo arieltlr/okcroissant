@@ -38,7 +38,9 @@ class ProfileShow extends React.Component {
                     <div className="profile-show-container"> 
                         <div className="prof-items-container">
                             <div className="name-container">
+                                <div className="prof-pic-container">
                                 <div className="profile-pic"></div>
+                                </div>
                                 <div className="user-info-container">
                                     {formButton}
                                 </div>
