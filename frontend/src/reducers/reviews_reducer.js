@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW} from '../actions/review_actions';
+import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW, REMOVE_REVIEW} from '../actions/review_actions';
 
 
 const reviews = (state = {}, action) => {
@@ -19,6 +19,11 @@ const reviews = (state = {}, action) => {
             const newState = Object.assign({}, state, { [action.review.data._id]: action.review.data })
             //   
             return newState;
+        case REMOVE_REVIEW:
+            debugger
+            const copyState = Object.assign({}, state)
+            delete copyState[action.reviewId]
+            return copyState;
         default:
             return state;
     }

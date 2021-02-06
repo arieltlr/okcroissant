@@ -35,9 +35,11 @@ class Reviews extends React.Component {
                             </div>
                             <p className="review-author">Author: {review.author}</p>
                             <div className="button-container">
-                                {/* <button className="button-splash1" onClick={()=> this.props.deleteReview(review._id)}>Delete</button> */}
                                 { this.props.user.id === review.user ? 
-                                <button className="review-author" onClick={() => this.editReview(review._id)}> Update Review</button>
+                                    <div>
+                                        <button className="review-author" onClick={() => this.editReview(review._id)}> Update Review</button>
+                                        <button className="review-author" onClick={()=> this.props.deleteReview(review._id)}>Delete</button>
+                                    </div>
                                 : null}
                             </div>
                             

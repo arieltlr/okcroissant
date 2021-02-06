@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchAllReviews, fetchBreadReviews, fetchUsersReviews, fetchOneReview, fetchReviewEdit } from '../../actions/review_actions';
+import { fetchAllReviews, fetchBreadReviews, fetchUsersReviews, fetchOneReview, fetchReviewEdit, deleteReview } from '../../actions/review_actions';
 import Reviews from './review_show';
 import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
@@ -23,7 +23,8 @@ const mdtp = (dispatch) => {
         fetchBreadReviews: breadId => dispatch(fetchBreadReviews(breadId)),
         fetchUsersReviews: userId => dispatch(fetchUsersReviews(userId)),
         openModal: (modal) => dispatch(openModal(modal)),
-        fetchReviewEdit: (reviewId) => dispatch(fetchReviewEdit(reviewId))
+        fetchReviewEdit: (reviewId) => dispatch(fetchReviewEdit(reviewId)),
+        deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
     }
 }
 
