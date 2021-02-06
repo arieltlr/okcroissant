@@ -29,7 +29,7 @@
 .edit-bprofile-modal {
     height: 650px;
 }
-.create-review-modal {
+.create-review-modal, .edit-review-modal {
     height: 390px;
 }
 .logo-container {

@@ -16,7 +16,7 @@ router.post('/',
             return res.status(400).json(errors);
         }
         const review = new Review({
-            author: req.body.username,
+            author: req.body.author,
             user: req.body.user,
             bread: req.body.bread,
             body: req.body.body
@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
         }
 );
 router.get('/:review_id', (req, res) => {
-        Review.find({_id: req.params.review_id})
+        Review.findById(req.params.review_id)
             .then(review => res.json(review))
             .catch(err => res.status(400).json({ err }))
         }
@@ -77,13 +77,17 @@ router.patch('/:review_id',
             if (!isValid) {
                 return res.status(400).json(errors);
             }
+            debugger
             Review.findByIdAndUpdate(
                 req.params.review_id,
                 req.body,
+                // req.user,
+                // req.author,
+                // req.bread,
                 {new: true},
 
                 (err, review) =>{
-                    if(review) return res.status(500).send(err);
+                    if(err) return res.status(500).send(err);
                     return res.send(review);
                 }
             )

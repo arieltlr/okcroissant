@@ -7,6 +7,7 @@ import breadProfileReducer from './bread_profile_reducer';
 import breadReducer from './bread_reducer';
 import CartReducer from "./cart_reducer";
 import reviews from './reviews_reducer';
+import reviewEdit from './review_edit_reducer';
 
 
 const RootReducer = combineReducers({
@@ -18,6 +19,7 @@ const RootReducer = combineReducers({
     bread: breadReducer,
     cart: CartReducer,
     reviews,
+    reviewEdit,
 });
 
 export default RootReducer;
