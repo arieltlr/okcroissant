@@ -33,14 +33,14 @@ class Reviews extends React.Component {
                             <div className="review-body-holder">
                                 <p className="review-body">{review.body}</p>
                             </div>
-                            <p className="review-author">Author: {review.author}</p>
-                            <div className="button-container">
+                            <p className="review-author">From: {review.author}</p>
+                            <div >
                                 { this.props.user.id === review.user ? 
-                                    <div>
-                                        <button className="review-author" onClick={() => this.editReview(review._id)}> Update Review</button>
-                                        <button className="review-author" onClick={()=> this.props.deleteReview(review._id)}>Delete</button>
+                                    <div className="review-owner-button-container">
+                                        <button className="review-owner" onClick={() => this.editReview(review._id)}>Update</button>
+                                        <button className="review-owner" onClick={()=> this.props.deleteReview(review._id)}>Delete</button>
                                     </div>
-                                : null}
+                                : <div className="space-holder"> </div> }
                             </div>
                             
                         </div>
@@ -56,7 +56,7 @@ class Reviews extends React.Component {
         } else {
             return(
                 <div>
-                    <h1>There aren't any reviews for this bread yet</h1>
+                    <h1 className="no-reviews">There aren't any reviews for this bread yet</h1>
                 </div>
             )
         }

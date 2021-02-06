@@ -30,7 +30,7 @@
 }
 
 .review-body-holder{
-    height: 200px;
+    height: 250px;
     width: 200px;
     display:block;
     justify-content: center;
@@ -55,6 +55,7 @@
     margin: 5px 0px;
 }
 
+
 .review-author {
     border: 2px solid $mustard;
     font-family: $nunito;
@@ -64,4 +65,34 @@
     border-radius: 15px;
     padding: 8px;
     width: 180px;
+}
+.review-owner-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px; 
+    width: 200px;
+}
+.review-owner {
+    border: 2px solid $mustard;
+    background-color: white;
+    font-family: $nunito;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 15px;
+    width: 95px;
+    height: 30px;
+}
+.space-holder {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+}
+.no-reviews {
+    font-family: $nunito;
+    font-weight: 300;
+    font-size: 36px;
+    padding-left: 210px;
 }
