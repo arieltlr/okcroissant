@@ -23,8 +23,8 @@ const App = () => (
             <ProtectedRoute exact path="/main" component={MainPage}/>
             <ProtectedRoute exact path="/profile" component={ProfileShowContainer} />
             <ProtectedRoute exact path="/createBreadprofile" component={create_profile_container} />
-            <Route exact path="/bread/:breadId" component={BreadShowContainer} />
-            <Route exact path='/reviews' component={ReviewShowContainer} />
+            <ProtectedRoute exact path="/bread/:breadId" component={BreadShowContainer} />
+            <ProtectedRoute exact path='/reviews' component={ReviewShowContainer} />
             <ProtectedRoute exact path="/cart" component={cart}/>
         </Switch>
     </div>
