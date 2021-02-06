@@ -3,6 +3,9 @@ import axios from 'axios';
 export const fetchAllReviews = () => {
     return axios.get('/api/reviews/')
 }
+export const fetchOneReview = (reviewId) => {
+    return axios.get(`/api/reviews/${reviewId}`)
+}
 export const fetchBreadReviews = (breadId) => {
     return axios.get(`/api/reviews/bread/${breadId}`)
 };
@@ -11,6 +14,7 @@ export const fetchUsersReviews = (userId) => {
 };
 
 export const createReview = (review) => {
+    debugger
     return axios.post('/api/reviews/', review)
 }
 

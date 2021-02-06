@@ -3,6 +3,7 @@ import * as APIUtil from '../util/reviews_util';
 export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
 export const RECEIVE_SINGLE_REVIEW = "RECEIVE_SINGLE_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const RECEIVE_REVIEW_EDIT = "RECEIVE_REVIEW_EDIT";
 
 export const receiveReviews = (reviews) => ({
     type: RECEIVE_ALL_REVIEWS,
@@ -17,10 +18,28 @@ export const receiveErrors = (errors) => ({
     errors
 });
 
+export const receiveReviewToUpdate = (review) => ({
+    type: RECEIVE_REVIEW_EDIT,
+    review
+})
+
+export const fetchReviewEdit = (reviewId) => dispatch => {
+    debugger
+    return APIUtil.fetchOneReview(reviewId).then(review => (
+        dispatch(receiveReviewToUpdate(review))
+    ))
+}
+
 export const fetchAllReviews = () => dispatch =>{
     //  
     return APIUtil.fetchAllReviews().then((reviews) => (
         dispatch(receiveReviews(reviews))
+    ))
+}
+export const fetchOneReview = (breadId) => dispatch =>{
+    //  
+    return APIUtil.fetchOneReview(breadId).then((review) => (
+        dispatch(receiveSingleReview(review))
     ))
 }
 export const fetchBreadReviews = (breadId) => dispatch =>{
@@ -34,6 +53,7 @@ export const fetchUsersReviews = (userId) => dispatch =>{
     ))
 }
 export const createReview = review => dispatch => {
+    debugger
     return APIUtil.createReview(review).then(review => (
         dispatch(receiveSingleReview(review))
     ),
@@ -41,10 +61,13 @@ export const createReview = review => dispatch => {
             dispatch(receiveErrors(err.response.data))
     )
     )  
-    }
-export const updateReview = review => dispatch => (
-    APIUtil.updateReview(review).then(review => (
-        dispatch(receiveSingleReview(review))
-        .catch(err => receiveErrors(err))
-    ))  
-)
+}
+export const updateReview = review => dispatch => {
+    debugger
+    return APIUtil.updateReview(review).then(review => (
+        dispatch(receiveSingleReview(review))  
+    ), 
+    err => console.log(err)
+    )
+}
+    

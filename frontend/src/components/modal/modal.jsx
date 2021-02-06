@@ -5,8 +5,10 @@ import SignupContainer from '../../components/session/signup_container';
 import LoginContainer from '../../components/session/login_container';
 import EditBProfileContainer from '../../components/profile/edit_bprofile_container';
 import CreateReviewContainer from '../../components/reviews/create_review_container';
+import EditReviewContainer from '../../components/reviews/edit_review_container';
+import { withRouter } from 'react-router-dom';
 
-function Modal ({modal, closeModal}) {
+function Modal ({modal, closeModal}, props) {
     if (!modal) {
         return null;
     }
@@ -28,6 +30,12 @@ function Modal ({modal, closeModal}) {
         case 'review': 
             component = <CreateReviewContainer /> 
             form = "create-review-modal";
+            break;
+        case 'edit-review': 
+            debugger
+            component = <EditReviewContainer /> 
+            form = "edit-review-modal";
+
             break;
         default: 
             return null;
@@ -52,4 +60,4 @@ const mdtp = dispatch => {
     }
 }
 
-export default connect(mstp, mdtp)(Modal);
+export default withRouter(connect(mstp, mdtp)(Modal));

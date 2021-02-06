@@ -3,17 +3,28 @@ import React from 'react';
 class Reviews extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            fetch: false,
+        }
+
+        this.editReview.bind(this);
     }
 
-    componentDidMount() {
-        const breadId = this.props.breadId
-        this.props.fetchBreadReviews(breadId);
+    reRender() {
+        this.setState({fetch: !this.state.fetch});
+        this.props.fetchBreadReviews(this.props.breadId);
+    }
+    editReview(reviewId){
+        debugger
+        this.props.fetchReviewEdit(reviewId)
+            .then(()=> this.props.openModal('edit-review'))
     }
     render(){
-        if (Object.values(this.props.reviews).length < 1){
-            return null
+        if (!this.state.fetch){
+            this.reRender()
         }
         const reviews = Object.values(this.props.reviews).map((review, i) => {
+            debugger
                 return(
                     
                     <div key={i} className="review-container">
@@ -23,6 +34,13 @@ class Reviews extends React.Component {
                                 <p className="review-body">{review.body}</p>
                             </div>
                             <p className="review-author">Author: {review.author}</p>
+                            <div className="button-container">
+                                {/* <button className="button-splash1" onClick={()=> this.props.deleteReview(review._id)}>Delete</button> */}
+                                { this.props.user.id === review.user ? 
+                                <button className="review-author" onClick={() => this.editReview(review._id)}> Update Review</button>
+                                : null}
+                            </div>
+                            
                         </div>
                     </div>  
             )
