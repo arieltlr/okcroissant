@@ -7,11 +7,16 @@ class DemoLogIn extends React.Component{
             username: "kaizhu",
             password: "123456"
         }
+        this.handleClick = this.handleClick.bind(this);   
+    }
+    handleClick(e){
+        this.props.guestLoginUpdate('username', this.state.username);
+        this.props.guestLoginUpdate('password', this.state.password);
     }
     render(){
         return (
             <div className='demo-block'>
-                <button  className='demo-button' onClick={()=>this.props.login(this.state)}>Guest Login</button>
+                <button  className='demo-button' onClick={this.handleClick}>Guest Login</button>
             </div>
 
             

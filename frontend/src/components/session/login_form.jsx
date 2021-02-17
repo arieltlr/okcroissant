@@ -12,6 +12,7 @@ class LoginForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
+        this.guestLoginUpdate = this.guestLoginUpdate.bind(this);
     };
 
     update(field) {
@@ -28,6 +29,13 @@ class LoginForm extends React.Component {
         //  
         this.props.login(user);
     }
+
+    guestLoginUpdate(key, vaule){
+        this.setState({
+            [key]: vaule
+        })
+    }
+
      componentWillUnmount(){
         const resetErrors = {};
         this.props.refreshErrors(resetErrors);
@@ -68,7 +76,7 @@ class LoginForm extends React.Component {
                         <div className="other-form-container">
                             {this.props.otherForm}
                         </div>
-                        <DemoLogIn />
+                        <DemoLogIn  guestLoginUpdate={this.guestLoginUpdate}/>
                     </div>
                 </form>
             </div>
