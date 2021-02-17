@@ -52,7 +52,7 @@
 }
 .form-brand {
     font-size: 30px;
-    font-family: 'Righteous', cursive;
+    font-family: 'Nunito', sans-serif;
 
 }
 
@@ -123,19 +123,20 @@
     opacity: 0.6;
 }
 .otherFormButton{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 10px 70px 10px 70px;
     margin-left: 40px;
     margin-bottom: 10px;
 }
 
 .error {
-    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
     color: red;
 }
 
 .demo-button {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 10px 125px 10px 125px;
     margin-left: 40px;
 }
@@ -146,7 +147,7 @@
 }
 
 .other-form-button-sign-up {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito', sans-serif;
     height: 40px;
     text-align: center;
     display: block;
