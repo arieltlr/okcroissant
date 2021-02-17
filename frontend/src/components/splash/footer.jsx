@@ -18,7 +18,7 @@ const Footer = () => {
                 <h1>Monica Liang</h1>
                 <ul className="footer-lst">
                     <li><a href="https://github.com/lmonica97"><img src={Git} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/monica-liang-a06510146/"><img src={Linkedin} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/monica-liang-zheng-a06510146/"><img src={Linkedin} /></a></li>
                 </ul>
             </div>
             <div className="column">
