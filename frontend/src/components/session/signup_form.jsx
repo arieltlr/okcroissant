@@ -75,7 +75,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('password2')}
                             placeholder="Confirm Password"
                             />
-                        <p className="error">{this.props.errors.password}</p>
+                        <p className="error">{this.props.errors.password2}</p>
                         </div>
                             <button className="form-submit">Create Account</button>
                         <div className="other-form-button-sign-up">
