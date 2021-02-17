@@ -14,7 +14,7 @@ export const fetchUsersReviews = (userId) => {
 };
 
 export const createReview = (review) => {
-    debugger
+    
     return axios.post('/api/reviews/', review)
 }
 

@@ -15,7 +15,7 @@ class Reviews extends React.Component {
         this.props.fetchBreadReviews(this.props.breadId);
     }
     editReview(reviewId){
-        debugger
+        
         this.props.fetchReviewEdit(reviewId)
             .then(()=> this.props.openModal('edit-review'))
     }
@@ -24,7 +24,7 @@ class Reviews extends React.Component {
             this.reRender()
         }
         const reviews = Object.values(this.props.reviews).map((review, i) => {
-            debugger
+            
                 return(
                     
                     <div key={i} className="review-container">

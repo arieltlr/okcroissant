@@ -77,7 +77,7 @@ router.patch('/:review_id',
             if (!isValid) {
                 return res.status(400).json(errors);
             }
-            debugger
+            
             Review.findByIdAndUpdate(
                 req.params.review_id,
                 req.body,

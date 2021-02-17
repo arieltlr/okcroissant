@@ -4,7 +4,7 @@ import CreateReviewForm from './create_review_form';
 import {createReview} from '../../actions/review_actions'
 
 const msp = (state, ownprops )=>{
-    debugger
+    
     let grabBread;
     if (Object.keys(state.breadProfile).length > 1){
         grabBread = state.breadProfile._id;
