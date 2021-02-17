@@ -32,7 +32,7 @@ function Modal ({modal, closeModal}, props) {
             form = "create-review-modal";
             break;
         case 'edit-review': 
-            debugger
+            
             component = <EditReviewContainer /> 
             form = "edit-review-modal";
 

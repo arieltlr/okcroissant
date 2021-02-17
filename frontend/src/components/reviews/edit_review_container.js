@@ -5,13 +5,12 @@ import {updateReview} from '../../actions/review_actions'
 
 const msp = (state, props )=>{
     debugger
-    // const reviewNum = Object.keys(state.reviews).length - 1;
-    // const reviewId = Object.keys(state.reviews)[reviewNum];
+    const reviewId = Object.keys(state.reviewEdit)[0];
     return ({
        user: state.session.user.id,
        bread: Object.keys(state.bread)[0],
        author: state.session.user.username,
-       review: Object.keys(state.reviewEdit)[0],
+       review: state.reviewEdit[reviewId],
        errors: state.errors.review,
     })
 }

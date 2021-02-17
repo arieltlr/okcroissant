@@ -15,12 +15,12 @@ const reviews = (state = {}, action) => {
             // debugger
             return array
         case RECEIVE_SINGLE_REVIEW:
-            debugger
+            
             const newState = Object.assign({}, state, { [action.review.data._id]: action.review.data })
             //   
             return newState;
         case REMOVE_REVIEW:
-            debugger
+            
             const copyState = Object.assign({}, state)
             delete copyState[action.reviewId]
             return copyState;

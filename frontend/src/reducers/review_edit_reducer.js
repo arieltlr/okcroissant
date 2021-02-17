@@ -6,7 +6,7 @@ const reviewEdit = (state = {}, action) => {
     //  
     switch (action.type) {
         case RECEIVE_REVIEW_EDIT:
-            debugger
+            
             return Object.assign({}, { [action.review.data._id]: action.review.data })
 
         default:
