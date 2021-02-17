@@ -131,3 +131,25 @@
     color: white;
     transition: 2s;
 }
+
+.noMatchContainer {
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 35px;
+    margin-right: 60px;
+    color:rgb(9, 152, 194);
+}
+
+.noMatch {
+    text-align: center;
+}
+
+.noMatchImg {
+    align-self: center;
+    padding-left: 280px;
+    padding-bottom: 30px;
+}
+
+.editbread {
+    color:rgb(206, 149, 4);
+}

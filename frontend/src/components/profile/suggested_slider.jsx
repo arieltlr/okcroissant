@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'infinite-react-carousel';
 import { Link } from 'react-router-dom';
+import sadFace from '../../images/sad_face.png';
 
 class SuggestedSlider extends React.Component {
     constructor(props) {
@@ -28,16 +29,19 @@ class SuggestedSlider extends React.Component {
             dots: true,
             dotsClass: "carousel-dots"
         }
-        // debugger
         let {breads} = this.props;
-        // debugger
         if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
-            return [];
+            return (
+                <div className="noMatchContainer">
+                    <div className="noMatch">We're sorry, there is currently no bread that match your <span className="editbread">bread profile</span>.</div>
+                        <br /> 
+                        <img className="noMatchImg" src={sadFace} />
+                    <div className="noMatch">Please <span className="editbread">complete / edit your bread profile</span> to generate matches!</div>
+                </div>
+            )
         } else {
-            // debugger
             breads = Object.values(breads)
             items = breads.map(bread => {
-                // debugger
                 return (
                     <div key = {bread._id}>
                             <Link to={`/bread/${bread._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={bread.image} /></Link>
@@ -45,22 +49,14 @@ class SuggestedSlider extends React.Component {
                     </div>
                 )
             })
-            // for (const [key, value] of Object.entries(breads)){
-            //         return (
-            //             <div key = {value._id}>
-            //                     <Link to={`/bread/${value._id}`} style={{ textDecoration: 'none' }}> <img className="profile-carousel-image" src={value.image} /></Link>
-            //                     <p className="profile-carousel-name">{value.name}</p>
-            //             </div>
-            //         )
-            // }
+            return (
+                <div className="profile-carousel">
+                    <Slider {...settings}>
+                        {items}
+                    </Slider>
+                </div>
+            )
         }
-        return (
-            <div className="profile-carousel">
-                <Slider {...settings}>
-                    {items}
-                </Slider>
-            </div>
-        )
     }
 }
 
