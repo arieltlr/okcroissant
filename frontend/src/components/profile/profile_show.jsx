@@ -21,7 +21,6 @@ class ProfileShow extends React.Component {
                 Edit Your Bread Profile
                 </button>
         } else{
-             debugger
             formButton = 
                 <div className="create-bread-profile">
                     <Link className="link-to-form2" to="/createBreadprofile">

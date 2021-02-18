@@ -4,7 +4,6 @@ import SuggestedSlider from './suggested_slider';
 import { fetchSuggestBreads } from '../../actions/bread_actions';
 
 const mapStateToProps = (state) => {
-    debugger
     return {
         user: state.session.user,
         breads: state.bread
