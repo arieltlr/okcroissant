@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SuggestedSliderContainer from './suggested_slider_container';
 import Footer from '../splash/footer';
+import sadFace from '../../images/sad_face.png';
 
 class ProfileShow extends React.Component {
     constructor(props) {
@@ -50,7 +51,16 @@ class ProfileShow extends React.Component {
                                         <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
                                         <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
                                 </div>  
-                            ): null
+                            ): (
+                                <div className="breadProfile-suggestions">
+                                    <div className="noMatchContainer">
+                                        <div className="noMatch">We're sorry, there is currently no bread that match your <span className="editbread">bread profile</span>.</div>
+                                            <br /> 
+                                            <img className="noMatchImg" src={sadFace} />
+                                        <div className="noMatch">Please <span className="editbread">complete / edit your bread profile</span> to generate matches!</div>
+                                    </div>
+                                </div>
+                            )
                         }
                     </div>
                 </div>
