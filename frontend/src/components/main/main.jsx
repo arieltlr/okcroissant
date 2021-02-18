@@ -28,7 +28,7 @@ class MainPage extends React.Component {
             infinite:true,
             speed: 500,
             slidesToshow:1,
-            arrows: true,
+            arrows: false,
             slidesToScroll:1,
             autoplay: true,
             autoplaySpeed: 4000,
