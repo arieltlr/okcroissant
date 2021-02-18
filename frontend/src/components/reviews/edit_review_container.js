@@ -4,7 +4,6 @@ import EditReview from './edit_review';
 import {updateReview} from '../../actions/review_actions'
 
 const msp = (state, props )=>{
-    debugger
     const reviewId = Object.keys(state.reviewEdit)[0];
     return ({
        user: state.session.user.id,

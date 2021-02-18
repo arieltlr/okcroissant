@@ -9,12 +9,10 @@ class ProfileShow extends React.Component {
     }
 
     componentDidMount() {
-        //  
         this.props.getBreadProfileResponses(this.props.user.id)
     }
 
     render(){
-         
         const hasProfile = Boolean(this.props.breadProfile.thin !== undefined);
          
         let formButton;
@@ -23,7 +21,7 @@ class ProfileShow extends React.Component {
                 Edit Your Bread Profile
                 </button>
         } else{
-             
+             debugger
             formButton = 
                 <div className="create-bread-profile">
                     <Link className="link-to-form2" to="/createBreadprofile">
@@ -46,10 +44,14 @@ class ProfileShow extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="breadProfile-suggestions">
-                                <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
-                                <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
-                        </div>  
+                        {
+                            hasProfile ? (
+                                <div className="breadProfile-suggestions">
+                                        <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
+                                        <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
+                                </div>  
+                            ): null
+                        }
                     </div>
                 </div>
                 <Footer />
