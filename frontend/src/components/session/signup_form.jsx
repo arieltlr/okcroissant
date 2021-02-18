@@ -37,7 +37,7 @@ class SignupForm extends React.Component {
 
 
 
-    render() {   
+    render() {
         return (
             <div className="signup-form-container">
                 <div className="logo-container">
