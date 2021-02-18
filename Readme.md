@@ -177,7 +177,6 @@ export const fetchSuggestedBreads = (breadData) => {
 + Jane:
 ```javascript
     breads = this.props.cart.map((items, i) => {
-                // debugger
                 price += items.price
                 return (
                     <div>
