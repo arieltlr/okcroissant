@@ -21,15 +21,15 @@
 }
 .profile-pic {
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     background-image: url('../../images/pexels-mariana-kurnyk-many_breads.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
     left: 19%;
-    top: 24%;
+    top: 30%;
     border: 2px solid rgb(9, 152, 194);
 }
 // .prof-pic-container {
@@ -63,13 +63,14 @@
 }
 
 .link-to-form {
-    margin-top: 60px;
+    margin-top: 80px;
     text-decoration: none;
     color: tan;
     margin-bottom: 60px;
     background-color: white;
-    padding: 30px 60px;
-    font-size: 30px;
+    padding: 30px 50px;
+    font-size: 20px;
+    font-weight: bold;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -87,17 +88,18 @@
 }
 
 .link-to-form2 {
-    margin-top: 60px;
+    margin-top: 80px;
     text-decoration: none;
     color: tan;
     margin-bottom: 60px;
     background-color: white;
-    padding: 30px 20px;
-    font-size: 30px;
+    padding: 25px 5px;
+    font-size: 20px;
     font-family: 'Nunito', sans-serif;
+    font-weight: bold;
     display: block;
     height: 30px;
-    width: 380px;
+    width: 300px;
     text-align: center;
     border-radius: 20px;
 }

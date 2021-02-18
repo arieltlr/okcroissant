@@ -9,7 +9,6 @@ class SuggestedSlider extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.getBreadProfileResposes(this.props.user.id)
         this.props.fetchSuggestBreads(this.props.breadProfile);
     }
 
@@ -33,6 +32,9 @@ class SuggestedSlider extends React.Component {
         if (Object.keys(breads).length === 0 || Object.keys(breads).length === 20) {
             return (
                 <div className="noMatchContainer">
+                    <div className="no-breadProfile-labelcont">
+                        <label className="no-breadProfile-label">Based on your Bread Profile, We recommend:</label>
+                    </div>
                     <div className="noMatch">We're sorry, there is currently no bread that match your <span className="editbread">bread profile</span>.</div>
                         <br /> 
                         <img className="noMatchImg" src={sadFace} />
@@ -50,10 +52,15 @@ class SuggestedSlider extends React.Component {
                 )
             })
             return (
-                <div className="profile-carousel">
-                    <Slider {...settings}>
-                        {items}
-                    </Slider>
+                <div>
+                    <div className="breadProfile-labelcont">
+                        <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
+                    </div>
+                    <div className="profile-carousel">
+                        <Slider {...settings}>
+                            {items}
+                        </Slider>
+                    </div>
                 </div>
             )
         }

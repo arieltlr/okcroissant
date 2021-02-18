@@ -46,12 +46,13 @@ class ProfileShow extends React.Component {
                         </div>
                         {
                             hasProfile ? (
-                                <div className="breadProfile-suggestions">
-                                        <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
-                                        <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
-                                </div>  
+                                <div>
+                                    <div className="breadProfile-suggestions">
+                                            <SuggestedSliderContainer breadProfile={this.props.breadProfile} />
+                                    </div>  
+                                </div>
                             ): (
-                                <div className="breadProfile-suggestions">
+                                <div className="breadProfile-suggestions-no-match">
                                     <div className="noMatchContainer">
                                         <div className="noMatch">We're sorry, there is currently no bread that match your <span className="editbread">bread profile</span>.</div>
                                             <br /> 

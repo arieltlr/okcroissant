@@ -133,10 +133,10 @@
 }
 
 .noMatchContainer {
-    margin-top: 80px;
+    margin-top: 130px;
     font-weight: bold;
-    font-size: 35px;
-    margin-right: 60px;
+    font-size: 23px;
+    margin-right: 90px;
     color:rgb(9, 152, 194);
 }
 
@@ -146,7 +146,7 @@
 
 .noMatchImg {
     align-self: center;
-    padding-left: 280px;
+    padding-left: 170px;
     padding-bottom: 30px;
 }
 

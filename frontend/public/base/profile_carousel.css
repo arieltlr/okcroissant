@@ -1,7 +1,7 @@
 .profile-carousel-image {
-    height: 250px;
+    height: 200px;
     object-fit: cover;
-    width: 250px;
+    width: 200px;
     border-radius: 20px;
     display: block;
     margin-left: auto;
@@ -20,23 +20,35 @@
     font-size: 30px;
 }
 
-.breadProfile-label {
+.breadProfile-labelcont {
+    position: absolute;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 23px;
     padding-bottom: 30px;
-    /* margin-right: 80px; */
-    /* margin-top: 120px; */
+    margin-left: 60px;
+    top: 30%;
+    text-align: center;
+}
+
+.no-breadProfile-labelcont {
+    position: absolute;
+    top: 30%;
+    color: black;
 }
 
 .breadProfile-suggestions {
-   margin-right: 60px;
-   margin-top: 60px;
+   margin-right: 30px;
+   margin-top: 120px;
+}
+
+.breadProfile-suggestions-no-match {
+    margin-right: 45px;
 }
 
 .profile-carousel {
     height: 500px;
-    width: 700px;
+    width: 650px;
     margin-top: 30px;
 }
 
@@ -46,9 +58,9 @@
 
 .main-profile-display {
     display: block;
-    height: 800px;
-    margin-left: 250px;
-    margin-right: 250px;
+    height: 700px;
+    margin-left: 150px;
+    margin-right: 150px;
     background-color: #f5f3ef;
     border-radius: 30px;
     font-family:'Nunito', sans-serif;

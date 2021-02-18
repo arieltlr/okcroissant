@@ -10,7 +10,6 @@ const validateBreadprofileInput = require('../../validation/breadprofile');
 router.post('/',
         passport.authenticate('jwt', { session: false }),
         (req, res) => {
-            console.log(req)
             Breadprofile.findOne({user: req.user.id}).then(user =>{
                 //  
                 if(user){
