@@ -133,11 +133,11 @@
 }
 
 .noMatchContainer {
-    margin-top: 130px;
     font-weight: bold;
     font-size: 23px;
-    margin-right: 90px;
     color:rgb(9, 152, 194);
+    width: 500px;
+    height: 400px;
 }
 
 .noMatch {

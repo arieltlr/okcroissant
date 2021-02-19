@@ -52,7 +52,7 @@ class SuggestedSlider extends React.Component {
                 )
             })
             return (
-                <div>
+                <div className="carousel-main">
                     <div className="breadProfile-labelcont">
                         <label className="breadProfile-label">Based on your Bread Profile, We recommend:</label>
                     </div>

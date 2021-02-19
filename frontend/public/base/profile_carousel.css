@@ -21,14 +21,11 @@
 }
 
 .breadProfile-labelcont {
-    position: absolute;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 23px;
     padding-bottom: 30px;
-    margin-left: 60px;
     top: 30%;
-    text-align: center;
 }
 
 .no-breadProfile-labelcont {
@@ -47,9 +44,8 @@
 }
 
 .profile-carousel {
-    height: 500px;
-    width: 650px;
-    margin-top: 30px;
+    height: 300px;
+    width: 500px;
 }
 
 .profile-carousel:hover {
@@ -64,4 +60,14 @@
     background-color: #f5f3ef;
     border-radius: 30px;
     font-family:'Nunito', sans-serif;
+}
+
+.carousel-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 0px;
+    padding: 0px 0px;
+    margin-bottom: 200px;
 }
