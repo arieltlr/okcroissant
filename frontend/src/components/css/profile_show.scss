@@ -23,8 +23,14 @@
     padding-left: 80px;
 }
 .profile-pic {
+<<<<<<< HEAD
+    position: absolute;
+    height: 100px;
+    width: 100px;
+=======
     height: 300px;
     width: 300px;
+>>>>>>> main
     background-image: url('../../images/pexels-mariana-kurnyk-many_breads.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,6 +51,14 @@
 //     align-items: center;
 // }
 
+<<<<<<< HEAD
+.user-info-container {
+    position: absolute;
+    left: 19%;
+    top: 75%;
+}
+=======
+>>>>>>> main
 
 .display-username{
     padding-top: 50px;
