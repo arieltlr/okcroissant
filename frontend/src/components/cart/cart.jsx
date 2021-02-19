@@ -47,27 +47,28 @@ class Cart extends React.Component {
                 price += items.price
                 return (
                     <div>
-                        <hr />
                         <div className="cart-items" key={i}>
                             <CartItem className breadId={items.bread} />
                             <div className="button-cart">
                                 <button className="button-splash1" value={items._id} onClick={this.handleDelete(items._id)}>Delete Bread</button>
                             </div>
                         </div>
+                        <hr />
                     </div>
                 )
             })
             quantity = this.props.cart.length
             return (
                 <div className="cart-master">
+                    <h1 className="cart-header">Your Cart</h1>
                     {breads}
-                    <div className="button-checkout">
-                        <button className="button-splash1" onClick={()=>this.handleCheckout()}>Checkout</button>
-                    </div>
                     <p className="quantity">
-                        <p>$ {price = parseFloat(price).toFixed(2)}</p>
-                        <p>{quantity} breads comming your way</p>
+                        <p className="cartprice">Current Total: $ <span className="editbread">{price = parseFloat(price).toFixed(2)}</span></p>
+                        <p><span className="editbread">{quantity}</span> bread(s) coming your way!</p>
                     </p>
+                    <div className="button-checkout">
+                        <button className="button-splash2" onClick={()=>this.handleCheckout()}>Checkout!</button>
+                    </div>
                     <Footer />
                 </div>
 

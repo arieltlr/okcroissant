@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewShowContainer from '../reviews/review_show_container';
-
+import Footer from '../splash/footer';
 import CreateReviewContainer from '../reviews/create_review_container'
 
 class BreadShow extends React.Component {
@@ -78,10 +78,7 @@ class BreadShow extends React.Component {
                             <h2 className="review-header">Reviews:</h2>
                             <ReviewShowContainer bread={bread}/>
                         </div>
-                        {/* <div>
-                            
-                            <CreateReviewContainer />
-                        </div> */}
+                        <Footer />
                     </div>
                 </div>
             )
