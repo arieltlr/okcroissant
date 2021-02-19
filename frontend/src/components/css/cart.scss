@@ -11,8 +11,16 @@
     margin-bottom: 30px;
     }
 .cart-master{
+    margin-top: 50px;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
+    .cart-header {
+        text-align: left;
+        font-weight: bold;
+        margin-left: 200px;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
     .quantity{
         display: flex;
         justify-content: space-between;
@@ -24,6 +32,8 @@
         font-weight: bold;
     }
     hr{
+        margin-left: 200px;
+        margin-right: 200px;
         border: 1px solid rgb(9, 152, 194);
     }
 

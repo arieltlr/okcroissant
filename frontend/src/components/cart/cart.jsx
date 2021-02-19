@@ -60,6 +60,7 @@ class Cart extends React.Component {
             quantity = this.props.cart.length
             return (
                 <div className="cart-master">
+                    <h1 className="cart-header">Your Cart</h1>
                     {breads}
                     <p className="quantity">
                         <p className="cartprice">Current Total: $ <span className="editbread">{price = parseFloat(price).toFixed(2)}</span></p>
