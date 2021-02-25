@@ -10,8 +10,8 @@ class Reviews extends React.Component {
         this.editReview.bind(this);
     }
 
-    componentDidMount() {
-        // this.setState({fetch: !this.state.fetch});
+    reRender() {
+        this.setState({fetch: !this.state.fetch});
         this.props.fetchBreadReviews(this.props.breadId);
     }
     editReview(reviewId){
@@ -20,8 +20,8 @@ class Reviews extends React.Component {
             .then(()=> this.props.openModal('edit-review'))
     }
     render(){
-        if (!this.props.reviews){
-            return null;
+        if (!this.state.fetch){
+            this.reRender()
         }
         const reviews = Object.values(this.props.reviews).map((review, i) => {
             

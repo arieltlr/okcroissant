@@ -1,15 +1,19 @@
 @import "./variables.scss";
 .No-bread{
+    display: flex;
     font-family: 'Nunito', sans-serif;
-    text-align: center;
-    font-size: 280px;
-    background-image: url("../../images/orlova-maria-background-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+    font-size: 100px;
     color: #1b1405e8;
     font-weight: bold;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url("../../images/orlova-maria-background-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
     }
+
 .cart-master{
     margin-top: 50px;
     font-family: 'Nunito', sans-serif;

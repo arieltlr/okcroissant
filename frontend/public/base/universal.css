@@ -88,7 +88,7 @@ div.button-master .button-splash{
 .footer-master{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 250px;
+    /* margin-top: 250px; */
     padding-bottom: 10px;
     background-color: white;
     border: solid 3px rgb(9, 152, 194);
