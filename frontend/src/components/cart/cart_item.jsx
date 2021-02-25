@@ -18,8 +18,9 @@ class CartItem extends React.Component {
             return (
                 <div className="cart-items-master">
                     <div className="item-info">
-                        <p>{this.props.bread.name}</p>
+                        <p className="breadName">{this.props.bread.name}</p>
                         <p>${this.props.bread.price}</p>
+                        <p className="breadOrigin">From: {this.props.bread.origin}</p>
                     </div>
                     <div>
                         <img className="img-cart" src={this.props.bread.image} alt="bread-image" />

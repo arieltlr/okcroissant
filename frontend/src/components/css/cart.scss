@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .No-bread{
-    font-family: $main-Roboto-font;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     font-size: 280px;
     background-image: url("../../images/orlova-maria-background-unsplash.jpg");
@@ -11,28 +11,42 @@
     margin-bottom: 30px;
     }
 .cart-master{
-    padding: 40px;
-    font-family: $main-Roboto-font;
+    margin-top: 50px;
+    font-family: 'Nunito', sans-serif;
     font-weight: 300;
+    .cart-header {
+        text-align: left;
+        font-weight: bold;
+        margin-left: 200px;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
     .quantity{
         display: flex;
         justify-content: space-between;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 40px;
         font-size: 30px;
-        margin-top: 120px;
         padding:10px;
-        border: $blue-border solid 1px;
+        font-weight: bold;
     }
     hr{
-        border: 1px solid #7b7b7b1c;
+        margin-left: 200px;
+        margin-right: 200px;
+        border: 1px solid rgb(9, 152, 194);
     }
 
     .cart-items{
         display: flex;
         justify-content: space-between;
-        margin-right: 87px;
+        margin-left: 200px;
+        margin-right: 200px;
         padding-top: 20px;
+        padding: 30px 30px;
+        border-radius: 20px;
+        background-color: #f5f3ef;
         .cart-items-master{
-            margin-left: 30px;
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
@@ -47,11 +61,21 @@
                 line-height: 1.4;
             }
         }
+        .cartprice{
+            font-weight: 900;
+        }
+        .breadName{
+            margin-top: 40px;
+            font-weight: bold;
+        }
         .img-cart{
-            width: 135px;
+            height: 200px;
+            width: 200px;
             border-radius: 10px;
             margin-right: 25px;
             margin-bottom: 10px;
+            object-fit: cover;
+            border: 5px solid rgb(9, 152, 194);
         }
         button:hover{
             background-color: red;
@@ -59,6 +83,28 @@
         }
     }
     .button-checkout{
-        margin-top:50px;
+        margin: 20px 0px;
+        font-size: 30px;
+    }
+
+    .button-splash2 {
+        height: 70px;
+        width: 80%;
+        border-radius: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: white;
+        color: tan;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        margin-left: 200px;
+        border: 3px solid tan;
+    }
+
+    .button-splash2:hover{
+    cursor: pointer;
+    background-color: rgb(206, 149, 4);
+    transition: 2s;
+    color: white;
     }
 }
