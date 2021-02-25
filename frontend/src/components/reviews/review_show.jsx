@@ -21,6 +21,7 @@ class Reviews extends React.Component {
     }
     render(){
         if (!this.state.fetch){
+            debugger
             this.reRender()
         }
         const reviews = Object.values(this.props.reviews).map((review, i) => {
@@ -48,6 +49,7 @@ class Reviews extends React.Component {
             )
             })
         if (reviews.length > 0){
+            debugger
             return (
             <div className="outer-review-container">
                     {reviews}
