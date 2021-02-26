@@ -11,7 +11,6 @@ router.post('/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
         const { errors, isValid } = validateReviewInput(req.body);
-              
         if (!isValid) {
             return res.status(400).json(errors);
         }
@@ -47,9 +46,9 @@ router.get('/:review_id', (req, res) => {
 );
 router.get('/bread/:bread_id', 
     (req, res) => {
-        //  
         Review.find({bread: req.params.bread_id})
-            .then(reviews => res.json(reviews))
+            .then(reviews =>{ 
+                return res.json(reviews)})
             .catch(err => res.status(400).json({ err }))
         }
 );

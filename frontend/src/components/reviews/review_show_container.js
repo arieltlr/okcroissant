@@ -6,7 +6,6 @@ import { openModal } from '../../actions/modal_actions';
 
 const mstp = (state, ownProps) => {
     const breadId = ownProps.match.params.breadId;
-      
     return {
         reviews: state.reviews,
         user: state.session.user,

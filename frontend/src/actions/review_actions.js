@@ -47,9 +47,9 @@ export const fetchOneReview = (breadId) => dispatch =>{
     ))
 }
 export const fetchBreadReviews = (breadId) => dispatch =>{
-    return APIUtil.fetchBreadReviews(breadId).then((reviews) => (
-        dispatch(receiveReviews(reviews))
-    ))
+    return APIUtil.fetchBreadReviews(breadId).then((reviews) => {
+        return dispatch(receiveReviews(reviews))
+    })
 }
 export const fetchUsersReviews = (userId) => dispatch =>{
     return APIUtil.fetchUsersReviews(userId).then((reviews) => (

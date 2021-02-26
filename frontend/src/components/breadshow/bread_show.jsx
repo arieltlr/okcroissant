@@ -12,8 +12,7 @@ class BreadShow extends React.Component {
     }
 
     componentDidMount(){
-        //  
-        this.props.fetchABread(this.props.match.params.breadId)
+        this.props.fetchABread(this.props.match.params.breadId);
     }
     
 

@@ -48,7 +48,7 @@ function Modal ({modal, closeModal}, props) {
     )
 }
 
-const mstp = state => {
+const mstp = (state) => {
     return {
         modal: state.ui.modal
     }

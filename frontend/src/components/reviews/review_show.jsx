@@ -11,7 +11,6 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        // this.setState({fetch: !this.state.fetch});
         this.props.fetchBreadReviews(this.props.breadId);
     }
     editReview(reviewId) {
@@ -21,6 +20,9 @@ class Reviews extends React.Component {
     }
     render() {
         if (!this.props.reviews) {
+            return null;
+        }
+        if(Object.keys(this.props.reviews).length === 0){
             return null;
         }
         const reviews = Object.values(this.props.reviews).map((review, i) => {

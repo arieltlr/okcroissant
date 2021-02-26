@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW, REMOVE_REVIEW} from '../actions/review_actions';
+import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
 
 
 const reviews = (state = {}, action) => {
